@@ -5,8 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af2df7a8-77c6-4bca-92e5-a43dd24bc9c2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/HELP.md" beforeDir="false" afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/Domain.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/IUserValidation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.AssemblyInfoInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.GlobalUsings.g.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.assets.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.csproj.AssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Domain.csproj.nuget.dgspec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Domain.csproj.nuget.g.props" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Domain.csproj.nuget.g.targets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/project.assets.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/project.nuget.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/project.packagespec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/rider.project.restore.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/Model.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/User.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Debug/net6.0/Model.AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Debug/net6.0/Model.AssemblyInfoInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Debug/net6.0/Model.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Debug/net6.0/Model.GlobalUsings.g.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Debug/net6.0/Model.assets.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Debug/net6.0/Model.csproj.AssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Model.csproj.nuget.dgspec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Model.csproj.nuget.g.props" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Model.csproj.nuget.g.targets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/project.assets.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/project.nuget.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/project.packagespec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/rider.project.restore.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/WebApi/Controllers/LoginController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/WebApi/Service/IUserService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/proto/Login.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/ReSEP3-T1-T2.sln" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/ReSEP3-T1-T2.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/WebApi/WebApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/WebApi/WebApi.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java-T3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java-T3.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +52,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="T2_login_logic" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="2SHr31NZelJUQNSKYnkQenFL6wV" />
@@ -26,6 +69,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../grpc-java-master" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="resep3.javat3.Service" />
+      <recent name="resep3.javat3.model" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="JavaT3Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -44,8 +95,49 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1688814149510</updated>
-      <workItem from="1688814150915" duration="2000" />
+      <workItem from="1688814150915" duration="571000" />
+      <workItem from="1688948007548" duration="59000" />
+      <workItem from="1689281290551" duration="875000" />
     </task>
+    <task id="LOCAL-00001" summary="initial T3 commit">
+      <created>1688814411115</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1688814411115</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial T3 commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial T3 commit" />
   </component>
 </project>
