@@ -1,20 +1,20 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Domain.Logic.LogicInterfaces;
 using Microsoft.AspNetCore.Mvc;
 using Model;
-using WebApi.Service;
 
 namespace WebApi.Controllers
 {
     [ApiController]
-    [Route("Login")]
+    [Route("login")]
     public class LoginController : ControllerBase
     {
-        private readonly IUserService _data;
+        private readonly IUserLogic userLogic;
 
-        public LoginController([FromServices] IUserService data)
+        public LoginController([FromServices] IUserLogic userLogic)
         {
-            _data = data;
+            this.userLogic = userLogic;
         }
 
         [HttpGet]
@@ -23,7 +23,7 @@ namespace WebApi.Controllers
         {
             try
             {
-                User user = _data.ValidateUser(username, password).Result;
+                User user = userLogic.ValidateUser(username, password).Result;
                 return Ok(user);
             }
             catch (Exception e)
@@ -38,7 +38,7 @@ namespace WebApi.Controllers
         {
             try
             {
-                await _data.RegisterUser(user);
+                await userLogic.RegisterUser(user);
                 
                 return Ok(user);
             }catch (Exception e) {
@@ -46,6 +46,5 @@ namespace WebApi.Controllers
                 return StatusCode(500, e.Message);
             }
         }
-        
     }
 }

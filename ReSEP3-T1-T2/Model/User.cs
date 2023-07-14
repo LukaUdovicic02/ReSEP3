@@ -16,10 +16,10 @@ namespace Model
         public string Password { get; set; }
 
 
-        public User(string username, string password)
+        public User()
         {
-            this.Username = username;
-            this.Password = password;
+            this.Username = "john";
+            this.Password = "password";
         }
     }
 }

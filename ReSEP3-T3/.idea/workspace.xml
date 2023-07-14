@@ -5,46 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af2df7a8-77c6-4bca-92e5-a43dd24bc9c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/Domain.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/IUserValidation.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.GlobalUsings.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.csproj.AssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Domain.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Domain.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Domain.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/project.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/project.packagespec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/rider.project.restore.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/Model.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/User.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Debug/net6.0/Model.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Debug/net6.0/Model.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Debug/net6.0/Model.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Debug/net6.0/Model.GlobalUsings.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Debug/net6.0/Model.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Debug/net6.0/Model.csproj.AssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Model.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Model.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Model.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/project.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/project.packagespec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/rider.project.restore.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/WebApi/Controllers/LoginController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/WebApi/Service/IUserService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/proto/Login.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/ReSEP3-T1-T2.sln" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/ReSEP3-T1-T2.sln" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/Logic/UserLogic.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/gRPClient/LoginGrpc.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/gRPClient/RepoInterfaces/IRepoLogin.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/gRPClient/proto/Login.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/IUserValidation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/Logic/LogicInterfaces/IUserLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Domain.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Domain.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Domain.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Domain.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Domain.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Domain.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/WebApi/Controllers/LoginController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/WebApi/Controllers/LoginController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/WebApi/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/WebApi/Service/IUserService.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/WebApi/WebApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/WebApi/WebApi.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java-T3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java-T3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/protobuffer/Login.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/protobuffer/LoginRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/protobuffer/LoginRequestOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/protobuffer/LoginResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/protobuffer/LoginResponseOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/protobuffer/LoginServiceGrpc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/Service/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/service/LoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/proto/Login.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/Login.proto" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +55,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -97,7 +90,8 @@
       <updated>1688814149510</updated>
       <workItem from="1688814150915" duration="571000" />
       <workItem from="1688948007548" duration="59000" />
-      <workItem from="1689281290551" duration="875000" />
+      <workItem from="1689281290551" duration="3027000" />
+      <workItem from="1689328746254" duration="3564000" />
     </task>
     <task id="LOCAL-00001" summary="initial T3 commit">
       <created>1688814411115</created>
@@ -106,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688814411115</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="gRPC Service made in Java with all needed dependencies calling login">
+      <created>1689282465993</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1689282465993</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,6 +139,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial T3 commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial T3 commit" />
+    <MESSAGE value="gRPC Service made in Java with all needed dependencies calling login" />
+    <option name="LAST_COMMIT_MESSAGE" value="gRPC Service made in Java with all needed dependencies calling login" />
   </component>
 </project>

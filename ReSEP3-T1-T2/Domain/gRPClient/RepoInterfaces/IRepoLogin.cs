@@ -1,13 +1,11 @@
 ﻿using System.Threading.Tasks;
 using Model;
 
-
-namespace Domain
+namespace Domain.gRPClient.RepoInterfaces
 {
-    public interface IUserValidation
+    public interface IRepoLogin
     {
         Task<User> ValidateUser(string userName, string password);
         Task RegisterUser(User user);
     }
-    
 }
