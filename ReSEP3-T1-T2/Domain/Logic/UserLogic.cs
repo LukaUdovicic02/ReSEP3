@@ -29,11 +29,8 @@ namespace Domain.Logic
                 throw new Exception("Username must be at least 3 characters!");
 
             if (userName.Length > 50)
-                throw new Exception("Username must be less than 16 characters!");
+                throw new Exception("Username must be less than 50 characters!");
             
-            
-           
-
         }
     }
 }
