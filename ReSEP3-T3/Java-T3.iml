@@ -70,6 +70,7 @@
     <orderEntry type="library" name="Maven: io.netty:netty-tcnative-boringssl-static:osx-x86_64:2.0.54.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-tcnative-boringssl-static:osx-aarch_64:2.0.54.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-tcnative-boringssl-static:windows-x86_64:2.0.54.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.xerial:sqlite-jdbc:3.36.0" level="project" />
     <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:3.21.6" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.13.4" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.13.4" level="project" />

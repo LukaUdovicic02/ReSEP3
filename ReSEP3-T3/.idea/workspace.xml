@@ -5,40 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af2df7a8-77c6-4bca-92e5-a43dd24bc9c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/Logic/UserLogic.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/gRPClient/LoginGrpc.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/gRPClient/RepoInterfaces/IRepoLogin.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/gRPClient/proto/Login.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/Domain.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/IUserValidation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/Logic/LogicInterfaces/IUserLogic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.assets.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/persistance/DBConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/persistance/DBInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginRequestOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginResponseOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginServiceGrpc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/Logic/UserLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/Logic/UserLogic.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Domain.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Domain.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Domain.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Domain.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Domain.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Domain.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/WebApi/Controllers/LoginController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/WebApi/Controllers/LoginController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/WebApi/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/WebApi/Service/IUserService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/WebApi/WebApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/WebApi/WebApi.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/protobuffer/Login.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/protobuffer/LoginRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/protobuffer/LoginRequestOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/protobuffer/LoginResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/protobuffer/LoginResponseOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/protobuffer/LoginServiceGrpc.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/Service/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/service/LoginServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/proto/Login.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/Login.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java-T3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java-T3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/service/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/service/LoginServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -55,6 +48,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -71,7 +65,20 @@
       <recent name="resep3.javat3.model" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.DBInitializer">
+    <configuration name="DBInitializer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="resep3.javat3.persistance.DBInitializer" />
+      <module name="Java-T3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="resep3.javat3.persistance.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JavaT3Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="Java-T3" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="resep3.javat3.JavaT3Application" />
@@ -79,6 +86,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.DBInitializer" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -91,7 +103,7 @@
       <workItem from="1688814150915" duration="571000" />
       <workItem from="1688948007548" duration="59000" />
       <workItem from="1689281290551" duration="3027000" />
-      <workItem from="1689328746254" duration="3564000" />
+      <workItem from="1689328746254" duration="10434000" />
     </task>
     <task id="LOCAL-00001" summary="initial T3 commit">
       <created>1688814411115</created>

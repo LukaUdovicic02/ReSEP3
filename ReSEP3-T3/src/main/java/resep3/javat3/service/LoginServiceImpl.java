@@ -7,6 +7,7 @@ import resep3.javat3.model.User;
 
 @GRpcService
 public class LoginServiceImpl extends resep3.javat3.protobuf.LoginServiceGrpc.LoginServiceImplBase {
+
     private final User user = new User();
 
     @Override
@@ -17,7 +18,6 @@ public class LoginServiceImpl extends resep3.javat3.protobuf.LoginServiceGrpc.Lo
             System.out.println("Received user" + successIGuess);
 
             resep3.javat3.protobuf.LoginResponse response = resep3.javat3.protobuf.LoginResponse.newBuilder().setMessage("Success").setSuccess(true).build();
-
 
             responseObserver.onNext(response);
             responseObserver.onCompleted();

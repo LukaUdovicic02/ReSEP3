@@ -19,7 +19,7 @@ namespace Model
         public User()
         {
             this.Username = "john";
-            this.Password = "password";
+            this.Password = "secret";
         }
     }
 }
