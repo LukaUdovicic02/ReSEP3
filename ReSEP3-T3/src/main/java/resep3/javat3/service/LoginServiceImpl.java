@@ -3,6 +3,7 @@ package resep3.javat3.service;
 import io.grpc.stub.StreamObserver;
 import org.lognet.springboot.grpc.GRpcService;
 import resep3.javat3.model.User;
+import resep3.javat3.persistance.DBInitializer;
 
 
 @GRpcService
@@ -10,8 +11,12 @@ public class LoginServiceImpl extends resep3.javat3.protobuf.LoginServiceGrpc.Lo
 
     private final User user = new User();
 
+    private final DBInitializer initializer = new DBInitializer();
+
+
     @Override
     public void login(resep3.javat3.protobuf.LoginRequest request, StreamObserver<resep3.javat3.protobuf.LoginResponse> responseObserver) {
+
 
         if (user.getUsername().equals(request.getUsername()) && user.getPassword().equals(request.getPassword())) {
             String successIGuess = request.getUsername() +" "+ request.getPassword();
