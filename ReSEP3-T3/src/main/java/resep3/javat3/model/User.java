@@ -2,13 +2,28 @@ package resep3.javat3.model;
 
 public class User
 {
+    private int uid;
     private String username;
     private String password;
+    private float bodyWeight;
+    private float fatPercentage;
 
-    public User() {
-        this.username = "john";
-        this.password = "secret";
+
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
     }
+
+
+    public User(int uid, String username, String password,float bodyWeight,float fatPercentage  ) {
+        this.username = username;
+        this.password = password;
+        this.uid = uid;
+        this.bodyWeight = bodyWeight;
+        this.fatPercentage = fatPercentage;
+    }
+
+
 
     public String getUsername() {
         return username;

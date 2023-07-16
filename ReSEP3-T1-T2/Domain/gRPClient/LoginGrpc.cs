@@ -13,21 +13,15 @@ namespace Domain.gRPClient
         {
             using var channel = GrpcChannel.ForAddress("http://localhost:6565");
             var client = new LoginService.LoginServiceClient(channel);
-            var request = new LoginRequest {Username = "john", Password = "secret"};
+            var request = new LoginRequest {Username = userName, Password = password};
             Console.WriteLine("connection test");
             var reply = await client.loginAsync(request);
-
-            var user = new User
-            {
-                Username = request.Username,
-                Password = request.Password,
-            };
             
             Console.WriteLine(reply.Message);
             Console.WriteLine(reply.Success);
 
 
-            return user;
+            return await Task.FromResult(new User(request.Username, request.Password));
         }
 
       

@@ -32,11 +32,8 @@ public class UserRepo implements IUserRepo {
 
         if (resultSet.next()) {
 
-            String fetchedUsername = resultSet.getString("username");
+            user = new User(username, password);
 
-            user = new User();
-            user.setUsername(fetchedUsername);
-            user.setPassword(password);
         } else {
 
             System.out.println("We can't find given user in database");

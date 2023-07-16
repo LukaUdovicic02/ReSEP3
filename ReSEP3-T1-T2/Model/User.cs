@@ -5,7 +5,9 @@ namespace Model
 {
     public class User
     {
-        public int Id { get; set; }
+        [JsonPropertyName("UID")]
+        [Key]
+        public int Uid { get; set; }
 
         [Required]
         [JsonPropertyName("username")]
@@ -15,11 +17,28 @@ namespace Model
         [JsonPropertyName("password")]
         public string Password { get; set; }
 
+        [JsonPropertyName("bodyWeight")]
+        public float BodyWeight { get; set; }
 
-        public User()
+        [JsonPropertyName("fatPercentage")]
+        public float FatPercentage { get; set; }
+
+
+        public User(string username,string password )
         {
-            this.Username = "john";
-            this.Password = "secret";
+            this.Username = username;
+            this.Password = password;
         }
+
+        public User(int uid,string username, string password, float body,float fat)
+        {
+            Uid = uid;
+            Username = username;
+            Password = password;
+            BodyWeight = body;
+            FatPercentage = fat;
+        }
+
+
     }
 }

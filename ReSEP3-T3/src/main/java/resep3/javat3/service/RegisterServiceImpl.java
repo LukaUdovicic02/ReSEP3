@@ -18,13 +18,10 @@ public class RegisterServiceImpl extends resep3.javat3.protobuf.RegisterServiceG
     @Override
     public void register(resep3.javat3.protobuf.RegisterRequest request, StreamObserver<resep3.javat3.protobuf.RegisterResponse> responseStreamObserver) {
 
-        User user = new User();
-        user.setUsername(request.getUsername());
-        user.setPassword(request.getPassword());
-
+        User user = new User(request.getUsername() ,request.getPassword());
 
         try {
-            user = userRepo.createUser(user);
+            userRepo.createUser(user);
 
             resep3.javat3.protobuf.RegisterResponse response = resep3.javat3.protobuf.RegisterResponse.newBuilder().
                     setMessage("Account has been created").
