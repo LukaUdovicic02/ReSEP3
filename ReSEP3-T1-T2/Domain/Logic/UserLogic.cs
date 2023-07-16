@@ -26,6 +26,7 @@ namespace Domain.Logic
         public async Task RegisterUser(User userToBeCreated)
         {
             string userName =  userToBeCreated.Username;
+            await _repoRegister.RegisterUser(userToBeCreated);
 
             if (userName.Length < 3)
                 throw new Exception("Username must be at least 3 characters!");

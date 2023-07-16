@@ -11,7 +11,6 @@ namespace Domain.gRPClient
     {
         public async Task RegisterUser(User user)
         {
-            
             using var channel = GrpcChannel.ForAddress("http://localhost:6565");
             var client = new RegisterService.RegisterServiceClient(channel);
             Console.WriteLine("connection test");
