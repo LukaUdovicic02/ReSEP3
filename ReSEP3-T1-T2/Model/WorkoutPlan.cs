@@ -25,7 +25,7 @@ namespace Model
         
         [ForeignKey("UserID")]
         public User User { get; set; }
-
+ 
 
         public WorkoutPlan(int wpid, string wPname, int timegoal, string type, int userId)
         {

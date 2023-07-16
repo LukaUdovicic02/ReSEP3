@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af2df7a8-77c6-4bca-92e5-a43dd24bc9c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/WorkoutPlan.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/model/WorkoutPlan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/gRPClient/LoginGrpc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/gRPClient/LoginGrpc.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/User.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/Repo/Impl/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/Repo/Impl/UserRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/service/RegisterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/service/RegisterServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/Repo/Impl/WorkoutRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/Repo/Impl/WorkoutRepo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +112,7 @@
       <workItem from="1689328746254" duration="13182000" />
       <workItem from="1689352958245" duration="3453000" />
       <workItem from="1689470472875" duration="7569000" />
-      <workItem from="1689502213010" duration="5119000" />
+      <workItem from="1689502213010" duration="6334000" />
     </task>
     <task id="LOCAL-00001" summary="initial T3 commit">
       <created>1688814411115</created>
@@ -155,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689484016055</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Made a bunch of modifications on Model in C# and Java in order to fulfill the 3 requirement and to be able to use the classes in creating necessary methods.">
+      <created>1689509158716</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1689509158716</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +192,7 @@
     <MESSAGE value="Worked with Dragos to create and  connect database to db server , dragos made queries necessary to make db ," />
     <MESSAGE value="Finished the connection between T2 , T3 and database , testing out the login functionality" />
     <MESSAGE value="Done with registering user , so user is able to be registered to the database from 2 tier to the 3 and to the database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done with registering user , so user is able to be registered to the database from 2 tier to the 3 and to the database" />
+    <MESSAGE value="Made a bunch of modifications on Model in C# and Java in order to fulfill the 3 requirement and to be able to use the classes in creating necessary methods." />
+    <option name="LAST_COMMIT_MESSAGE" value="Made a bunch of modifications on Model in C# and Java in order to fulfill the 3 requirement and to be able to use the classes in creating necessary methods." />
   </component>
 </project>
