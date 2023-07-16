@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af2df7a8-77c6-4bca-92e5-a43dd24bc9c2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/gRPClient/proto/WorkoutPlan.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/proto/WorkoutPlan.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/Repo/Impl/WorkoutRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/Repo/Impl/WorkoutRepo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -112,7 +113,7 @@
       <workItem from="1689328746254" duration="13182000" />
       <workItem from="1689352958245" duration="3453000" />
       <workItem from="1689470472875" duration="7569000" />
-      <workItem from="1689502213010" duration="6334000" />
+      <workItem from="1689502213010" duration="7152000" />
     </task>
     <task id="LOCAL-00001" summary="initial T3 commit">
       <created>1688814411115</created>
@@ -156,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689509158716</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="worked on WorkoutRepo for create a WorkoutPlan">
+      <created>1689511391732</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1689511391732</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +201,7 @@
     <MESSAGE value="Finished the connection between T2 , T3 and database , testing out the login functionality" />
     <MESSAGE value="Done with registering user , so user is able to be registered to the database from 2 tier to the 3 and to the database" />
     <MESSAGE value="Made a bunch of modifications on Model in C# and Java in order to fulfill the 3 requirement and to be able to use the classes in creating necessary methods." />
-    <option name="LAST_COMMIT_MESSAGE" value="Made a bunch of modifications on Model in C# and Java in order to fulfill the 3 requirement and to be able to use the classes in creating necessary methods." />
+    <MESSAGE value="worked on WorkoutRepo for create a WorkoutPlan" />
+    <option name="LAST_COMMIT_MESSAGE" value="worked on WorkoutRepo for create a WorkoutPlan" />
   </component>
 </project>

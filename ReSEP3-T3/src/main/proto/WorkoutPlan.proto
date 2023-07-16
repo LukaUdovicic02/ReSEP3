@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_package = "resep3.javat3.protobuf";
+option java_multiple_files = true;
+
+service WorkoutPlan {
+  rpc createWorkoutPlan(WorkoutPlanRequest) returns (WorkoutPlanResponse);
+}
+
+message WorkoutPlanRequest {
+  string wpName = 1;
+  int32 timeGoal = 2;
+  string type = 3;
+  int32 userID = 4;
+}
+
+message WorkoutPlanResponse {
+  int64 wpid = 1;
+}
