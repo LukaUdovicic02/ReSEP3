@@ -9,5 +9,6 @@ import java.sql.SQLException;
 public interface IUserRepo
 {
     User getUserByUsernameAndPassword(String username, String password) throws SQLException;
+    User createUser(User user) throws SQLException;
 }
 

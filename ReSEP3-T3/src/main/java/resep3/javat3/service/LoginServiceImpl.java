@@ -18,12 +18,12 @@ public class LoginServiceImpl extends resep3.javat3.protobuf.LoginServiceGrpc.Lo
     }
 
     @Override
-    public void login(resep3.javat3.protobuf.LoginRequest request, StreamObserver<resep3.javat3.protobuf.LoginResponse> responseObserver) {
+    public  void login(resep3.javat3.protobuf.LoginRequest request, StreamObserver<resep3.javat3.protobuf.LoginResponse> responseObserver) {
         try {
             User user = userRepo.getUserByUsernameAndPassword(request.getUsername(), request.getPassword());
 
             if (user != null) {
-                // Valid credentials
+
                 resep3.javat3.protobuf.LoginResponse response = resep3.javat3.protobuf.LoginResponse.newBuilder()
                         .setMessage("Success")
                         .setSuccess(true)
@@ -32,7 +32,7 @@ public class LoginServiceImpl extends resep3.javat3.protobuf.LoginServiceGrpc.Lo
                 responseObserver.onNext(response);
                 responseObserver.onCompleted();
             } else {
-                // Invalid credentials
+
                 resep3.javat3.protobuf.LoginResponse response = resep3.javat3.protobuf.LoginResponse.newBuilder()
                         .setMessage("Invalid credentials")
                         .setSuccess(false)
@@ -42,7 +42,7 @@ public class LoginServiceImpl extends resep3.javat3.protobuf.LoginServiceGrpc.Lo
                 responseObserver.onCompleted();
             }
         } catch (SQLException e) {
-            System.out.println("Failed to fetch user data from the database.");
+            System.out.println("Failed to get user from the database.");
             e.printStackTrace();
         }
     }

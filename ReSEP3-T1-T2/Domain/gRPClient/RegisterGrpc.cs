@@ -25,9 +25,6 @@ namespace Domain.gRPClient
             Console.WriteLine(reply.Success);
             
             
-    
-            
-            
         }
     }
 }

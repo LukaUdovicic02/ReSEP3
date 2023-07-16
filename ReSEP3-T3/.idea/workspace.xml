@@ -5,20 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af2df7a8-77c6-4bca-92e5-a43dd24bc9c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/gRPClient/RegisterGrpc.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/gRPClient/RepoInterfaces/IRepoRegister.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/gRPClient/proto/Register.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/global.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WorkoutDB.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identifier.sqlite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/proto/Register.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/Domain.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/gRPClient/LoginGrpc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/gRPClient/LoginGrpc.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/gRPClient/RepoInterfaces/IRepoLogin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/gRPClient/RepoInterfaces/IRepoLogin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/WebApi/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginRequestOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginResponseOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginServiceGrpc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/Register.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/RegisterRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/RegisterRequestOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/RegisterResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/RegisterResponseOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/RegisterServiceGrpc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/service/RegisterServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/gRPClient/RegisterGrpc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/gRPClient/RegisterGrpc.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/Repo/Impl/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/Repo/Impl/UserRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/Repo/Interfaces/IUserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/Repo/Interfaces/IUserRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/service/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/service/LoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/proto/Register.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/Register.proto" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +128,7 @@
       <workItem from="1689281290551" duration="3027000" />
       <workItem from="1689328746254" duration="13182000" />
       <workItem from="1689352958245" duration="3453000" />
-      <workItem from="1689470472875" duration="2395000" />
+      <workItem from="1689470472875" duration="7569000" />
     </task>
     <task id="LOCAL-00001" summary="initial T3 commit">
       <created>1688814411115</created>
