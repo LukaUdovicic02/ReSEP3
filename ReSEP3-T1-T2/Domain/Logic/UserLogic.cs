@@ -10,10 +10,12 @@ namespace Domain.Logic
     {
 
         private readonly IRepoLogin _repoLogin;
+        private readonly IRepoRegister _repoRegister;
 
-        public UserLogic(IRepoLogin login)
+        public UserLogic(IRepoLogin login, IRepoRegister register)
         {
             _repoLogin = login;
+            
         }
 
         public async Task<User> ValidateUser(string userName, string password)
