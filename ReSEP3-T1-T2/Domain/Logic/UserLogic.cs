@@ -15,7 +15,7 @@ namespace Domain.Logic
         public UserLogic(IRepoLogin login, IRepoRegister register)
         {
             _repoLogin = login;
-            
+            _repoRegister = register;
         }
 
         public async Task<User> ValidateUser(string userName, string password)
