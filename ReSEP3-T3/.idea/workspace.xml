@@ -5,17 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af2df7a8-77c6-4bca-92e5-a43dd24bc9c2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/Logic/UserLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/Logic/UserLogic.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/gRPClient/RegisterGrpc.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/gRPClient/RepoInterfaces/IRepoRegister.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/gRPClient/proto/Register.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/global.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WorkoutDB.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/identifier.sqlite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/proto/Register.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/gRPClient/LoginGrpc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/gRPClient/LoginGrpc.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/gRPClient/RepoInterfaces/IRepoLogin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/gRPClient/RepoInterfaces/IRepoLogin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/WebApi/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/Repo/Impl/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/Repo/Impl/UserRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/Repo/Interfaces/IUserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/Repo/Interfaces/IUserRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/Login.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginRequestOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginResponseOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginServiceGrpc.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/service/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/service/LoginServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +57,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/resep3/javat3" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../grpc-java-master" />
   </component>
   <component name="RecentsManager">
@@ -119,7 +122,8 @@
       <workItem from="1688948007548" duration="59000" />
       <workItem from="1689281290551" duration="3027000" />
       <workItem from="1689328746254" duration="13182000" />
-      <workItem from="1689352958245" duration="3026000" />
+      <workItem from="1689352958245" duration="3453000" />
+      <workItem from="1689470472875" duration="2395000" />
     </task>
     <task id="LOCAL-00001" summary="initial T3 commit">
       <created>1688814411115</created>
@@ -142,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689345034595</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Finished the connection between T2 , T3 and database , testing out the login functionality">
+      <created>1689356432541</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1689356432542</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,6 +187,7 @@
     <MESSAGE value="initial T3 commit" />
     <MESSAGE value="gRPC Service made in Java with all needed dependencies calling login" />
     <MESSAGE value="Worked with Dragos to create and  connect database to db server , dragos made queries necessary to make db ," />
-    <option name="LAST_COMMIT_MESSAGE" value="Worked with Dragos to create and  connect database to db server , dragos made queries necessary to make db ," />
+    <MESSAGE value="Finished the connection between T2 , T3 and database , testing out the login functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished the connection between T2 , T3 and database , testing out the login functionality" />
   </component>
 </project>

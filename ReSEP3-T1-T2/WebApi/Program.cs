@@ -19,6 +19,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IRepoLogin, LoginGrpc>();
 builder.Services.AddScoped<IUserLogic ,UserLogic>();
 
+builder.Services.AddScoped<IRepoRegister, RegisterGrpc>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

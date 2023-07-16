@@ -30,9 +30,6 @@ namespace Domain.gRPClient
             return user;
         }
 
-        public Task RegisterUser(User user)
-        {
-            throw new System.NotImplementedException();
-        }
+      
     }
 }
