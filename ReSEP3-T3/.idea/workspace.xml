@@ -5,9 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af2df7a8-77c6-4bca-92e5-a43dd24bc9c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/gRPClient/proto/WorkoutPlan.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/proto/WorkoutPlan.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/Logic/LogicInterfaces/IWorkoutPlan.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/Logic/WorkoutPlan.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/gRPClient/RepoInterfaces/IRepoWorkoutPlan.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/gRPClient/WorkoutPlanGrpc.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/WorkoutPlanGrpc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/WorkoutPlanOuterClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/WorkoutPlanRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/WorkoutPlanRequestOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/WorkoutPlanResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/WorkoutPlanResponseOrBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/gRPClient/proto/WorkoutPlan.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/gRPClient/proto/WorkoutPlan.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/WebApi/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginRequestOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginRequestOrBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginResponseOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginResponseOrBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginServiceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginServiceGrpc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/RegisterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/RegisterRequestOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/RegisterRequestOrBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/RegisterResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/RegisterResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/RegisterResponseOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/RegisterResponseOrBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/RegisterServiceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/RegisterServiceGrpc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/proto/WorkoutPlan.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/WorkoutPlan.proto" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +50,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="T2_login_logic" />
+        <entry key="$PROJECT_DIR$/.." value="Register_T2_and_3" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -113,7 +138,8 @@
       <workItem from="1689328746254" duration="13182000" />
       <workItem from="1689352958245" duration="3453000" />
       <workItem from="1689470472875" duration="7569000" />
-      <workItem from="1689502213010" duration="7152000" />
+      <workItem from="1689502213010" duration="7942000" />
+      <workItem from="1689545685187" duration="1823000" />
     </task>
     <task id="LOCAL-00001" summary="initial T3 commit">
       <created>1688814411115</created>

@@ -21,6 +21,8 @@ builder.Services.AddScoped<IUserLogic ,UserLogic>();
 
 builder.Services.AddScoped<IRepoRegister, RegisterGrpc>();
 
+builder.Services.AddScoped<IRepoWorkoutPlan, WorkoutPlanGrpc>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

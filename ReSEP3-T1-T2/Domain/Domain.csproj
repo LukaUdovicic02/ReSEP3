@@ -14,6 +14,7 @@
     <ItemGroup>
         <Protobuf Include="gRPClient/proto/Login.proto" GrpcServices="Client" />
         <Protobuf Include="gRPClient/proto/Register.proto" GrpcServices="Client" />
+        <Protobuf Include="gRPClient/proto/WorkoutPlan.proto" GrpcServices="Client" />
     </ItemGroup>
 
     <ItemGroup>

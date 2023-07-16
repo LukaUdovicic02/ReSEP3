@@ -17,3 +17,5 @@ message WorkoutPlanRequest {
 message WorkoutPlanResponse {
   int64 wpid = 1;
 }
+
+

@@ -27,13 +27,14 @@ namespace Model
         public User User { get; set; }
  
 
-        public WorkoutPlan(int wpid, string wPname, int timegoal, string type, int userId)
+        public WorkoutPlan(int wpid, string wPname, int timegoal, string type, int userId , User user)
         {
             Wpid = wpid;
             WPname = wPname;
             this.timegoal = timegoal;
             Type = type;
             UserID = userId;
+            this.User = user;
         }
     }
 }

@@ -2,7 +2,7 @@
 
 option csharp_namespace = "domain.grpClient";
 
-service WorkoutPlan {
+service WorkoutPlanService {
   rpc createWorkoutPlan(WorkoutPlanRequest) returns (WorkoutPlanResponse);
 }
 
