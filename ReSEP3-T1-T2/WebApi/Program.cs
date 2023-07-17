@@ -22,6 +22,7 @@ builder.Services.AddScoped<IUserLogic ,UserLogic>();
 builder.Services.AddScoped<IRepoRegister, RegisterGrpc>();
 
 builder.Services.AddScoped<IRepoWorkoutPlan, WorkoutPlanGrpc>();
+builder.Services.AddScoped<IWorkoutPlanLogic, WorkoutPlanLogic>();
 
 var app = builder.Build();
 

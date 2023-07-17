@@ -3,7 +3,7 @@ using Model;
 
 namespace Domain.Logic.LogicInterfaces
 {
-    public interface IWorkoutPlan
+    public interface IWorkoutPlanLogic
     {
         Task CreateWorkout(WorkoutPlan workoutPlanLogicToBeCreated);
     }

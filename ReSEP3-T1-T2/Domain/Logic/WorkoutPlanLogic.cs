@@ -6,7 +6,7 @@ using Model;
 
 namespace Domain.Logic
 {
-    public class WorkoutPlanLogic : IWorkoutPlan
+    public class WorkoutPlanLogic : IWorkoutPlanLogic
     {
 
         private readonly IRepoWorkoutPlan _workoutPlan;

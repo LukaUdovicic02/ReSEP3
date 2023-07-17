@@ -9,8 +9,8 @@ public class WorkoutPlan
     private int userID;
 
 
-    public WorkoutPlan(int wpID, String wpName, int timeGoal, String type, int userID) {
-        this.wpID = wpID;
+    public WorkoutPlan( String wpName, int timeGoal, String type, int userID) {
+
         this.wpName = wpName;
         this.timeGoal = timeGoal;
         this.type = type;
