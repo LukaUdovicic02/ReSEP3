@@ -4,11 +4,11 @@ import io.grpc.stub.StreamObserver;
 import org.lognet.springboot.grpc.GRpcService;
 import resep3.javat3.Repo.Impl.WorkoutRepo;
 import resep3.javat3.model.WorkoutPlan;
-import resep3.javat3.protobuf.WorkoutPlanGrpc;
+import resep3.javat3.protobuf.WorkoutPlanServiceGrpc;
 
 
 @GRpcService
-public class WorkoutPlanServiceImpl extends WorkoutPlanGrpc.WorkoutPlanImplBase
+public class WorkoutPlanServiceImpl extends WorkoutPlanServiceGrpc.WorkoutPlanServiceImplBase
 {
 
     private final WorkoutRepo workoutRepo;

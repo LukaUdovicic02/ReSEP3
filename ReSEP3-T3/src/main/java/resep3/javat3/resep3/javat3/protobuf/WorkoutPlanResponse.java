@@ -76,13 +76,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return resep3.javat3.protobuf.WorkoutPlanOuterClass.internal_static_WorkoutPlanResponse_descriptor;
+    return resep3.javat3.protobuf.WorkoutPlan.internal_static_WorkoutPlanResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return resep3.javat3.protobuf.WorkoutPlanOuterClass.internal_static_WorkoutPlanResponse_fieldAccessorTable
+    return resep3.javat3.protobuf.WorkoutPlan.internal_static_WorkoutPlanResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             resep3.javat3.protobuf.WorkoutPlanResponse.class, resep3.javat3.protobuf.WorkoutPlanResponse.Builder.class);
   }
@@ -263,13 +263,13 @@ private static final long serialVersionUID = 0L;
       resep3.javat3.protobuf.WorkoutPlanResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return resep3.javat3.protobuf.WorkoutPlanOuterClass.internal_static_WorkoutPlanResponse_descriptor;
+      return resep3.javat3.protobuf.WorkoutPlan.internal_static_WorkoutPlanResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return resep3.javat3.protobuf.WorkoutPlanOuterClass.internal_static_WorkoutPlanResponse_fieldAccessorTable
+      return resep3.javat3.protobuf.WorkoutPlan.internal_static_WorkoutPlanResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               resep3.javat3.protobuf.WorkoutPlanResponse.class, resep3.javat3.protobuf.WorkoutPlanResponse.Builder.class);
     }
@@ -300,7 +300,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return resep3.javat3.protobuf.WorkoutPlanOuterClass.internal_static_WorkoutPlanResponse_descriptor;
+      return resep3.javat3.protobuf.WorkoutPlan.internal_static_WorkoutPlanResponse_descriptor;
     }
 
     @java.lang.Override

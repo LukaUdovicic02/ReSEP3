@@ -13,13 +13,17 @@ namespace Domain.gRPClient
         {
             using var channel = GrpcChannel.ForAddress("http://localhost:6565");
             var client = new WorkoutPlanService.WorkoutPlanServiceClient(channel);
-            Console.WriteLine("connection test");
+            Console.WriteLine("connection established");
+            
             var reply = await client.createWorkoutPlanAsync(new WorkoutPlanRequest
             {
                 WpName = workoutPlan.WPname,
                 TimeGoal = workoutPlan.timegoal,
                 Type = workoutPlan.Type,
-                UserID = workoutPlan.UserID
+                UserID = workoutPlan.UserID,
+                
+                
+                
             });
 
             Console.WriteLine("this is ID of the workout : " + reply.Wpid);

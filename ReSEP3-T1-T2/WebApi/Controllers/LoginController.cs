@@ -7,7 +7,7 @@ using Model;
 namespace WebApi.Controllers
 {
     [ApiController]
-    [Route("login")]
+    [Route("controller")]
     public class LoginController : ControllerBase
     {
         private readonly IUserLogic userLogic;

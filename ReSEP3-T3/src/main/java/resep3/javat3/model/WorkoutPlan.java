@@ -16,6 +16,8 @@ public class WorkoutPlan
         this.type = type;
         this.userID = userID;
     }
+    public WorkoutPlan() {
+    }
 
 
     public int getWpID() {

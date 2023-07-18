@@ -1,35 +1,48 @@
 package resep3.javat3.Repo.Impl;
 
-
 import org.lognet.springboot.grpc.GRpcService;
 import resep3.javat3.Repo.Interfaces.IWorkoutRepo;
 import resep3.javat3.model.WorkoutPlan;
 import resep3.javat3.persistance.DBConnection;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 @GRpcService
-public class WorkoutRepo implements IWorkoutRepo
-{
+public class WorkoutRepo implements IWorkoutRepo {
     private final DBConnection initializer = new DBConnection();
 
     public void createWorkoutPlan(WorkoutPlan workoutPlan) {
 
-        try (Connection connection = initializer.getConnection();
-             PreparedStatement statement = connection.prepareStatement(
-                     "INSERT INTO WorkoutPlan (WPname, timegoal, type, UserID) VALUES (?, ?, ?, ?)")) {
+        try {
 
-            statement.setString(1, workoutPlan.getWpName());
-            statement.setInt(2, workoutPlan.getTimeGoal());
-            statement.setString(3, workoutPlan.getType());
-            statement.setInt(4, workoutPlan.getUserID());
+            initializer.connect();
 
-            statement.executeUpdate();
-            System.out.println("Workout plan created.");
+            try (Connection connection = initializer.getConnection();
+                 PreparedStatement statement = connection.prepareStatement(
+                         "INSERT INTO WorkoutPlan (WPname, timegoal, type, UserID) VALUES (?, ?, ?, ?)")) {
 
+                statement.setString(1, workoutPlan.getWpName());
+                statement.setInt(2, workoutPlan.getTimeGoal());
+                statement.setString(3, workoutPlan.getType());
+                statement.setInt(4, workoutPlan.getUserID());
+
+                statement.executeUpdate();
+                System.out.println("Workout plan created.");
+
+
+                try (ResultSet generatedAutoKeys = statement.getGeneratedKeys()) {
+                    if (generatedAutoKeys.next()) {
+                        int generatedId = generatedAutoKeys.getInt(1);
+                        workoutPlan.setWpID(generatedId);
+                        System.out.println("ID: " + generatedId);
+                    } else {
+                        throw new SQLException("Creating workout plan failed, no ID found.");
+                    }
+                }
+            }
             initializer.disconnect();
 
         } catch (SQLException e) {
@@ -37,10 +50,4 @@ public class WorkoutRepo implements IWorkoutRepo
             e.printStackTrace();
         }
     }
-
-
-
-
 }
-
-

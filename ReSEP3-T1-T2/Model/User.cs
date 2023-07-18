@@ -23,6 +23,9 @@ namespace Model
         [JsonPropertyName("fatPercentage")]
         public float FatPercentage { get; set; }
 
+        public User()
+        {
+        }
 
         public User(string username,string password )
         {

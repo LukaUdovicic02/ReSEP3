@@ -7,11 +7,11 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.39.0)",
     comments = "Source: WorkoutPlan.proto")
-public final class WorkoutPlanGrpc {
+public final class WorkoutPlanServiceGrpc {
 
-  private WorkoutPlanGrpc() {}
+  private WorkoutPlanServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "WorkoutPlan";
+  public static final String SERVICE_NAME = "WorkoutPlanService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<resep3.javat3.protobuf.WorkoutPlanRequest,
@@ -25,10 +25,10 @@ public final class WorkoutPlanGrpc {
   public static io.grpc.MethodDescriptor<resep3.javat3.protobuf.WorkoutPlanRequest,
       resep3.javat3.protobuf.WorkoutPlanResponse> getCreateWorkoutPlanMethod() {
     io.grpc.MethodDescriptor<resep3.javat3.protobuf.WorkoutPlanRequest, resep3.javat3.protobuf.WorkoutPlanResponse> getCreateWorkoutPlanMethod;
-    if ((getCreateWorkoutPlanMethod = WorkoutPlanGrpc.getCreateWorkoutPlanMethod) == null) {
-      synchronized (WorkoutPlanGrpc.class) {
-        if ((getCreateWorkoutPlanMethod = WorkoutPlanGrpc.getCreateWorkoutPlanMethod) == null) {
-          WorkoutPlanGrpc.getCreateWorkoutPlanMethod = getCreateWorkoutPlanMethod =
+    if ((getCreateWorkoutPlanMethod = WorkoutPlanServiceGrpc.getCreateWorkoutPlanMethod) == null) {
+      synchronized (WorkoutPlanServiceGrpc.class) {
+        if ((getCreateWorkoutPlanMethod = WorkoutPlanServiceGrpc.getCreateWorkoutPlanMethod) == null) {
+          WorkoutPlanServiceGrpc.getCreateWorkoutPlanMethod = getCreateWorkoutPlanMethod =
               io.grpc.MethodDescriptor.<resep3.javat3.protobuf.WorkoutPlanRequest, resep3.javat3.protobuf.WorkoutPlanResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createWorkoutPlan"))
@@ -37,7 +37,7 @@ public final class WorkoutPlanGrpc {
                   resep3.javat3.protobuf.WorkoutPlanRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   resep3.javat3.protobuf.WorkoutPlanResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new WorkoutPlanMethodDescriptorSupplier("createWorkoutPlan"))
+              .setSchemaDescriptor(new WorkoutPlanServiceMethodDescriptorSupplier("createWorkoutPlan"))
               .build();
         }
       }
@@ -48,50 +48,50 @@ public final class WorkoutPlanGrpc {
   /**
    * Creates a new async stub that supports all call types for the service
    */
-  public static WorkoutPlanStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<WorkoutPlanStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<WorkoutPlanStub>() {
+  public static WorkoutPlanServiceStub newStub(io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<WorkoutPlanServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<WorkoutPlanServiceStub>() {
         @java.lang.Override
-        public WorkoutPlanStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new WorkoutPlanStub(channel, callOptions);
+        public WorkoutPlanServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new WorkoutPlanServiceStub(channel, callOptions);
         }
       };
-    return WorkoutPlanStub.newStub(factory, channel);
+    return WorkoutPlanServiceStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
-  public static WorkoutPlanBlockingStub newBlockingStub(
+  public static WorkoutPlanServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<WorkoutPlanBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<WorkoutPlanBlockingStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<WorkoutPlanServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<WorkoutPlanServiceBlockingStub>() {
         @java.lang.Override
-        public WorkoutPlanBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new WorkoutPlanBlockingStub(channel, callOptions);
+        public WorkoutPlanServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new WorkoutPlanServiceBlockingStub(channel, callOptions);
         }
       };
-    return WorkoutPlanBlockingStub.newStub(factory, channel);
+    return WorkoutPlanServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new ListenableFuture-style stub that supports unary calls on the service
    */
-  public static WorkoutPlanFutureStub newFutureStub(
+  public static WorkoutPlanServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<WorkoutPlanFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<WorkoutPlanFutureStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<WorkoutPlanServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<WorkoutPlanServiceFutureStub>() {
         @java.lang.Override
-        public WorkoutPlanFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new WorkoutPlanFutureStub(channel, callOptions);
+        public WorkoutPlanServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new WorkoutPlanServiceFutureStub(channel, callOptions);
         }
       };
-    return WorkoutPlanFutureStub.newStub(factory, channel);
+    return WorkoutPlanServiceFutureStub.newStub(factory, channel);
   }
 
   /**
    */
-  public static abstract class WorkoutPlanImplBase implements io.grpc.BindableService {
+  public static abstract class WorkoutPlanServiceImplBase implements io.grpc.BindableService {
 
     /**
      */
@@ -115,16 +115,16 @@ public final class WorkoutPlanGrpc {
 
   /**
    */
-  public static final class WorkoutPlanStub extends io.grpc.stub.AbstractAsyncStub<WorkoutPlanStub> {
-    private WorkoutPlanStub(
+  public static final class WorkoutPlanServiceStub extends io.grpc.stub.AbstractAsyncStub<WorkoutPlanServiceStub> {
+    private WorkoutPlanServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected WorkoutPlanStub build(
+    protected WorkoutPlanServiceStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new WorkoutPlanStub(channel, callOptions);
+      return new WorkoutPlanServiceStub(channel, callOptions);
     }
 
     /**
@@ -138,16 +138,16 @@ public final class WorkoutPlanGrpc {
 
   /**
    */
-  public static final class WorkoutPlanBlockingStub extends io.grpc.stub.AbstractBlockingStub<WorkoutPlanBlockingStub> {
-    private WorkoutPlanBlockingStub(
+  public static final class WorkoutPlanServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<WorkoutPlanServiceBlockingStub> {
+    private WorkoutPlanServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected WorkoutPlanBlockingStub build(
+    protected WorkoutPlanServiceBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new WorkoutPlanBlockingStub(channel, callOptions);
+      return new WorkoutPlanServiceBlockingStub(channel, callOptions);
     }
 
     /**
@@ -160,16 +160,16 @@ public final class WorkoutPlanGrpc {
 
   /**
    */
-  public static final class WorkoutPlanFutureStub extends io.grpc.stub.AbstractFutureStub<WorkoutPlanFutureStub> {
-    private WorkoutPlanFutureStub(
+  public static final class WorkoutPlanServiceFutureStub extends io.grpc.stub.AbstractFutureStub<WorkoutPlanServiceFutureStub> {
+    private WorkoutPlanServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected WorkoutPlanFutureStub build(
+    protected WorkoutPlanServiceFutureStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new WorkoutPlanFutureStub(channel, callOptions);
+      return new WorkoutPlanServiceFutureStub(channel, callOptions);
     }
 
     /**
@@ -188,10 +188,10 @@ public final class WorkoutPlanGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final WorkoutPlanImplBase serviceImpl;
+    private final WorkoutPlanServiceImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(WorkoutPlanImplBase serviceImpl, int methodId) {
+    MethodHandlers(WorkoutPlanServiceImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -220,32 +220,32 @@ public final class WorkoutPlanGrpc {
     }
   }
 
-  private static abstract class WorkoutPlanBaseDescriptorSupplier
+  private static abstract class WorkoutPlanServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    WorkoutPlanBaseDescriptorSupplier() {}
+    WorkoutPlanServiceBaseDescriptorSupplier() {}
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return resep3.javat3.protobuf.WorkoutPlanOuterClass.getDescriptor();
+      return resep3.javat3.protobuf.WorkoutPlan.getDescriptor();
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("WorkoutPlan");
+      return getFileDescriptor().findServiceByName("WorkoutPlanService");
     }
   }
 
-  private static final class WorkoutPlanFileDescriptorSupplier
-      extends WorkoutPlanBaseDescriptorSupplier {
-    WorkoutPlanFileDescriptorSupplier() {}
+  private static final class WorkoutPlanServiceFileDescriptorSupplier
+      extends WorkoutPlanServiceBaseDescriptorSupplier {
+    WorkoutPlanServiceFileDescriptorSupplier() {}
   }
 
-  private static final class WorkoutPlanMethodDescriptorSupplier
-      extends WorkoutPlanBaseDescriptorSupplier
+  private static final class WorkoutPlanServiceMethodDescriptorSupplier
+      extends WorkoutPlanServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
     private final String methodName;
 
-    WorkoutPlanMethodDescriptorSupplier(String methodName) {
+    WorkoutPlanServiceMethodDescriptorSupplier(String methodName) {
       this.methodName = methodName;
     }
 
@@ -260,11 +260,11 @@ public final class WorkoutPlanGrpc {
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
     io.grpc.ServiceDescriptor result = serviceDescriptor;
     if (result == null) {
-      synchronized (WorkoutPlanGrpc.class) {
+      synchronized (WorkoutPlanServiceGrpc.class) {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new WorkoutPlanFileDescriptorSupplier())
+              .setSchemaDescriptor(new WorkoutPlanServiceFileDescriptorSupplier())
               .addMethod(getCreateWorkoutPlanMethod())
               .build();
         }

@@ -3,8 +3,8 @@
 
 package resep3.javat3.protobuf;
 
-public final class WorkoutPlanOuterClass {
-  private WorkoutPlanOuterClass() {}
+public final class WorkoutPlan {
+  private WorkoutPlan() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
@@ -36,10 +36,10 @@ public final class WorkoutPlanOuterClass {
       "\n\021WorkoutPlan.proto\"T\n\022WorkoutPlanReques" +
       "t\022\016\n\006wpName\030\001 \001(\t\022\020\n\010timeGoal\030\002 \001(\005\022\014\n\004t" +
       "ype\030\003 \001(\t\022\016\n\006userID\030\004 \001(\005\"#\n\023WorkoutPlan" +
-      "Response\022\014\n\004wpid\030\001 \001(\0032M\n\013WorkoutPlan\022>\n" +
-      "\021createWorkoutPlan\022\023.WorkoutPlanRequest\032" +
-      "\024.WorkoutPlanResponseB\032\n\026resep3.javat3.p" +
-      "rotobufP\001b\006proto3"
+      "Response\022\014\n\004wpid\030\001 \001(\0032T\n\022WorkoutPlanSer" +
+      "vice\022>\n\021createWorkoutPlan\022\023.WorkoutPlanR" +
+      "equest\032\024.WorkoutPlanResponseB\032\n\026resep3.j" +
+      "avat3.protobufP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

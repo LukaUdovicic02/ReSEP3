@@ -3,7 +3,7 @@ syntax = "proto3";
 option java_package = "resep3.javat3.protobuf";
 option java_multiple_files = true;
 
-service WorkoutPlan {
+service WorkoutPlanService {
   rpc createWorkoutPlan(WorkoutPlanRequest) returns (WorkoutPlanResponse);
 }
 
