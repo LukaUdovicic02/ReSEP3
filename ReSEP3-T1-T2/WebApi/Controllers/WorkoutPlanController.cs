@@ -48,8 +48,22 @@ namespace WebApi.Controllers
                 Console.WriteLine(e);
                 return StatusCode(500, e.Message);
             }
-            
-            
+        }
+
+
+        [HttpDelete]
+        public async Task<ActionResult<WorkoutPlan>> DeleteWorkoutPlan([FromRoute] int id)
+        {
+            try
+            {
+                await _workoutPlanLogic.DeleteWorkoutPlan(id);
+                return Ok(id);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode(500, e.Message);
+            }
         }
         
        

@@ -32,12 +32,12 @@ namespace Domain.gRPClient
             using var channel = GrpcChannel.ForAddress("http://localhost:6565");
             var client = new WorkoutPlanService.WorkoutPlanServiceClient(channel);
             Console.WriteLine("connection established");
-            
+
             var reply = await client.getWorkoutPlanAsync(new GetWorkoutPlanRequest()
             );
 
             IList<WorkoutPlan> workoutPlans = new List<WorkoutPlan>();
-            
+
             foreach (var data in reply.Data)
             {
                 var workoutPlan = new WorkoutPlan
@@ -56,6 +56,20 @@ namespace Domain.gRPClient
 
 
             return workoutPlans;
+        }
+
+        public async Task DeleteWorkoutPlan(int id)
+        {
+            using var channel = GrpcChannel.ForAddress("http://localhost:6565");
+            var client = new WorkoutPlanService.WorkoutPlanServiceClient(channel);
+            Console.WriteLine("connection established");
+
+            var reply = await client.deleteWorkoutPlanAsync(new DeleteWorkoutPlanRequest
+            {
+                Wpid = id,
+            });
+
+            Console.WriteLine("Successfully deleted workout plan ");
         }
     }
 }

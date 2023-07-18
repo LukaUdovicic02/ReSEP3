@@ -9,6 +9,7 @@ namespace Domain.gRPClient.RepoInterfaces
     {
         Task CreateWorkout(WorkoutPlan workoutPlan);
         Task<IEnumerable<WorkoutPlan>> GetAllWorkoutPlans();
+        Task DeleteWorkoutPlan(int id);
 
     }
 }
