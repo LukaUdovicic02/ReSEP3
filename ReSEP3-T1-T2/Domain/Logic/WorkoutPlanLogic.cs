@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Domain.gRPClient.RepoInterfaces;
 using Domain.Logic.LogicInterfaces;
 using Model;
@@ -8,7 +9,6 @@ namespace Domain.Logic
 {
     public class WorkoutPlanLogic : IWorkoutPlanLogic
     {
-
         private readonly IRepoWorkoutPlan _workoutPlan;
 
         public WorkoutPlanLogic(IRepoWorkoutPlan plan)
@@ -19,9 +19,12 @@ namespace Domain.Logic
 
         public async Task CreateWorkout(WorkoutPlan workoutPlanLogicToBeCreated)
         {
-             await _workoutPlan.CreateWorkout(workoutPlanLogicToBeCreated);
-             
-             // should we have kind of unique workout
+            await _workoutPlan.CreateWorkout(workoutPlanLogicToBeCreated);
+        }
+
+        public async Task<IEnumerable<WorkoutPlan>> GetAllWorkoutPlans()
+        {
+            return await _workoutPlan.GetAllWorkoutPlans();
         }
     }
 }

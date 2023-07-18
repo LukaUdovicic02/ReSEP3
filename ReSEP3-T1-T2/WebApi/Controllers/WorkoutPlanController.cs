@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Domain.Logic.LogicInterfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -7,7 +8,7 @@ using Model;
 namespace WebApi.Controllers
 {
     [ApiController]
-    [Route("workoutplan")]
+    [Route("WorkoutPlan")]
     public class WorkoutPlanController : ControllerBase
     {
         private readonly IWorkoutPlanLogic _workoutPlanLogic;
@@ -33,5 +34,24 @@ namespace WebApi.Controllers
                 
             }
         }
+
+        [HttpGet]
+        public async Task<ActionResult<WorkoutPlan>> GetWorkoutPlans()
+        {
+            try
+            {
+                IEnumerable<WorkoutPlan> workoutPlans = _workoutPlanLogic.GetAllWorkoutPlans().Result;
+                return Ok(workoutPlans);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode(500, e.Message);
+            }
+            
+            
+        }
+        
+       
     }
 }

@@ -10,6 +10,7 @@ namespace WebApi.Controllers
     [Route("controller")]
     public class LoginController : ControllerBase
     {
+        
         private readonly IUserLogic userLogic;
 
         public LoginController([FromServices] IUserLogic userLogic)
