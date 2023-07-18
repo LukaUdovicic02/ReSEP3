@@ -3,8 +3,12 @@ package resep3.javat3.service;
 import io.grpc.stub.StreamObserver;
 import org.lognet.springboot.grpc.GRpcService;
 import resep3.javat3.Repo.Impl.WorkoutRepo;
+import resep3.javat3.model.User;
 import resep3.javat3.model.WorkoutPlan;
 import resep3.javat3.protobuf.WorkoutPlanServiceGrpc;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
 
 
 @GRpcService
@@ -40,5 +44,36 @@ public class WorkoutPlanServiceImpl extends WorkoutPlanServiceGrpc.WorkoutPlanSe
 
     }
 
+
+    @Override
+    public void getWorkoutPlan(resep3.javat3.protobuf.GetWorkoutPlanRequest request , StreamObserver<resep3.javat3.protobuf.GetWorkoutPlanResponse> responseStreamObserver) {
+
+        try {
+            ArrayList<WorkoutPlan> workoutPlans = workoutRepo.getWorkoutPlans();
+
+            resep3.javat3.protobuf.GetWorkoutPlanResponse.Builder responseBuilder = resep3.javat3.protobuf.GetWorkoutPlanResponse.newBuilder();
+            for (WorkoutPlan workoutPlan : workoutPlans)
+            {
+                resep3.javat3.protobuf.WPData data = resep3.javat3.protobuf.WPData.newBuilder()
+                        .setWpid(workoutPlan.getWpID())
+                        .setWpname(workoutPlan.getWpName())
+                        .setTimegoal(workoutPlan.getTimeGoal())
+                        .setType(workoutPlan.getType())
+                        .setUserid(workoutPlan.getUserID())
+                        .build();
+                responseBuilder.addData(data);
+            }
+
+            resep3.javat3.protobuf.GetWorkoutPlanResponse response = responseBuilder.build();
+            responseStreamObserver.onNext(response);
+            responseStreamObserver.onCompleted();
+
+        } catch
+        (Exception e) {
+            e.printStackTrace();
+
+            System.out.println("System could not fetch workout plans");
+        }
+    }
 
 }

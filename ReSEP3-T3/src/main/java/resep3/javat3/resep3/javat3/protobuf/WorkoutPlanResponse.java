@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
             break;
           case 8: {
 
-            wpid_ = input.readInt64();
+            wpid_ = input.readInt32();
             break;
           }
           default: {
@@ -88,13 +88,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WPID_FIELD_NUMBER = 1;
-  private long wpid_;
+  private int wpid_;
   /**
-   * <code>int64 wpid = 1;</code>
+   * <code>int32 wpid = 1;</code>
    * @return The wpid.
    */
   @java.lang.Override
-  public long getWpid() {
+  public int getWpid() {
     return wpid_;
   }
 
@@ -112,8 +112,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (wpid_ != 0L) {
-      output.writeInt64(1, wpid_);
+    if (wpid_ != 0) {
+      output.writeInt32(1, wpid_);
     }
     unknownFields.writeTo(output);
   }
@@ -124,9 +124,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (wpid_ != 0L) {
+    if (wpid_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, wpid_);
+        .computeInt32Size(1, wpid_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -157,8 +157,7 @@ private static final long serialVersionUID = 0L;
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + WPID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getWpid());
+    hash = (53 * hash) + getWpid();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -292,7 +291,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      wpid_ = 0L;
+      wpid_ = 0;
 
       return this;
     }
@@ -369,7 +368,7 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(resep3.javat3.protobuf.WorkoutPlanResponse other) {
       if (other == resep3.javat3.protobuf.WorkoutPlanResponse.getDefaultInstance()) return this;
-      if (other.getWpid() != 0L) {
+      if (other.getWpid() != 0) {
         setWpid(other.getWpid());
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -401,33 +400,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private long wpid_ ;
+    private int wpid_ ;
     /**
-     * <code>int64 wpid = 1;</code>
+     * <code>int32 wpid = 1;</code>
      * @return The wpid.
      */
     @java.lang.Override
-    public long getWpid() {
+    public int getWpid() {
       return wpid_;
     }
     /**
-     * <code>int64 wpid = 1;</code>
+     * <code>int32 wpid = 1;</code>
      * @param value The wpid to set.
      * @return This builder for chaining.
      */
-    public Builder setWpid(long value) {
+    public Builder setWpid(int value) {
       
       wpid_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>int64 wpid = 1;</code>
+     * <code>int32 wpid = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearWpid() {
       
-      wpid_ = 0L;
+      wpid_ = 0;
       onChanged();
       return this;
     }

@@ -45,6 +45,37 @@ public final class WorkoutPlanServiceGrpc {
     return getCreateWorkoutPlanMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<resep3.javat3.protobuf.GetWorkoutPlanRequest,
+      resep3.javat3.protobuf.GetWorkoutPlanResponse> getGetWorkoutPlanMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getWorkoutPlan",
+      requestType = resep3.javat3.protobuf.GetWorkoutPlanRequest.class,
+      responseType = resep3.javat3.protobuf.GetWorkoutPlanResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<resep3.javat3.protobuf.GetWorkoutPlanRequest,
+      resep3.javat3.protobuf.GetWorkoutPlanResponse> getGetWorkoutPlanMethod() {
+    io.grpc.MethodDescriptor<resep3.javat3.protobuf.GetWorkoutPlanRequest, resep3.javat3.protobuf.GetWorkoutPlanResponse> getGetWorkoutPlanMethod;
+    if ((getGetWorkoutPlanMethod = WorkoutPlanServiceGrpc.getGetWorkoutPlanMethod) == null) {
+      synchronized (WorkoutPlanServiceGrpc.class) {
+        if ((getGetWorkoutPlanMethod = WorkoutPlanServiceGrpc.getGetWorkoutPlanMethod) == null) {
+          WorkoutPlanServiceGrpc.getGetWorkoutPlanMethod = getGetWorkoutPlanMethod =
+              io.grpc.MethodDescriptor.<resep3.javat3.protobuf.GetWorkoutPlanRequest, resep3.javat3.protobuf.GetWorkoutPlanResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getWorkoutPlan"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  resep3.javat3.protobuf.GetWorkoutPlanRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  resep3.javat3.protobuf.GetWorkoutPlanResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WorkoutPlanServiceMethodDescriptorSupplier("getWorkoutPlan"))
+              .build();
+        }
+      }
+    }
+    return getGetWorkoutPlanMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -100,6 +131,13 @@ public final class WorkoutPlanServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateWorkoutPlanMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void getWorkoutPlan(resep3.javat3.protobuf.GetWorkoutPlanRequest request,
+        io.grpc.stub.StreamObserver<resep3.javat3.protobuf.GetWorkoutPlanResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetWorkoutPlanMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -109,6 +147,13 @@ public final class WorkoutPlanServiceGrpc {
                 resep3.javat3.protobuf.WorkoutPlanRequest,
                 resep3.javat3.protobuf.WorkoutPlanResponse>(
                   this, METHODID_CREATE_WORKOUT_PLAN)))
+          .addMethod(
+            getGetWorkoutPlanMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                resep3.javat3.protobuf.GetWorkoutPlanRequest,
+                resep3.javat3.protobuf.GetWorkoutPlanResponse>(
+                  this, METHODID_GET_WORKOUT_PLAN)))
           .build();
     }
   }
@@ -134,6 +179,14 @@ public final class WorkoutPlanServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateWorkoutPlanMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getWorkoutPlan(resep3.javat3.protobuf.GetWorkoutPlanRequest request,
+        io.grpc.stub.StreamObserver<resep3.javat3.protobuf.GetWorkoutPlanResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetWorkoutPlanMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -155,6 +208,13 @@ public final class WorkoutPlanServiceGrpc {
     public resep3.javat3.protobuf.WorkoutPlanResponse createWorkoutPlan(resep3.javat3.protobuf.WorkoutPlanRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateWorkoutPlanMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public resep3.javat3.protobuf.GetWorkoutPlanResponse getWorkoutPlan(resep3.javat3.protobuf.GetWorkoutPlanRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetWorkoutPlanMethod(), getCallOptions(), request);
     }
   }
 
@@ -179,9 +239,18 @@ public final class WorkoutPlanServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateWorkoutPlanMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<resep3.javat3.protobuf.GetWorkoutPlanResponse> getWorkoutPlan(
+        resep3.javat3.protobuf.GetWorkoutPlanRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetWorkoutPlanMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_WORKOUT_PLAN = 0;
+  private static final int METHODID_GET_WORKOUT_PLAN = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -203,6 +272,10 @@ public final class WorkoutPlanServiceGrpc {
         case METHODID_CREATE_WORKOUT_PLAN:
           serviceImpl.createWorkoutPlan((resep3.javat3.protobuf.WorkoutPlanRequest) request,
               (io.grpc.stub.StreamObserver<resep3.javat3.protobuf.WorkoutPlanResponse>) responseObserver);
+          break;
+        case METHODID_GET_WORKOUT_PLAN:
+          serviceImpl.getWorkoutPlan((resep3.javat3.protobuf.GetWorkoutPlanRequest) request,
+              (io.grpc.stub.StreamObserver<resep3.javat3.protobuf.GetWorkoutPlanResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -266,6 +339,7 @@ public final class WorkoutPlanServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new WorkoutPlanServiceFileDescriptorSupplier())
               .addMethod(getCreateWorkoutPlanMethod())
+              .addMethod(getGetWorkoutPlanMethod())
               .build();
         }
       }

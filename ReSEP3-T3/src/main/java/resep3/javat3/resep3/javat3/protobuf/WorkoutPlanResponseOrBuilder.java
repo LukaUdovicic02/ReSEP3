@@ -8,8 +8,8 @@ public interface WorkoutPlanResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 wpid = 1;</code>
+   * <code>int32 wpid = 1;</code>
    * @return The wpid.
    */
-  long getWpid();
+  int getWpid();
 }
