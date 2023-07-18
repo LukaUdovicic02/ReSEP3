@@ -1,0 +1,8 @@
+C:\Users\canar\RiderProjects\ReSEP3\ReSEP3-T1-T2\BlazorT1\obj\Debug\net7.0\BlazorT1.csproj.AssemblyReference.cache
+C:\Users\canar\RiderProjects\ReSEP3\ReSEP3-T1-T2\BlazorT1\obj\Debug\net7.0\BlazorT1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\canar\RiderProjects\ReSEP3\ReSEP3-T1-T2\BlazorT1\obj\Debug\net7.0\BlazorT1.AssemblyInfoInputs.cache
+C:\Users\canar\RiderProjects\ReSEP3\ReSEP3-T1-T2\BlazorT1\obj\Debug\net7.0\BlazorT1.AssemblyInfo.cs
+C:\Users\canar\RiderProjects\ReSEP3\ReSEP3-T1-T2\BlazorT1\obj\Debug\net7.0\BlazorT1.csproj.CoreCompileInputs.cache
+C:\Users\canar\RiderProjects\ReSEP3\ReSEP3-T1-T2\BlazorT1\obj\Debug\net7.0\BlazorT1.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\canar\RiderProjects\ReSEP3\ReSEP3-T1-T2\BlazorT1\obj\Debug\net7.0\BlazorT1.RazorAssemblyInfo.cache
+C:\Users\canar\RiderProjects\ReSEP3\ReSEP3-T1-T2\BlazorT1\obj\Debug\net7.0\BlazorT1.RazorAssemblyInfo.cs

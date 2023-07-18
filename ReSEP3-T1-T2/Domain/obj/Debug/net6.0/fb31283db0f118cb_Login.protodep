@@ -1,0 +1,2 @@
+obj\Debug\net6.0\gRPClient\proto/Login.cs \
+obj\Debug\net6.0\gRPClient\proto/LoginGrpc.cs: gRPClient/proto/Login.proto

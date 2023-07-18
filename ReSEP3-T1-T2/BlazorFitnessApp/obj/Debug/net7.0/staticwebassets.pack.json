@@ -1,0 +1,77 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\canar\\RiderProjects\\ReSEP3\\ReSEP3-T1-T2\\BlazorFitnessApp\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\BlazorFitnessApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\BlazorFitnessApp.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\canar\\RiderProjects\\ReSEP3\\ReSEP3-T1-T2\\BlazorFitnessApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\canar\\RiderProjects\\ReSEP3\\ReSEP3-T1-T2\\BlazorFitnessApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\canar\\RiderProjects\\ReSEP3\\ReSEP3-T1-T2\\BlazorFitnessApp\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\Users\\canar\\RiderProjects\\ReSEP3\\ReSEP3-T1-T2\\BlazorFitnessApp\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\Users\\canar\\RiderProjects\\ReSEP3\\ReSEP3-T1-T2\\BlazorFitnessApp\\wwwroot\\css\\open-iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\canar\\RiderProjects\\ReSEP3\\ReSEP3-T1-T2\\BlazorFitnessApp\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\canar\\RiderProjects\\ReSEP3\\ReSEP3-T1-T2\\BlazorFitnessApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "C:\\Users\\canar\\RiderProjects\\ReSEP3\\ReSEP3-T1-T2\\BlazorFitnessApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "C:\\Users\\canar\\RiderProjects\\ReSEP3\\ReSEP3-T1-T2\\BlazorFitnessApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "C:\\Users\\canar\\RiderProjects\\ReSEP3\\ReSEP3-T1-T2\\BlazorFitnessApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\canar\\RiderProjects\\ReSEP3\\ReSEP3-T1-T2\\BlazorFitnessApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "C:\\Users\\canar\\RiderProjects\\ReSEP3\\ReSEP3-T1-T2\\BlazorFitnessApp\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\canar\\RiderProjects\\ReSEP3\\ReSEP3-T1-T2\\BlazorFitnessApp\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.BlazorFitnessApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.BlazorFitnessApp.props",
+      "PackagePath": "build\\BlazorFitnessApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.BlazorFitnessApp.props",
+      "PackagePath": "buildMultiTargeting\\BlazorFitnessApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.BlazorFitnessApp.props",
+      "PackagePath": "buildTransitive\\BlazorFitnessApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

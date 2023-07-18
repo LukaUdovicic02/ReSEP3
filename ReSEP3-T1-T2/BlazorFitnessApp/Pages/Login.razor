@@ -1,0 +1,59 @@
+﻿@page "/login"
+@using System.ComponentModel.DataAnnotations
+@using BlazorApp1.Data
+@inject HttpClient HttpClient
+@inject Microsoft.AspNetCore.Components.NavigationManager NavigationManager
+
+
+<h3>Login</h3>
+
+<div>
+    <label for="username">Username:</label>
+    <InputText id="username" @bind="username" />
+    <ValidationMessage For="() => username" />
+
+    <label for="password">Password:</label>
+    <InputText id="password" type="password" @bind="password" />
+    <ValidationMessage For="() => password" />
+
+    <button @onclick="LogIn">Login</button>
+</div>
+
+@code {
+    private string username;
+    private string password;
+
+    private async Task LogIn()
+    {
+    // ths paragraph will perform client-side validation 
+        var validationContext = new ValidationContext(this);
+        var validationResults = new List<ValidationResult>();
+        var isValid = Validator.TryValidateObject(this, validationContext, validationResults, true);
+
+        if (isValid)
+        {
+    // Create a request object with the user's login credentials
+            var request = new User()
+            {
+                Username = username,
+                Password = password
+            };
+
+    // Make an API call to check the user's credentials
+            var response = await HttpClient.PostAsJsonAsync("/api/auth/login", request);
+
+            if (response.IsSuccessStatusCode)
+            {
+    // If login will be successful it will redirect the user to the home page or our main page with workouts and tasks
+                NavigationManager.NavigateTo("/Home");
+            }
+            else
+            {
+    // If login fails then display an error message
+    
+                var errorMessage = await response.Content.ReadAsStringAsync();
+    // Handle and display the error message
+            }
+        }
+    }
+}

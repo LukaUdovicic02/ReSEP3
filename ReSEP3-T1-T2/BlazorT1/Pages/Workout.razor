@@ -1,0 +1,65 @@
+﻿@page "/workouts"
+
+@using BlazorT1.Data
+@using BlazorT1.Services
+@inject IWorkout _Workout
+
+<h3>Workout Page</h3>
+
+@if (workouts != null)
+{                                
+    <h4>Existing Workouts</h4>
+    <ul>
+        @foreach (var workout in workouts)
+        {
+            <li>
+                <strong>@workout.Name</strong> - @workout.Description
+                <button @onclick="() => EditWorkout(workout)">Edit</button>
+                <button @onclick="() => DeleteWorkout(workout)">Delete</button>
+            </li>
+        }
+    </ul>
+}
+
+<h4>Create New Workout</h4>
+<div>
+    <label for="workoutName">Name:</label>
+    <input type="text" id="workoutName" @bind="newWorkout.Name" />
+</div>
+<div>
+    <label for="workoutDescription">Description:</label>
+    <input type="text" id="workoutDescription" @bind="newWorkout.Description" />
+</div>
+<button @onclick="CreateWorkout">Create</button>
+@code {
+    List<Data.Workout> workouts;
+    Workout newWorkout = new Workout();
+    Workout editedWorkout;
+
+    protected override async Task OnInitializedAsync()
+    {
+        workouts = await _Workout.GetWorkouts();
+    }
+
+    private async Task CreateWorkout()
+    {
+        await _Workout.CreateWorkout(newWorkout);
+
+        newWorkout = new Workout();
+        workouts = await _Workout.GetWorkouts();
+    }
+
+    private async Task DeleteWorkout(Workout workout)
+    {
+        await _Workout.DeleteWorkout(workout.Name);
+
+        workouts = await _Workout.GetWorkouts();
+    }
+
+    private Task EditWorkout(Data.Workout workout)
+    {
+        // in the future we have to implement this part as well
+        throw new NotImplementedException();
+    }
+
+}
