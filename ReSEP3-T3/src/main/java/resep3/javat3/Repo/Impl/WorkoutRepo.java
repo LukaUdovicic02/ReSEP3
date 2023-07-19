@@ -80,8 +80,30 @@ public class WorkoutRepo implements IWorkoutRepo {
             System.out.println("Failed to fetch WorkoutPlans.");
             e.printStackTrace();
         }
-
+        initializer.disconnect();
         return workoutPlans;
+
+    }
+
+    public void deleteWorkoutPlan(int id) {
+        try {
+            initializer.connect();
+            Connection connection = initializer.getConnection();
+            PreparedStatement statement = connection.prepareStatement("DELETE FROM WorkoutPlan WHERE WPID = ?");
+            statement.setInt(1, id);
+            int rowsDeleted = statement.executeUpdate();
+
+            if (rowsDeleted > 0) {
+                System.out.println("Workout plan with WPID " + id + " deleted.");
+            } else {
+                System.out.println("No workout plan found with WPID " + id);
+            }
+        } catch (SQLException e) {
+            System.out.println("Failed to delete WorkoutPlan.");
+            e.printStackTrace();
+        } finally {
+            initializer.disconnect();
+        }
     }
 
 

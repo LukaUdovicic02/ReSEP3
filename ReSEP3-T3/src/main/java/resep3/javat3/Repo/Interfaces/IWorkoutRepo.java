@@ -8,4 +8,5 @@ public interface IWorkoutRepo
 {
     void createWorkoutPlan(WorkoutPlan workoutPlan);
     ArrayList<WorkoutPlan> getWorkoutPlans();
+    void deleteWorkoutPlan(int id);
 }

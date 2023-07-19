@@ -39,6 +39,16 @@ public final class WorkoutPlan {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_WPData_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_DeleteWorkoutPlanRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_DeleteWorkoutPlanRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_empty_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_empty_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -57,12 +67,15 @@ public final class WorkoutPlan {
       "\007_useridB\t\n\007_WPName\"/\n\026GetWorkoutPlanRes" +
       "ponse\022\025\n\004data\030\001 \003(\0132\007.WPData\"V\n\006WPData\022\014" +
       "\n\004wpid\030\001 \001(\005\022\016\n\006wpname\030\002 \001(\t\022\020\n\010timegoal" +
-      "\030\003 \001(\005\022\014\n\004type\030\004 \001(\t\022\016\n\006userid\030\005 \001(\0052\227\001\n" +
-      "\022WorkoutPlanService\022>\n\021createWorkoutPlan" +
-      "\022\023.WorkoutPlanRequest\032\024.WorkoutPlanRespo" +
-      "nse\022A\n\016getWorkoutPlan\022\026.GetWorkoutPlanRe" +
-      "quest\032\027.GetWorkoutPlanResponseB\032\n\026resep3" +
-      ".javat3.protobufP\001b\006proto3"
+      "\030\003 \001(\005\022\014\n\004type\030\004 \001(\t\022\016\n\006userid\030\005 \001(\005\"(\n\030" +
+      "DeleteWorkoutPlanRequest\022\014\n\004wpid\030\001 \001(\005\"\007" +
+      "\n\005empty2\317\001\n\022WorkoutPlanService\022>\n\021create" +
+      "WorkoutPlan\022\023.WorkoutPlanRequest\032\024.Worko" +
+      "utPlanResponse\022A\n\016getWorkoutPlan\022\026.GetWo" +
+      "rkoutPlanRequest\032\027.GetWorkoutPlanRespons" +
+      "e\0226\n\021deleteWorkoutPlan\022\031.DeleteWorkoutPl" +
+      "anRequest\032\006.emptyB\032\n\026resep3.javat3.proto" +
+      "bufP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -98,6 +111,18 @@ public final class WorkoutPlan {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_WPData_descriptor,
         new java.lang.String[] { "Wpid", "Wpname", "Timegoal", "Type", "Userid", });
+    internal_static_DeleteWorkoutPlanRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_DeleteWorkoutPlanRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_DeleteWorkoutPlanRequest_descriptor,
+        new java.lang.String[] { "Wpid", });
+    internal_static_empty_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_empty_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_empty_descriptor,
+        new java.lang.String[] { });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

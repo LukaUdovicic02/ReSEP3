@@ -39,7 +39,6 @@ public class UserRepo implements IUserRepo {
             System.out.println("We can't find given user in database");
         }
 
-        // Disconnect from the database
         initializer.disconnect();
 
         return user;
