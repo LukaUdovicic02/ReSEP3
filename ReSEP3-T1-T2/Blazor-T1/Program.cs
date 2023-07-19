@@ -1,5 +1,6 @@
 using System;
 using System.Net.Http;
+using Blazor;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Blazor_T1;
@@ -10,5 +11,5 @@ builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddScoped(sp => new HttpClient {BaseAddress = new Uri(builder.HostEnvironment.BaseAddress)});
-
-await builder.Build().RunAsync();
+builder.Services.AddScoped<ILoginService, LoginHttpClient>();
+    await builder.Build().RunAsync();

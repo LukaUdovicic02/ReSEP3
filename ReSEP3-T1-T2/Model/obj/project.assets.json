@@ -8,26 +8,24 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\lukau\\.nuget\\packages\\": {}
+    "C:\\Users\\Dragos\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lukau\\Desktop\\ReSEP3\\ReSEP3-T1-T2\\Model\\Model.csproj",
+      "projectUniqueName": "C:\\Users\\Dragos\\Documents\\GitHub\\ReSEP3\\ReSEP3-T1-T2\\Model\\Model.csproj",
       "projectName": "Model",
-      "projectPath": "C:\\Users\\lukau\\Desktop\\ReSEP3\\ReSEP3-T1-T2\\Model\\Model.csproj",
-      "packagesPath": "C:\\Users\\lukau\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lukau\\Desktop\\ReSEP3\\ReSEP3-T1-T2\\Model\\obj\\",
+      "projectPath": "C:\\Users\\Dragos\\Documents\\GitHub\\ReSEP3\\ReSEP3-T1-T2\\Model\\Model.csproj",
+      "packagesPath": "C:\\Users\\Dragos\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dragos\\Documents\\GitHub\\ReSEP3\\ReSEP3-T1-T2\\Model\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\lukau\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Dragos\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -56,12 +54,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.16, 6.0.16]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.16, 6.0.16]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.16, 6.0.16]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

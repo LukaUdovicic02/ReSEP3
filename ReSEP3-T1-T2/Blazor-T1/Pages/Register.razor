@@ -1,0 +1,46 @@
+﻿@page "/register"
+
+<EditForm Model="@registerModel" OnValidSubmit="HandleRegister">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <h3 class="mb-4">Register</h3>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <InputText id="username" @bind-Value="@registerModel.Username" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <InputText id="email" @bind-Value="@registerModel.Email" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <InputText id="password" @bind-Value="@registerModel.Password" class="form-control" type="password" />
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Register</button>
+                    <a href="/login" class="btn btn-secondary">Back to Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</EditForm>
+
+@code {
+    private RegisterModel registerModel = new RegisterModel();
+
+    private void HandleRegister()
+    {
+    // Handle registration logic here
+    }
+
+    private class RegisterModel
+    {
+        public string Username { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+    }
+}
