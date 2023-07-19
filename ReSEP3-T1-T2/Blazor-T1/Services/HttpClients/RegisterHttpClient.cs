@@ -1,10 +1,12 @@
-﻿using System.Net.Http.Headers;
+﻿using System;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
+using System.Threading.Tasks;
 using Model;
 
-namespace Blazor;
 
 public class RegisterHttpClient : IRegisterService
 {
@@ -14,7 +16,7 @@ public class RegisterHttpClient : IRegisterService
     {
         this.httpClient = httpClient;
     }
-    public async Task<bool> Register(User user)
+    public async Task Register(User user)
     {
         HttpClientHandler clientHandler = new HttpClientHandler();
         clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
@@ -37,6 +39,6 @@ public class RegisterHttpClient : IRegisterService
         if(!response.IsSuccessStatusCode)
             throw new Exception(@"Error: {responseMessage.StatusCode}, {responseMessage.ReasonPhrase}");
 
-        return true;
+
     }
 }

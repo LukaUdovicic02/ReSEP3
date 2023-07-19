@@ -1,8 +1,8 @@
-﻿using Model;
+﻿using System.Threading.Tasks;
+using Model;
 
-namespace Blazor;
 
 public interface IRegisterService
 {
-    Task<bool> Register(User user);
+    Task Register(User user);
 }

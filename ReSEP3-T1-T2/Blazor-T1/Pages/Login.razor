@@ -1,5 +1,4 @@
 ﻿@page "/login"
-@using Blazor
 @using Model
 @inject NavigationManager NavigationManager
 @inject ILoginService LoginService
@@ -37,14 +36,16 @@
 
     protected override void OnInitialized()
     {
-        var user = new User(); // Assuming you have a User model or class
+        var user = new User(); 
         editContext = new EditContext(user);
     }
 
-    private Task HandleLogin()
+    private async Task HandleLogin()
     {
-        LoginService.Login(username, password);
-        return Task.CompletedTask;
+        User user = await LoginService.Login(username, password);
+        Console.WriteLine("sent a request");
+        NavigationManager.NavigateTo("/WorkoutPlan");
+       
     }
 
     private void HandleRegisterClick()

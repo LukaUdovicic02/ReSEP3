@@ -1,6 +1,6 @@
-﻿using Model;
+﻿using System.Threading.Tasks;
+using Model;
 
-namespace Blazor;
 
 public interface ILoginService
 {
