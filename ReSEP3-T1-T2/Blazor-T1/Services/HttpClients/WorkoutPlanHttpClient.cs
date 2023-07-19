@@ -29,9 +29,7 @@ public class WorkoutPlanHttpClient : IWorkoutPlanService
         List<WorkoutPlan> result = JsonSerializer.Deserialize<List<WorkoutPlan>>(message);
         
         return result;
-
-
-
+        
     }
 
     public async Task<WorkoutPlan> GetWorkoutPlanById(int id)
@@ -59,12 +57,13 @@ public class WorkoutPlanHttpClient : IWorkoutPlanService
         return response.IsSuccessStatusCode;
     }
 
-    public async Task<bool> DeleteWorkoutPlan(int id)
+    public async Task DeleteWorkoutPlan(int id)
     {
-        string apiUrl = $"/api/workoutplans/{id}"; // Replace with your actual API endpoint
-
-        var response = await httpClient.DeleteAsync(apiUrl);
-
-        return response.IsSuccessStatusCode;
+        HttpResponseMessage response = await httpClient.DeleteAsync($"http://localhost:5052/WorkoutPlan/{id}");
+        if (!response.IsSuccessStatusCode)
+        {
+            throw new Exception("could not delete the workout plan");
+        }
     }
+
 }

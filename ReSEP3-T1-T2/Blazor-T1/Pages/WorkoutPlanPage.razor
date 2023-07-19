@@ -9,8 +9,8 @@
     <p>
         <em> Loading... </em>
     </p>
-
 }
+
 else if (!workoutplanToShow.Any())
 {
     <p> No Workout Plans exist, please create one. </p>
@@ -23,6 +23,7 @@ else
             <th>Workout name</th>
             <th>TimeGoal</th>
             <th>Type</th>
+            <th>Remove</th>
         </tr>
         </thead>
 
@@ -33,6 +34,11 @@ else
                 <td>@workout.WPname</td>
                 <td>@workout.Timegoal</td>
                 <td>@workout.Type</td>
+                <td>
+                    <button @onclick="@(() => RemoveWorkoutPlan(workout.Wpid))">
+                        <i class="oi oi-trash" style="color:red"/>
+                    </button>
+                </td>
             </tr>
         }
         </tbody>
@@ -43,9 +49,20 @@ else
 @code {
 
     private List<WorkoutPlan> workoutplanToShow;
+    private List<WorkoutPlan> allWorkoutPlans;
 
     protected override async Task OnInitializedAsync()
     {
-        workoutplanToShow = await workoutPlanService.GetWorkoutPlans();
+        allWorkoutPlans = await workoutPlanService.GetWorkoutPlans();
+        workoutplanToShow = allWorkoutPlans;
     }
+
+
+    private async Task RemoveWorkoutPlan(int workoutWpid)
+    {
+        await workoutPlanService.DeleteWorkoutPlan(workoutWpid);
+        workoutplanToShow.Remove(workoutplanToShow.First(w => w.Wpid == workoutWpid));
+        Console.WriteLine("workout plan deleted");
+    }
+
 }

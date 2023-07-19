@@ -50,8 +50,8 @@ namespace WebApi.Controllers
             }
         }
 
-        [HttpDelete]
-        public async Task<ActionResult<WorkoutPlan>> DeleteWorkoutPlan([FromBody] int id)
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<WorkoutPlan>> DeleteWorkoutPlan(int id)
         {
             try
             {
