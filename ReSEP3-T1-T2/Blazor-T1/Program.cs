@@ -12,4 +12,5 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.Services.AddScoped(sp => new HttpClient {BaseAddress = new Uri(builder.HostEnvironment.BaseAddress)});
 builder.Services.AddScoped<ILoginService, LoginHttpClient>();
 builder.Services.AddScoped<IRegisterService, RegisterHttpClient>();
+builder.Services.AddScoped<IWorkoutPlanService, WorkoutPlanHttpClient>();
     await builder.Build().RunAsync();

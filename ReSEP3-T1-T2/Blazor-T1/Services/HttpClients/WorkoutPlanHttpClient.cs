@@ -1,8 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Json;
+using System.Text.Json;
 using System.Threading.Tasks;
-using Blazor_T1.Pages;
+using Model;
 
 public class WorkoutPlanHttpClient : IWorkoutPlanService
 {
@@ -15,9 +18,20 @@ public class WorkoutPlanHttpClient : IWorkoutPlanService
 
     public async Task<List<WorkoutPlan>> GetWorkoutPlans()
     {
-        string apiUrl = "/api/workoutplans"; // Replace with your actual API endpoint
 
-        return await httpClient.GetFromJsonAsync<List<WorkoutPlan>>(apiUrl);
+        HttpResponseMessage response = await httpClient.GetAsync($"http://localhost:5052/WorkoutPlan");
+        if (!response.IsSuccessStatusCode)
+        {
+            throw new Exception("could not get the workout plans");
+        }
+
+        string message = await response.Content.ReadAsStringAsync();
+        List<WorkoutPlan> result = JsonSerializer.Deserialize<List<WorkoutPlan>>(message);
+        
+        return result;
+
+
+
     }
 
     public async Task<WorkoutPlan> GetWorkoutPlanById(int id)

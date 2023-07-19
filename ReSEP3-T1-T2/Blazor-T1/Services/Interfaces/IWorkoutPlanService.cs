@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Blazor_T1.Pages;
+using Model;
 
 public interface IWorkoutPlanService
 {

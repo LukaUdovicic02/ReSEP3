@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af2df7a8-77c6-4bca-92e5-a43dd24bc9c2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Blazor-T1/Pages/WorkoutPlanPage.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Blazor-T1/Pages/Register.razor" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Blazor-T1/Pages/Register.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Blazor-T1/Pages/WorkoutPlan.razor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Blazor-T1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Blazor-T1/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Blazor-T1/Services/HttpClients/WorkoutPlanHttpClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Blazor-T1/Services/HttpClients/WorkoutPlanHttpClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Blazor-T1/Services/Interfaces/IWorkoutPlanService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Blazor-T1/Services/Interfaces/IWorkoutPlanService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkoutDB.db" beforeDir="false" afterPath="$PROJECT_DIR$/WorkoutDB.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +126,7 @@
       <workItem from="1689692010167" duration="75000" />
       <workItem from="1689718219826" duration="1140000" />
       <workItem from="1689758301592" duration="5600000" />
-      <workItem from="1689772240507" duration="5179000" />
+      <workItem from="1689772240507" duration="6313000" />
     </task>
     <task id="LOCAL-00001" summary="initial T3 commit">
       <created>1688814411115</created>

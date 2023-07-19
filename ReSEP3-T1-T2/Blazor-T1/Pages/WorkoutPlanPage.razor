@@ -1,0 +1,51 @@
+﻿@page "/WorkoutPlan"
+@using Model
+@inject IWorkoutPlanService workoutPlanService
+
+<h3>WorkoutPlan</h3>
+
+@if (workoutplanToShow == null)
+{
+    <p>
+        <em> Loading... </em>
+    </p>
+
+}
+else if (!workoutplanToShow.Any())
+{
+    <p> No Workout Plans exist, please create one. </p>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Workout name</th>
+            <th>TimeGoal</th>
+            <th>Type</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        @foreach (var workout in workoutplanToShow)
+        {
+            <tr>
+                <td>@workout.WPname</td>
+                <td>@workout.Timegoal</td>
+                <td>@workout.Type</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+
+@code {
+
+    private List<WorkoutPlan> workoutplanToShow;
+
+    protected override async Task OnInitializedAsync()
+    {
+        workoutplanToShow = await workoutPlanService.GetWorkoutPlans();
+    }
+}
