@@ -21,12 +21,15 @@ namespace Domain.gRPClient
             
             Console.WriteLine(reply.Message);
             Console.WriteLine(reply.Success);
+            Console.WriteLine(reply.Uid);
+
+            User user = new(reply.Uid, request.Username, request.Password);
 
 
-            return await Task.FromResult(new User(request.Username, request.Password));
+            return await Task.FromResult(user);
         }
-
-
+        
+        
         public async Task<IEnumerable<WorkoutPlan>> GetWpByUserID(int id)
         {
 

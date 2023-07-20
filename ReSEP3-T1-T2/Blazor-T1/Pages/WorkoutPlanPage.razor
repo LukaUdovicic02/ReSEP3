@@ -1,10 +1,15 @@
 ﻿@page "/WorkoutPlan"
 @using Model
 @inject IWorkoutPlanService workoutPlanService
+@inject ILoginService LoginService
 
-<h3>WorkoutPlan</h3>
 
-@if (workoutplanToShow == null)
+
+@if (!DataSession.Instance.User.IsAuthenticated)
+{
+    <h4>Please log in or Create an account in order to access your workout plans</h4>
+}
+else if (workoutplanToShow == null)
 {
     <p>
         <em> Loading... </em>
@@ -43,7 +48,9 @@ else
         }
         </tbody>
     </table>
-}
+
+
+
 
 
 @code {
@@ -53,8 +60,11 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        allWorkoutPlans = await workoutPlanService.GetWorkoutPlans();
-        workoutplanToShow = allWorkoutPlans;
+        if (DataSession.Instance.User.IsAuthenticated)
+        {
+            allWorkoutPlans = (List<WorkoutPlan>) await LoginService.GetWpByUserID(DataSession.Instance.User.Uid);
+            workoutplanToShow = allWorkoutPlans;
+        }
     }
 
 
@@ -64,5 +74,7 @@ else
         workoutplanToShow.Remove(workoutplanToShow.First(w => w.Wpid == workoutWpid));
         Console.WriteLine("workout plan deleted");
     }
+
+}
 
 }

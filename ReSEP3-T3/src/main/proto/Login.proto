@@ -16,6 +16,7 @@ message LoginRequest {
 message LoginResponse {
   bool success = 1;
   string message = 2;
+  int32 uid = 3;
 }
 
 message GetWpByUserIdRequest {

@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 @GRpcService
 public class LoginServiceImpl extends resep3.javat3.protobuf.LoginServiceGrpc.LoginServiceImplBase {
-    
+
     private final UserRepo userRepo;
 
     public LoginServiceImpl() {
@@ -56,16 +56,17 @@ public class LoginServiceImpl extends resep3.javat3.protobuf.LoginServiceGrpc.Lo
             User user = userRepo.getUserByUsernameAndPassword(request.getUsername(), request.getPassword());
 
             if (user != null) {
-
+                // User found in the database, return the complete user information
                 resep3.javat3.protobuf.LoginResponse response = resep3.javat3.protobuf.LoginResponse.newBuilder()
                         .setMessage("Success")
                         .setSuccess(true)
+                        .setUid(user.getUid())
                         .build();
 
                 responseObserver.onNext(response);
                 responseObserver.onCompleted();
             } else {
-
+                // User not found in the database
                 resep3.javat3.protobuf.LoginResponse response = resep3.javat3.protobuf.LoginResponse.newBuilder()
                         .setMessage("Invalid credentials")
                         .setSuccess(false)
@@ -79,4 +80,5 @@ public class LoginServiceImpl extends resep3.javat3.protobuf.LoginServiceGrpc.Lo
             e.printStackTrace();
         }
     }
+
 }

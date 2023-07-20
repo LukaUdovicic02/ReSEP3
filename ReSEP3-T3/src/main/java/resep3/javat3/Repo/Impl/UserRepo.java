@@ -43,6 +43,7 @@ public class UserRepo implements IUserRepo {
     }
 
 
+    // Add a new method to get the complete user information by username and password
     public User getUserByUsernameAndPassword(String username, String password) throws SQLException {
         User user = null;
 
@@ -50,25 +51,28 @@ public class UserRepo implements IUserRepo {
 
         Connection connection = initializer.getConnection();
         Statement statement = connection.createStatement();
-        String selectQuery = "SELECT username, password FROM User WHERE username = '"
-                + username + "' AND password = '" + password + "'";
-
+        String selectQuery = "SELECT * FROM User WHERE username = '" + username + "' AND password = '" + password + "'";
 
         ResultSet resultSet = statement.executeQuery(selectQuery);
 
         if (resultSet.next()) {
+            // Retrieve the complete user information from the database
+            int uid = resultSet.getInt("uid"); // Assuming the user ID is stored in a column named "uid"
+            System.out.println(uid);
+            float bodyWeight = resultSet.getFloat("bodyWeight"); // Assuming the body weight is stored in a column named "bodyWeight"
+            float fatPercentage = resultSet.getFloat("fatPercentage"); // Assuming the fat percentage is stored in a column named "fatPercentage"
 
-            user = new User(username, password);
-
+            // Create the complete User object
+            user = new User(uid, username, password, bodyWeight, fatPercentage);
         } else {
-
-            System.out.println("We can't find given user in database");
+            System.out.println("We can't find the given user in the database.");
         }
 
         initializer.disconnect();
 
         return user;
     }
+
 
     public User createUser(User user) throws SQLException {
         try {

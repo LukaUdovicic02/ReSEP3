@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
 namespace Model
@@ -22,6 +23,21 @@ namespace Model
 
         [JsonPropertyName("fatPercentage")]
         public float FatPercentage { get; set; }
+        
+        public bool IsAuthenticated { get; set; }
+        
+        
+        public IEnumerable<WorkoutPlan> WorkoutPlans { get; set; }
+
+        public User(int uid, string username, string password, float bodyWeight, float fatPercentage, IList<WorkoutPlan> workoutPlans)
+        {
+            Uid = uid;
+            Username = username;
+            Password = password;
+            BodyWeight = bodyWeight;
+            FatPercentage = fatPercentage;
+            WorkoutPlans = workoutPlans;
+        }
 
         public User()
         {
@@ -29,6 +45,12 @@ namespace Model
 
         public User(string username,string password )
         {
+            this.Username = username;
+            this.Password = password;
+        } 
+        public User(int id, string username,string password )
+        {
+            this.Uid = id;
             this.Username = username;
             this.Password = password;
         }

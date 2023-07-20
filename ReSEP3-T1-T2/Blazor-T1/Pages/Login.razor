@@ -43,8 +43,18 @@
     private async Task HandleLogin()
     {
         User user = await LoginService.Login(username, password);
-        Console.WriteLine("sent a request");
-        NavigationManager.NavigateTo("/WorkoutPlan");
+        if (user.Uid != 0 && user.IsAuthenticated)
+        {
+            await DataSession.CreateInstance(user);
+            NavigationManager.NavigateTo("/WorkoutPlan");
+            Console.WriteLine(user.Uid);
+        }
+        else
+        {
+            Console.WriteLine("Login failed.");
+        }
+        
+        
        
     }
 
@@ -52,4 +62,5 @@
     {
         NavigationManager.NavigateTo("/register");
     }
+    
 }

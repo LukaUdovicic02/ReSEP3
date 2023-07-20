@@ -37,12 +37,12 @@ namespace WebApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<WorkoutPlan>> GetWpByUserID(int id)
+        public async Task<ActionResult<IEnumerable<WorkoutPlan>>> GetWpByUserID(int id)
         {
             try
             {
-                await userLogic.GetWpByUserID(id);
-                return Ok(id);
+                IEnumerable<WorkoutPlan> workoutPlans = await userLogic.GetWpByUserID(id);
+                return Ok(workoutPlans);
             }
             catch (Exception e)
             {
@@ -50,6 +50,7 @@ namespace WebApi.Controllers
                 return StatusCode(500, e.Message);
             }
         }
+
 
         [HttpPost]
         public async Task<ActionResult<User>> RegisterUser([FromBody] User user)

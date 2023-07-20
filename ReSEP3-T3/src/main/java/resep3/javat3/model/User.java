@@ -2,8 +2,8 @@ package resep3.javat3.model;
 
 import java.util.ArrayList;
 
-public class User
-{
+public class User {
+
     private int uid;
     private String username;
     private String password;
@@ -28,8 +28,7 @@ public class User
         this.workoutPlans = workoutPlans;
     }
 
-    public User()
-    {
+    public User() {
 
     }
 
@@ -39,14 +38,14 @@ public class User
     }
 
 
-    public User(int uid, String username, String password,float bodyWeight,float fatPercentage  ) {
+
+    public User(int uid, String username, String password, float bodyWeight, float fatPercentage) {
         this.username = username;
         this.password = password;
         this.uid = uid;
         this.bodyWeight = bodyWeight;
         this.fatPercentage = fatPercentage;
     }
-
 
 
     public String getUsername() {
@@ -64,4 +63,13 @@ public class User
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public int getUid() {
+        return uid;
+    }
+
+    public void setUid(int uid) {
+        this.uid = uid;
+    }
+
 }
