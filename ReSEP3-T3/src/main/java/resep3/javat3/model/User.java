@@ -1,5 +1,7 @@
 package resep3.javat3.model;
 
+import java.util.ArrayList;
+
 public class User
 {
     private int uid;
@@ -7,7 +9,24 @@ public class User
     private String password;
     private float bodyWeight;
     private float fatPercentage;
+    private ArrayList<WorkoutPlan> workoutPlans;
 
+    public ArrayList<WorkoutPlan> getWorkoutPlans() {
+        return workoutPlans;
+    }
+
+    public void setWorkoutPlans(ArrayList<WorkoutPlan> workoutPlans) {
+        this.workoutPlans = workoutPlans;
+    }
+
+    public User(int uid, String username, String password, float bodyWeight, float fatPercentage, ArrayList<WorkoutPlan> workoutPlans) {
+        this.uid = uid;
+        this.username = username;
+        this.password = password;
+        this.bodyWeight = bodyWeight;
+        this.fatPercentage = fatPercentage;
+        this.workoutPlans = workoutPlans;
+    }
 
     public User()
     {

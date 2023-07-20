@@ -5,6 +5,7 @@ option java_multiple_files = true;
 
 service LoginService {
   rpc login(LoginRequest) returns (LoginResponse);
+  rpc getWpByUserID(GetWpByUserIdRequest) returns (GetWpByUserIdResponse);
 }
 
 message LoginRequest {
@@ -15,4 +16,20 @@ message LoginRequest {
 message LoginResponse {
   bool success = 1;
   string message = 2;
+}
+
+message GetWpByUserIdRequest {
+  int32 userid = 1;
+}
+
+message GetWpByUserIdResponse {
+  repeated WorkoutPlanData data = 1;
+}
+
+message WorkoutPlanData {
+  int32 wpid = 1;
+  string wpname = 2;
+  int32 timegoal = 3;
+  string type = 4;
+  int32 userid = 5;
 }

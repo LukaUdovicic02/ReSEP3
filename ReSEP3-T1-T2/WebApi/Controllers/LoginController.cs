@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Domain.Logic.LogicInterfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -33,7 +35,22 @@ namespace WebApi.Controllers
                 return StatusCode(500, e.Message);
             }
         }
-        
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<WorkoutPlan>> GetWpByUserID(int id)
+        {
+            try
+            {
+                await userLogic.GetWpByUserID(id);
+                return Ok(id);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode(500, e.Message);
+            }
+        }
+
         [HttpPost]
         public async Task<ActionResult<User>> RegisterUser([FromBody] User user)
         {

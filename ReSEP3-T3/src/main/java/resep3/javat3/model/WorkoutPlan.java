@@ -19,6 +19,10 @@ public class WorkoutPlan
     public WorkoutPlan() {
     }
 
+    public WorkoutPlan(int userid) {
+        userID = userid;
+    }
+
 
     public int getWpID() {
         return wpID;

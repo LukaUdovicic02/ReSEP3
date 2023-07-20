@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:sqlite:C:\Users\Dragos\Documents\GitHub\ReSEP3\ReSEP3-T3\WorkoutDB.db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="WorkoutDB.db" uuid="2faf5ac3-96d8-4c6c-b350-aa317b66e1c9">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/WorkoutDB.db</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

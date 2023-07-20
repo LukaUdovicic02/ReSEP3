@@ -1,33 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dragos\\Documents\\GitHub\\ReSEP3\\ReSEP3-T1-T2\\Domain\\Domain.csproj": {}
+    "C:\\Users\\lukau\\Desktop\\ReSEP3\\ReSEP3-T1-T2\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dragos\\Documents\\GitHub\\ReSEP3\\ReSEP3-T1-T2\\Domain\\Domain.csproj": {
+    "C:\\Users\\lukau\\Desktop\\ReSEP3\\ReSEP3-T1-T2\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dragos\\Documents\\GitHub\\ReSEP3\\ReSEP3-T1-T2\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\lukau\\Desktop\\ReSEP3\\ReSEP3-T1-T2\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Dragos\\Documents\\GitHub\\ReSEP3\\ReSEP3-T1-T2\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\Dragos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dragos\\Documents\\GitHub\\ReSEP3\\ReSEP3-T1-T2\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\lukau\\Desktop\\ReSEP3\\ReSEP3-T1-T2\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\lukau\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lukau\\Desktop\\ReSEP3\\ReSEP3-T1-T2\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Dragos\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\lukau\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Dragos\\Documents\\GitHub\\ReSEP3\\ReSEP3-T1-T2\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\Dragos\\Documents\\GitHub\\ReSEP3\\ReSEP3-T1-T2\\Model\\Model.csproj"
+              "C:\\Users\\lukau\\Desktop\\ReSEP3\\ReSEP3-T1-T2\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\lukau\\Desktop\\ReSEP3\\ReSEP3-T1-T2\\Model\\Model.csproj"
               }
             }
           }
@@ -68,45 +70,33 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.16, 6.0.16]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.16, 6.0.16]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.16, 6.0.16]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Dragos\\Documents\\GitHub\\ReSEP3\\ReSEP3-T1-T2\\Model\\Model.csproj": {
+    "C:\\Users\\lukau\\Desktop\\ReSEP3\\ReSEP3-T1-T2\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dragos\\Documents\\GitHub\\ReSEP3\\ReSEP3-T1-T2\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\lukau\\Desktop\\ReSEP3\\ReSEP3-T1-T2\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "C:\\Users\\Dragos\\Documents\\GitHub\\ReSEP3\\ReSEP3-T1-T2\\Model\\Model.csproj",
-        "packagesPath": "C:\\Users\\Dragos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dragos\\Documents\\GitHub\\ReSEP3\\ReSEP3-T1-T2\\Model\\obj\\",
+        "projectPath": "C:\\Users\\lukau\\Desktop\\ReSEP3\\ReSEP3-T1-T2\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\lukau\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lukau\\Desktop\\ReSEP3\\ReSEP3-T1-T2\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Dragos\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\lukau\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -135,26 +125,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.16, 6.0.16]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.16, 6.0.16]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.16, 6.0.16]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

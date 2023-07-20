@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Domain.gRPClient.RepoInterfaces;
 using Domain.Logic.LogicInterfaces;
@@ -21,6 +23,11 @@ namespace Domain.Logic
         public async Task<User> ValidateUser(string userName, string password)
         {
            return await _repoLogin.ValidateUser(userName, password);
+        }
+
+        public async Task<IEnumerable<WorkoutPlan>> GetWpByUserID(int id)
+        {
+            return await _repoLogin.GetWpByUserID(id);
         }
 
         public async Task RegisterUser(User userToBeCreated)

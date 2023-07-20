@@ -1,14 +1,19 @@
 package resep3.javat3.persistance;
 
+import resep3.javat3.model.WorkoutPlan;
+
 import java.sql.*;
+import java.util.ArrayList;
 
 public class DBInitCreateWorkout {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
 
       //  insertWorkoutPlan("chestworkout" , 2 , "chest" , 1);
       // updateWorkout(2 , "legworkout" , 30 , "leg");
      //   deleteWorkout(2);
+        getWpByUserId(1);
+
     }
 
 
@@ -30,6 +35,34 @@ public class DBInitCreateWorkout {
             e.printStackTrace();
         }
     }
+
+    private static ArrayList<WorkoutPlan> getWpByUserId(int userid) throws SQLException {
+        final DBConnection initializer = new DBConnection();
+        ArrayList<WorkoutPlan> workoutPlans = new ArrayList<>();
+        initializer.connect();
+
+        Connection connection = initializer.getConnection();
+        Statement statement = connection.createStatement();
+        String selectQuery = "Select UserID from WorkoutPlan where userid = " + userid;
+
+        System.out.println(selectQuery);
+
+        ResultSet resultSet = statement.executeQuery(selectQuery);
+        if (resultSet.next())
+        {
+            WorkoutPlan workoutPlan = new WorkoutPlan(userid);
+            workoutPlans.add(workoutPlan);
+            System.out.println(workoutPlans);
+        }
+
+
+
+        return workoutPlans;
+    }
+
+
+
+
 
     // works
     private static void updateWorkout(int wpid, String WPname, int timegoal, String type ) {
