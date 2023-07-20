@@ -12,5 +12,7 @@ public class DataSession
     public User User { get; private set; }
 
     private DataSession()
-    { }
+    {
+        
+    }   
 }
