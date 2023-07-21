@@ -48,10 +48,21 @@ public class WorkoutPlanHttpClient : IWorkoutPlanService
             throw new Exception(result);
         }
 
-        WorkoutPlan w  = JsonSerializer.Deserialize<WorkoutPlan>(result, new JsonSerializerOptions()
+        WorkoutPlan w = JsonSerializer.Deserialize<WorkoutPlan>(result, new JsonSerializerOptions()
         {
             PropertyNameCaseInsensitive = true
         })!;
+        if (DataSession.Instance.User.Uid == w.UserID)
+        {
+            WorkoutPlan workoutPlan = new WorkoutPlan
+            {
+                UserID = w.UserID,
+                WPname = w.WPname,
+                Timegoal = w.Timegoal,
+                Type = w.Type
+            };
+            return workoutPlan;
+        }
         return w;
     }
 
