@@ -1,0 +1,52 @@
+﻿@page "/CreateWorkout"
+@using Model
+@inject NavigationManager NavigationManager
+@inject IWorkoutPlanService WorkoutPlanService
+<h3>CreateWorkout</h3>
+<EditForm OnValidSubmit="@AddWorkoutPlanAysnc" Model="@workoutPlan">
+    <DataAnnotationsValidator/>
+        <ValidationSummary/>
+    <div class="form-group">
+        <label>Workout Name:</label>
+        <InputTextArea @bind-Value="@workoutPlan.WPname" class="form-control" type="text"/>
+    </div>
+    <div class="form-group">
+        <label>Time Goal:</label>
+        <InputNumber @bind-Value="@workoutPlan.Timegoal" class="form-control" type="number"/>
+    </div>
+    <div class="form-group">
+        <label>Type:</label>
+        <InputTextArea @bind-Value="@workoutPlan.Type" class="form-control" type="text"/>
+    </div>
+    @if (!string.IsNullOrEmpty(resultMsg))
+    {
+        <label style="color: @color">@resultMsg</label>
+    }
+    <br>
+    <div class="button-row">
+        <button type="submit" class="button-start">Create</button>
+    </div>
+</EditForm>
+@code {
+    private string resultMsg;
+    private string color;
+
+    private WorkoutPlan workoutPlan = new WorkoutPlan();
+    
+
+    private async Task AddWorkoutPlanAysnc()
+    {
+        resultMsg = "";
+
+        await WorkoutPlanService.CreateWorkoutPlan(workoutPlan);
+        
+        
+        resultMsg = "Workout plan successfully created";
+        Console.WriteLine("1.5");
+
+        color = "green";
+        Console.WriteLine("333");
+        
+        NavigationManager.NavigateTo("/WorkoutPlan");
+    }
+}
