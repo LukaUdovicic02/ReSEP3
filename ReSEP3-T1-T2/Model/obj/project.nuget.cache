@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "8bA7X1TaNmwQ8Q4q2CKNXL/ccpgnHzKzS3pxYve0+j2soHekwtE8buEzDzaJyxQ+Er2KA8Lz3rNGLp1GB6HOKg==",
+  "dgSpecHash": "Ine3qSec2BZ0AcZ5F9RKZrvQ1jPTNOplN1m0U19ig33VPmSz4F8GlrEPXig/3xa4jxKL0wo1ZkPIAKOk5gYJ4g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lukau\\Desktop\\ReSEP3\\ReSEP3-T1-T2\\Model\\Model.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Roalson Purple\\Desktop\\ReSEP3\\ReSEP3-T1-T2\\Model\\Model.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Roalson Purple\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.13\\microsoft.netcore.app.ref.6.0.13.nupkg.sha512",
+    "C:\\Users\\Roalson Purple\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.13\\microsoft.windowsdesktop.app.ref.6.0.13.nupkg.sha512",
+    "C:\\Users\\Roalson Purple\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.13\\microsoft.aspnetcore.app.ref.6.0.13.nupkg.sha512"
+  ],
   "logs": []
 }

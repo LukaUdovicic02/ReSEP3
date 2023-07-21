@@ -7,7 +7,7 @@ public interface IWorkoutPlanService
 {
     Task<List<WorkoutPlan>> GetWorkoutPlans();
     Task<WorkoutPlan> GetWorkoutPlanById(int id);
-    Task<bool> CreateWorkoutPlan(WorkoutPlan plan);
+    Task<WorkoutPlan> CreateWorkoutPlan(WorkoutPlan plan);
     Task<bool> UpdateWorkoutPlan(WorkoutPlan plan);
     Task DeleteWorkoutPlan(int id);
 }

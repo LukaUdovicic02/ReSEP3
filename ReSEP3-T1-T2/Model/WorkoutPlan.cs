@@ -36,5 +36,7 @@ namespace Model
             UserID = userId;
             User = user;
         }
+
+        
     }
 }

@@ -39,13 +39,20 @@ public class WorkoutPlanHttpClient : IWorkoutPlanService
         return await httpClient.GetFromJsonAsync<WorkoutPlan>(apiUrl);
     }
 
-    public async Task<bool> CreateWorkoutPlan(WorkoutPlan plan)
+    public async Task<WorkoutPlan> CreateWorkoutPlan(WorkoutPlan plan)
     {
-        string apiUrl = "/api/workoutplans"; // Replace with your actual API endpoint
+        HttpResponseMessage response = await httpClient.PostAsJsonAsync($"http://localhost:5052/WorkoutPlan", plan);
+        string result = await response.Content.ReadAsStringAsync();
+        if (!response.IsSuccessStatusCode)
+        {
+            throw new Exception(result);
+        }
 
-        var response = await httpClient.PostAsJsonAsync(apiUrl, plan);
-
-        return response.IsSuccessStatusCode;
+        WorkoutPlan w  = JsonSerializer.Deserialize<WorkoutPlan>(result, new JsonSerializerOptions()
+        {
+            PropertyNameCaseInsensitive = true
+        })!;
+        return w;
     }
 
     public async Task<bool> UpdateWorkoutPlan(WorkoutPlan plan)

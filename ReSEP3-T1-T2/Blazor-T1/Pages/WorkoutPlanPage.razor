@@ -1,8 +1,11 @@
 ﻿@page "/WorkoutPlan"
 @using Model
+@inject NavigationManager NavigationManager
 @inject IWorkoutPlanService workoutPlanService
 
 <h3>WorkoutPlan</h3>
+
+<button class="custom-btn btn-14" @onclick="CreateWorkout">Create new Workout</button>
 
 @if (workoutplanToShow == null)
 {
@@ -65,4 +68,8 @@ else
         Console.WriteLine("workout plan deleted");
     }
 
+    private void CreateWorkout()
+    {
+        NavigationManager.NavigateTo("/CreateWorkout");
+    }
 }
