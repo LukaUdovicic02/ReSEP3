@@ -1,13 +1,20 @@
 ﻿@page "/WorkoutPlan"
 @using Model
-@inject NavigationManager NavigationManager
+
+
 @inject IWorkoutPlanService workoutPlanService
+@inject ILoginService LoginService
+@inject NavigationManager _navigationManager
 
-<h3>WorkoutPlan</h3>
 
-<button class="custom-btn btn-14" @onclick="CreateWorkout">Create new Workout</button>
 
-@if (workoutplanToShow == null)
+
+
+@if (!DataSession.Instance.User.IsAuthenticated)
+{
+    <h4>Please log in or Create an account in order to access your workout plans</h4>
+}
+else if (workoutplanToShow == null)
 {
     <p>
         <em> Loading... </em>
@@ -20,6 +27,7 @@ else if (!workoutplanToShow.Any())
 }
 else
 {
+    <button type="button" class="btn btn-secondary" @onclick="Logout">Logout</button>
     <table class="table">
         <thead>
         <tr>
@@ -46,7 +54,9 @@ else
         }
         </tbody>
     </table>
-}
+
+
+
 
 
 @code {
@@ -56,8 +66,18 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        allWorkoutPlans = await workoutPlanService.GetWorkoutPlans();
-        workoutplanToShow = allWorkoutPlans;
+        if (DataSession.Instance.User.IsAuthenticated)
+        {
+            allWorkoutPlans = (List<WorkoutPlan>) await LoginService.GetWpByUserID(DataSession.Instance.User.Uid);
+            workoutplanToShow = allWorkoutPlans;
+        }
+    }
+
+    private async Task Logout()
+    {
+        DataSession.Instance.User.IsAuthenticated = false;
+        await DataSession.DeleteInstance();
+        _navigationManager.NavigateTo("/login");
     }
 
 
@@ -68,8 +88,6 @@ else
         Console.WriteLine("workout plan deleted");
     }
 
-    private void CreateWorkout()
-    {
-        NavigationManager.NavigateTo("/CreateWorkout");
-    }
+}
+
 }

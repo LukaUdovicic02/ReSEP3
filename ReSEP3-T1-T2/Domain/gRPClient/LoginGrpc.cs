@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using domain.grpClient;
 using Domain.gRPClient.RepoInterfaces;
@@ -19,9 +21,43 @@ namespace Domain.gRPClient
             
             Console.WriteLine(reply.Message);
             Console.WriteLine(reply.Success);
+            Console.WriteLine(reply.Uid);
+
+            User user = new(reply.Uid, request.Username, request.Password);
 
 
-            return await Task.FromResult(new User(request.Username, request.Password));
+            return await Task.FromResult(user);
+        }
+        
+        
+        public async Task<IEnumerable<WorkoutPlan>> GetWpByUserID(int id)
+        {
+
+            using var channel = GrpcChannel.ForAddress("http://localhost:6565");
+            var client = new LoginService.LoginServiceClient(channel);
+            Console.WriteLine("connection established");
+
+            var reply = await client.getWpByUserIDAsync(new GetWpByUserIdRequest
+            {
+                Userid = id,
+            });
+
+            IList<WorkoutPlan> workoutPlans = new List<WorkoutPlan>();
+
+            foreach (var data in reply.Data)
+            {
+                var workout = new WorkoutPlan
+                {
+                    Wpid = data.Wpid,
+                    Timegoal = data.Timegoal,
+                    Type = data.Type,
+                    UserID = data.Userid,
+                    WPname = data.Wpname
+                    
+                };
+                workoutPlans.Add(workout);
+            }
+            return workoutPlans;
         }
 
       
