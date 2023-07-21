@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="af2df7a8-77c6-4bca-92e5-a43dd24bc9c2" name="Changes" comment="finished full implementation of the deleting workout plan from tier 2 to tier 3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/model/WorkoutPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/model/WorkoutPlan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/persistance/DBInitCreateWorkout.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/persistance/DBInitializer.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +126,8 @@
       <workItem from="1689718219826" duration="1140000" />
       <workItem from="1689758301592" duration="5600000" />
       <workItem from="1689772240507" duration="6910000" />
-      <workItem from="1689928897163" duration="1001000" />
+      <workItem from="1689928897163" duration="4828000" />
+      <workItem from="1689941740691" duration="1000" />
     </task>
     <task id="LOCAL-00001" summary="initial T3 commit">
       <created>1688814411115</created>

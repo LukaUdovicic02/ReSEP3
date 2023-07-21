@@ -28,6 +28,11 @@ public class DataSession
         Instance.User = user;
         //Instance.WorkoutPlan = HttpClient.GetWpByUserID(user.Uid);
     }
+
+    public static async Task DeleteInstance()
+    {
+        Instance.User = null;
+    }
     
     
     
