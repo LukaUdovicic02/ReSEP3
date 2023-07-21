@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af2df7a8-77c6-4bca-92e5-a43dd24bc9c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Domain.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Domain.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Domain.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Domain.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Debug/net6.0/Model.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Debug/net6.0/Model.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Debug/net6.0/Model.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Debug/net6.0/Model.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Model.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Model.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Model.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Model.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+    <list default="true" id="af2df7a8-77c6-4bca-92e5-a43dd24bc9c2" name="Changes" comment="finished full implementation of the deleting workout plan from tier 2 to tier 3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="Register_T2_and_3" />
+        <entry key="$PROJECT_DIR$/.." value="DeleteWorkout_T2_T3" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -56,20 +35,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "spring.configuration.checksum": "e92c917b4c4e569e62b2bec0ade8866d",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/resep3/javat3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/WorkoutDB.db" />
+  </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="resep3.javat3.service" />
@@ -107,9 +84,7 @@
       </method>
     </configuration>
     <configuration name="JavaT3Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/openjdk-17.0.2" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <module name="grpc-springboot-x" />
+      <module name="Java-T3" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="resep3.javat3.JavaT3Application" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -117,6 +92,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DBInitCreateWorkout" />
+        <item itemvalue="Application.DBInitializer" />
         <item itemvalue="Application.DBInitCreateWorkout" />
         <item itemvalue="Application.DBInitializer" />
       </list>
@@ -145,7 +122,7 @@
       <workItem from="1689718219826" duration="1140000" />
       <workItem from="1689758301592" duration="5600000" />
       <workItem from="1689772240507" duration="6910000" />
-      <workItem from="1689811055897" duration="449000" />
+      <workItem from="1689928897163" duration="1001000" />
     </task>
     <task id="LOCAL-00001" summary="initial T3 commit">
       <created>1688814411115</created>
@@ -217,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689764421269</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="worked on git ignore file in order to prevent future useless confilcts">
+      <created>1689874875308</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1689874875308</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,6 +229,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial T3 commit" />
@@ -257,6 +242,7 @@
     <MESSAGE value="finished the creating workout from tier 2 to tier 3 and database" />
     <MESSAGE value="getting all the workouts from the database to the tier 2" />
     <MESSAGE value="finished full implementation of the deleting workout plan from tier 2 to tier 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished full implementation of the deleting workout plan from tier 2 to tier 3" />
+    <MESSAGE value="worked on git ignore file in order to prevent future useless confilcts" />
+    <option name="LAST_COMMIT_MESSAGE" value="worked on git ignore file in order to prevent future useless confilcts" />
   </component>
 </project>
