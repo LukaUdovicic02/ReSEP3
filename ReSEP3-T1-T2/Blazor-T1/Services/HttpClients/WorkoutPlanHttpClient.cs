@@ -41,7 +41,10 @@ public class WorkoutPlanHttpClient : IWorkoutPlanService
 
     public async Task<WorkoutPlan> CreateWorkoutPlan(WorkoutPlan plan)
     {
-        HttpResponseMessage response = await httpClient.PostAsJsonAsync($"http://localhost:5052/WorkoutPlan", plan);
+        
+        plan.UserID = DataSession.Instance.User.Uid;
+
+        HttpResponseMessage response = await httpClient.PostAsJsonAsync("http://localhost:5052/WorkoutPlan", plan);
         string result = await response.Content.ReadAsStringAsync();
         if (!response.IsSuccessStatusCode)
         {
@@ -52,19 +55,10 @@ public class WorkoutPlanHttpClient : IWorkoutPlanService
         {
             PropertyNameCaseInsensitive = true
         })!;
-        if (DataSession.Instance.User.Uid == w.UserID)
-        {
-            WorkoutPlan workoutPlan = new WorkoutPlan
-            {
-                UserID = w.UserID,
-                WPname = w.WPname,
-                Timegoal = w.Timegoal,
-                Type = w.Type
-            };
-            return workoutPlan;
-        }
+    
         return w;
     }
+
 
     public async Task<bool> UpdateWorkoutPlan(WorkoutPlan plan)
     {///ask NIcola

@@ -19,7 +19,7 @@ public class DataSession
     {
         User = new User();
         HttpClient = new LoginHttpClient();
-        WorkoutPlan = new WorkoutPlan();
+  
         
     }
 
