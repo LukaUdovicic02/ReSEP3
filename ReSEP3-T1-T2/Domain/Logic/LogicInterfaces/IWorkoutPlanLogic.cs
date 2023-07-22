@@ -9,6 +9,6 @@ namespace Domain.Logic.LogicInterfaces
         Task CreateWorkout(WorkoutPlan workoutPlanLogicToBeCreated);
         Task<IEnumerable<WorkoutPlan>> GetAllWorkoutPlans();
         Task DeleteWorkoutPlan(int id);
-        
+        Task UpdateWorkout(int id);
     }
 }

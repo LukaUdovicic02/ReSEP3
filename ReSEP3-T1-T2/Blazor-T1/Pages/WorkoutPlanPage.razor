@@ -10,6 +10,7 @@
 
 
 
+
 @if (!DataSession.Instance.User.IsAuthenticated)
 {
     <h4>Please log in or Create an account in order to access your workout plans</h4>
@@ -47,6 +48,8 @@ else
                 <td>@workout.Timegoal</td>
                 <td>@workout.Type</td>
                 <td>
+                      <button @onclick="@(() => EditWorkoutPlan(workout.Wpid))">
+                      </button>
                     <button @onclick="@(() => RemoveWorkoutPlan(workout.Wpid))">
                         <i class="oi oi-trash" style="color:red"/>
                     </button>
@@ -55,9 +58,7 @@ else
         }
         </tbody>
     </table>
-
-
-
+}
 
 
 @code {
@@ -92,6 +93,11 @@ else
     private void CreateWorkout()
     {
         _navigationManager.NavigateTo("/CreateWorkout");
+    }
+
+    private void EditWorkoutPlan(int workoutWpid)
+    {
+        _navigationManager.NavigateTo($"/EditWorkout/{workoutWpid}");
     }
 }
 

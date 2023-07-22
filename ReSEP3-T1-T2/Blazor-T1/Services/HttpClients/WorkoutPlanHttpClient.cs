@@ -61,12 +61,12 @@ public class WorkoutPlanHttpClient : IWorkoutPlanService
 
 
     public async Task<bool> UpdateWorkoutPlan(WorkoutPlan plan)
-    {///ask NIcola
-        string apiUrl = $"/api/workoutplans/{plan.ToString()}"; // Replace with your actual API endpoint
+    {
 
-        var response = await httpClient.PutAsJsonAsync(apiUrl, plan);
-
+        string apiUrl = $"http://localhost:5052/EditWorkout/{plan.Wpid}";
+        var response = await httpClient.PutAsJsonAsync(apiUrl, plan.Wpid);
         return response.IsSuccessStatusCode;
+    
     }
 
     public async Task DeleteWorkoutPlan(int id)

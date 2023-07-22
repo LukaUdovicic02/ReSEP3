@@ -31,5 +31,9 @@ namespace Domain.Logic
         {
             await _workoutPlan.DeleteWorkoutPlan(id);
         }
+        public async Task UpdateWorkout(int id)
+        {
+            await _workoutPlan.DeleteWorkoutPlan(id);
+        }
     }
 }

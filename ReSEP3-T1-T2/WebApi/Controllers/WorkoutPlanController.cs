@@ -13,7 +13,7 @@ namespace WebApi.Controllers
     {
         private readonly IWorkoutPlanLogic _workoutPlanLogic;
 
-        public WorkoutPlanController([FromServices]IWorkoutPlanLogic workoutPlanLogic)
+        public WorkoutPlanController([FromServices] IWorkoutPlanLogic workoutPlanLogic)
         {
             _workoutPlanLogic = workoutPlanLogic;
         }
@@ -23,19 +23,19 @@ namespace WebApi.Controllers
         
         
         [HttpPost]
-        public async Task<ActionResult<WorkoutPlan>> CreateWorkout([FromBody]WorkoutPlan wp)
+        public async Task<ActionResult<WorkoutPlan>> CreateWorkout([FromBody] WorkoutPlan wp)
         {
             try
             {
                 await _workoutPlanLogic.CreateWorkout(wp);
                 return Ok(wp);
             }
-            
+
             catch (Exception e)
             {
                 Console.WriteLine(e);
                 return StatusCode(500, e.Message);
-                
+
             }
         }
 
@@ -68,7 +68,22 @@ namespace WebApi.Controllers
                 return StatusCode(500, e.Message);
             }
         }
-        
-       
+
+        [HttpPut]
+        public async Task<IActionResult> UpdateWorkout([FromBody] int id)
+        {
+            try
+            {
+
+                await _workoutPlanLogic.UpdateWorkout(id);
+                return Ok(id);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode(500, e.Message);
+            }
+        }
+
     }
 }
