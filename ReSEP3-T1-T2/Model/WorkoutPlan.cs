@@ -27,7 +27,6 @@ namespace Model
             Timegoal = timegoal;
             Type = type;
             UserID = userId;
-         
         }
 
         public WorkoutPlan(string wPname, int timegoal, string type)
