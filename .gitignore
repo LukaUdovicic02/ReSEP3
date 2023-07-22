@@ -3,3 +3,18 @@
 
 /ReSEP3-T1-T2/WebApi/bin/
 /ReSEP3-T1-T2/WebApi/obj/
+
+
+
+# Rider-specific files
+*.sln.DotSettings
+.idea/
+*.suo
+*.user
+*.vs/
+.vscode/
+
+# C# project-specific files
+bin/
+obj/
+*.db
