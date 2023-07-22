@@ -31,3 +31,17 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+# Rider-specific files
+*.sln.DotSettings
+.idea/
+*.suo
+*.user
+*.vs/
+.vscode/
+
+# C# project-specific files
+bin/
+obj/
+*.db
