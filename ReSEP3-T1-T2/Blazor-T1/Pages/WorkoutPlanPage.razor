@@ -1,8 +1,10 @@
 ﻿@page "/WorkoutPlan"
 @using Model
 @inject IWorkoutPlanService workoutPlanService
+@inject NavigationManager navigationManager
 
 <h3>WorkoutPlan</h3>
+//Create button "Create new workout"
 
 @if (workoutplanToShow == null)
 {
@@ -35,6 +37,8 @@ else
                 <td>@workout.Timegoal</td>
                 <td>@workout.Type</td>
                 <td>
+                      <button @onclick="@(() => EditWorkoutPlan(workout.Wpid))">
+                      </button>
                     <button @onclick="@(() => RemoveWorkoutPlan(workout.Wpid))">
                         <i class="oi oi-trash" style="color:red"/>
                     </button>
@@ -64,5 +68,10 @@ else
         workoutplanToShow.Remove(workoutplanToShow.First(w => w.Wpid == workoutWpid));
         Console.WriteLine("workout plan deleted");
     }
+    private void EditWorkoutPlan(int workoutWpid)
+    {
+        navigationManager.NavigateTo($"/EditWorkout/{workoutWpid}");
+    }
+
 
 }

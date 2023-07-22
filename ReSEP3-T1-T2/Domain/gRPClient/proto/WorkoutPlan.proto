@@ -6,6 +6,7 @@ service WorkoutPlanService {
   rpc createWorkoutPlan(WorkoutPlanRequest) returns (WorkoutPlanResponse);
   rpc getWorkoutPlan(GetWorkoutPlanRequest) returns (GetWorkoutPlanResponse);
   rpc deleteWorkoutPlan(DeleteWorkoutPlanRequest) returns (empty);
+  rpc updateWorkoutPlan(UpdateWorkoutPlanRequest) returns (update);
 }
 
 message WorkoutPlanRequest {
@@ -17,6 +18,13 @@ message WorkoutPlanRequest {
 
 message WorkoutPlanResponse {
   int32 wpid = 1;
+}
+
+message UpdateWorkoutPlanRequest {
+int32 wpid=1;
+}
+message update {
+  
 }
 
 message GetWorkoutPlanRequest {
@@ -41,7 +49,6 @@ message WPData {
 message DeleteWorkoutPlanRequest {
   int32 wpid = 1;
 }
-
 message empty {
   
 }

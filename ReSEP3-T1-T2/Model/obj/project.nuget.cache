@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "8bA7X1TaNmwQ8Q4q2CKNXL/ccpgnHzKzS3pxYve0+j2soHekwtE8buEzDzaJyxQ+Er2KA8Lz3rNGLp1GB6HOKg==",
+  "dgSpecHash": "t7gWzFBn6tXeltHTJrLkS899I4V4hIR0qOujWqGCPh18AmOcFf0ggLGXvEEzN/K66I+ChmeYf+gfwXMhYuZGgQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lukau\\Desktop\\ReSEP3\\ReSEP3-T1-T2\\Model\\Model.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\canar\\RiderProjects\\Tier1\\ReSEP3-T1-T2\\Model\\Model.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\canar\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.18\\microsoft.netcore.app.ref.6.0.18.nupkg.sha512",
+    "C:\\Users\\canar\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.18\\microsoft.windowsdesktop.app.ref.6.0.18.nupkg.sha512",
+    "C:\\Users\\canar\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.18\\microsoft.aspnetcore.app.ref.6.0.18.nupkg.sha512"
+  ],
   "logs": []
 }
