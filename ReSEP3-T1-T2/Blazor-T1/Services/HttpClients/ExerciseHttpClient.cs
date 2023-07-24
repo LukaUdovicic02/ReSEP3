@@ -14,7 +14,7 @@ public class ExerciseHttpClient : IExerciseService
     public async Task<Exercise> CreateExercise(Exercise exercise)
     {
         
-        exercise.eid = DataSession.Instance.User.Uid; ///take care here
+        exercise.EId = DataSession.Instance.User.Uid; ///take care here
 
         HttpResponseMessage response = await httpClient.PostAsJsonAsync("http://localhost:5052/WorkoutPlan", exercise); //replace with actual endpoint
         string result = await response.Content.ReadAsStringAsync();
