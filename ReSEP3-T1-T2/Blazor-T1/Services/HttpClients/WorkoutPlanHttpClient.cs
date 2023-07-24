@@ -48,12 +48,12 @@ public class WorkoutPlanHttpClient : IWorkoutPlanService
         return response.IsSuccessStatusCode;
     }
 
-    public async Task<bool> UpdateWorkoutPlan(WorkoutPlan plan)
+    public async Task UpdateWorkoutPlan(WorkoutPlan plan)
     {
-
+        DataSession.Instance.User.Uid = plan.UserID;
         string apiUrl = $"http://localhost:5052/EditWorkout/{plan.Wpid}";
         var response = await httpClient.PutAsJsonAsync(apiUrl, plan.Wpid);
-        return response.IsSuccessStatusCode;
+       
     
     }
 

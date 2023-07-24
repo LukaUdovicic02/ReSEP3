@@ -72,13 +72,17 @@ namespace Domain.gRPClient
             Console.WriteLine("Successfully deleted workout plan ");
         }
 
-        public async Task UpdateWorkout(int id)
+        public async Task UpdateWorkout(WorkoutPlan workoutPlan)
         {
             using var channel = GrpcChannel.ForAddress("http://localhost:6565");
             var client = new WorkoutPlanService.WorkoutPlanServiceClient(channel);
             Console.WriteLine("connection established");
-         
-          
+
+            var replay = client.createWorkoutPlanAsync(new WorkoutPlanRequest
+            {
+                WpName = workoutPlan.WPname, TimeGoal = workoutPlan.Timegoal, Type = workoutPlan.Type,
+                UserID = workoutPlan.UserID
+            });
             Console.WriteLine("Successfully updated workout plan");
         }
     }
