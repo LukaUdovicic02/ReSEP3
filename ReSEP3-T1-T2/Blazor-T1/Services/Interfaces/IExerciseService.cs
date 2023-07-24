@@ -1,9 +1,9 @@
-using Model;
-
-
+﻿using Model;
 
 public interface IExerciseService
 {
-    Task<Exercise> CreateExercise(Exercise exercise);
-    Task DeleteExercise(int id);
+    Task<List<Exercise>> GetExercises();
+    Task<Exercise> GetExerciseById(int id);
+    Task<bool> CreateExercise(Exercise exercise);
+
 }
