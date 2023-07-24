@@ -18,7 +18,7 @@ public class Exercise
         EId = eId;
         EName = eName;
         NrOfReps = nrOfReps;
-        nrOfSets = nrOfSets;
+        NrOfSets = nrOfSets;
 
     }
 }
