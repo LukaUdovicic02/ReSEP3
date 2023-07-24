@@ -1,0 +1,56 @@
+﻿@page "/EditWorkout/{workoutId}"
+
+@using Model
+@inject IWorkoutPlanService workoutPlanService
+@inject NavigationManager navigationManager
+
+<h3>Edit Workout</h3>
+
+@if (workout == null)
+{
+    <p>
+        <em>Loading...</em>
+    </p>
+}
+else
+{
+    <div>
+        <label for="wpName">Workout Name:</label>
+        <input type="text" id="wpName" @bind="workout.WPname" />
+    </div>
+    <div>
+        <label for="timeGoal">Time Goal:</label>
+        <input type="number" id="timeGoal" @bind="workout.Timegoal" />
+    </div>
+    <div>
+        <label for="type">Type:</label>
+        <input type="text" id="type" @bind="workout.Type" />
+    </div>
+
+    <button @onclick="UpdateWorkout">Update</button>
+    <button @onclick="CancelEdit">Cancel</button>
+
+}
+
+@code {
+    private WorkoutPlan workout;
+
+    [Parameter]
+    public int workoutId { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        workout = await workoutPlanService.GetWorkoutPlanById(workoutId);
+    }
+
+    private async Task UpdateWorkout()
+    {
+        await workoutPlanService.UpdateWorkoutPlan(workout);
+        navigationManager.NavigateTo("/WorkoutPlan", forceLoad: true);
+    }
+
+    private void CancelEdit()
+    {
+        navigationManager.NavigateTo("/WorkoutPlan", forceLoad: true);
+    }
+}
