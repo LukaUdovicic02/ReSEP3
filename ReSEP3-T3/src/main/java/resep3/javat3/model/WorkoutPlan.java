@@ -18,6 +18,19 @@ public class WorkoutPlan
         this.userID = userID;
         user = new User();
     }
+
+
+    public WorkoutPlan(int wpid, String wpName, int timeGoal, String type, int userID) {
+
+        this.wpName = wpName;
+        this.timeGoal = timeGoal;
+        this.type = type;
+        this.userID = userID;
+        user = new User();
+        wpID = wpid;
+    }
+
+
     public WorkoutPlan() {
     }
 

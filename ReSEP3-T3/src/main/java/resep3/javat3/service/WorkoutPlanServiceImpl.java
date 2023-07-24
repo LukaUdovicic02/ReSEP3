@@ -83,4 +83,27 @@ public class WorkoutPlanServiceImpl extends WorkoutPlanServiceGrpc.WorkoutPlanSe
         }
     }
 
+
+    @Override
+    public void updateWorkoutPlan(resep3.javat3.protobuf.UpdateWorkoutPlanRequest request, StreamObserver<resep3.javat3.protobuf.UpdateWorkoutPlanResponse> responseStreamObserver)
+    {
+        WorkoutPlan workoutPlan = new WorkoutPlan(request.getWpid(),request.getWpname() , request.getTimegoal() , request.getType() , request.getUserid());
+
+        try {
+
+            workoutRepo.updateWorkoutPlan(workoutPlan);
+            resep3.javat3.protobuf.UpdateWorkoutPlanResponse response = resep3.javat3.protobuf.UpdateWorkoutPlanResponse.newBuilder().setWpid(workoutPlan.getWpID()).build();
+
+            responseStreamObserver.onNext(response);
+            responseStreamObserver.onCompleted();
+
+            System.out.println("Workout plan has been updated");
+
+        } catch (Exception e)
+        {
+            e.printStackTrace();
+            System.out.println("could not update the workout plan");
+        }
+    }
+
 }

@@ -107,5 +107,26 @@ public class WorkoutRepo implements IWorkoutRepo {
     }
 
 
+    public void updateWorkoutPlan(WorkoutPlan workoutPlan) {
+
+        try {
+
+            initializer.connect();
+
+            Connection connection = initializer.getConnection();
+            PreparedStatement statement = connection.prepareStatement("UPDATE WorkoutPlan SET WPname= '" + workoutPlan.getWpName() +
+                    "', timegoal = '" + workoutPlan.getTimeGoal() + "', UserID  = '" + workoutPlan.getUserID() + "'," +
+                    " type = '" + workoutPlan.getType() + "' WHERE WPID = " + workoutPlan.getWpID());
+            statement.executeUpdate();
+            System.out.println("Data updated successfully.");
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println("Failed to update data.");
+        } finally {
+            initializer.disconnect();
+        }
+    }
+
 
 }

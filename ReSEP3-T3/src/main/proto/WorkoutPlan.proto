@@ -3,10 +3,12 @@ syntax = "proto3";
 option java_package = "resep3.javat3.protobuf";
 option java_multiple_files = true;
 
+
 service WorkoutPlanService {
   rpc createWorkoutPlan(WorkoutPlanRequest) returns (WorkoutPlanResponse);
   rpc getWorkoutPlan(GetWorkoutPlanRequest) returns (GetWorkoutPlanResponse);
   rpc deleteWorkoutPlan(DeleteWorkoutPlanRequest) returns (empty);
+  rpc updateWorkoutPlan(UpdateWorkoutPlanRequest) returns (UpdateWorkoutPlanResponse);
 }
 
 message WorkoutPlanRequest {
@@ -17,6 +19,17 @@ message WorkoutPlanRequest {
 }
 
 message WorkoutPlanResponse {
+  int32 wpid = 1;
+}
+
+message UpdateWorkoutPlanRequest {
+  int32 wpid = 1;
+  string wpname = 2;
+  int32 timegoal = 3;
+  string type = 4;
+  int32 userid = 5;
+}
+message UpdateWorkoutPlanResponse {
   int32 wpid = 1;
 }
 
@@ -42,7 +55,6 @@ message WPData {
 message DeleteWorkoutPlanRequest {
   int32 wpid = 1;
 }
-
 message empty {
 
 }
