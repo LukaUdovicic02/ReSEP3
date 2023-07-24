@@ -5,85 +5,78 @@ using Domain.Logic.LogicInterfaces;
 using Microsoft.AspNetCore.Mvc;
 using Model;
 
-namespace WebApi.Controllers
+namespace WebApi.Controllers;
+
+[ApiController]
+[Route("WorkoutPlan")]
+public class WorkoutPlanController : ControllerBase
 {
-    [ApiController]
-    [Route("WorkoutPlan")]
-    public class WorkoutPlanController : ControllerBase
+    private readonly IWorkoutPlanLogic _workoutPlanLogic;
+
+    public WorkoutPlanController([FromServices] IWorkoutPlanLogic workoutPlanLogic)
     {
-        private readonly IWorkoutPlanLogic _workoutPlanLogic;
+        _workoutPlanLogic = workoutPlanLogic;
+    }
 
-        public WorkoutPlanController([FromServices] IWorkoutPlanLogic workoutPlanLogic)
+
+    [HttpPost]
+    public async Task<ActionResult<WorkoutPlan>> CreateWorkout([FromBody] WorkoutPlan wp)
+    {
+        try
         {
-            _workoutPlanLogic = workoutPlanLogic;
+            await _workoutPlanLogic.CreateWorkout(wp);
+            return Ok(wp);
         }
 
-        
-        
-        
-        
-        [HttpPost]
-        public async Task<ActionResult<WorkoutPlan>> CreateWorkout([FromBody] WorkoutPlan wp)
+        catch (Exception e)
         {
-            try
-            {
-                await _workoutPlanLogic.CreateWorkout(wp);
-                return Ok(wp);
-            }
-
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                return StatusCode(500, e.Message);
-
-            }
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
         }
+    }
 
-        [HttpGet]
-        public async Task<ActionResult<WorkoutPlan>> GetWorkoutPlans()
+    [HttpGet]
+    public async Task<ActionResult<WorkoutPlan>> GetWorkoutPlans()
+    {
+        try
         {
-            try
-            {
-                IEnumerable<WorkoutPlan> workoutPlans = _workoutPlanLogic.GetAllWorkoutPlans().Result;
-                return Ok(workoutPlans);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                return StatusCode(500, e.Message);
-            }
+            IEnumerable<WorkoutPlan> workoutPlans = _workoutPlanLogic.GetAllWorkoutPlans().Result;
+            return Ok(workoutPlans);
         }
-
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<WorkoutPlan>> DeleteWorkoutPlan(int id)
+        catch (Exception e)
         {
-            try
-            {
-                await _workoutPlanLogic.DeleteWorkoutPlan(id);
-                return Ok(id);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                return StatusCode(500, e.Message);
-            }
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
         }
+    }
 
-        [HttpPut]
-        public async Task<IActionResult> UpdateWorkout([FromBody] WorkoutPlan workoutPlan)
+    [HttpDelete("{id}")]
+    public async Task<ActionResult<WorkoutPlan>> DeleteWorkoutPlan(int id)
+    {
+        try
         {
-            try
-            {
-
-               await _workoutPlanLogic.UpdateWorkout(workoutPlan);
-                return Ok(workoutPlan);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                return StatusCode(500, e.Message);
-            }
+            await _workoutPlanLogic.DeleteWorkoutPlan(id);
+            return Ok(id);
         }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
 
+    [HttpPut]
+    public async Task<IActionResult> UpdateWorkout([FromBody] WorkoutPlan workoutPlan)
+    {
+        try
+        {
+            await _workoutPlanLogic.UpdateWorkout(workoutPlan);
+            return Ok(workoutPlan);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
     }
 }

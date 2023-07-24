@@ -34,7 +34,7 @@ public class WorkoutPlanHttpClient : IWorkoutPlanService
 
     public async Task<WorkoutPlan> GetWorkoutPlanById(int id)
     {
-        string apiUrl = $"/api/workoutplans/{id}"; // Replace with your actual API endpoint
+        string apiUrl = $"/api/workoutplans/{id}"; 
 
         return await httpClient.GetFromJsonAsync<WorkoutPlan>(apiUrl);
     }
