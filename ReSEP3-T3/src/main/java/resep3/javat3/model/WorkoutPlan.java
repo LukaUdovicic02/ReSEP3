@@ -7,6 +7,7 @@ public class WorkoutPlan
     private int timeGoal;
     private String type;
     private int userID;
+    private User user;
 
 
     public WorkoutPlan( String wpName, int timeGoal, String type, int userID) {
@@ -15,8 +16,13 @@ public class WorkoutPlan
         this.timeGoal = timeGoal;
         this.type = type;
         this.userID = userID;
+        user = new User();
     }
     public WorkoutPlan() {
+    }
+
+    public WorkoutPlan(int userid) {
+        userID = userid;
     }
 
 

@@ -5,9 +5,63 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af2df7a8-77c6-4bca-92e5-a43dd24bc9c2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Blazor-T1/Pages/WorkoutPlanPage.razor" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Blazor-T1/Pages/WorkoutPlanPage.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Blazor-T1/Services/HttpClients/WorkoutPlanHttpClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Blazor-T1/Services/HttpClients/WorkoutPlanHttpClient.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Blazor-T1/Services/Interfaces/IWorkoutPlanService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Blazor-T1/Services/Interfaces/IWorkoutPlanService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Debug/net6.0/Domain.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Domain.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Domain.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Domain.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/Domain.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Domain/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/WorkoutPlan.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/WorkoutPlan.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Debug/net6.0/Model.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Debug/net6.0/Model.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Debug/net6.0/Model.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Debug/net6.0/Model.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Debug/net6.0/Model.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Debug/net6.0/Model.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Model.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Model.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Model.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/Model.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../ReSEP3-T1-T2/Model/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkoutDB.db" beforeDir="false" afterPath="$PROJECT_DIR$/WorkoutDB.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/DeleteWorkoutPlanRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/DeleteWorkoutPlanRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/DeleteWorkoutPlanRequestOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/DeleteWorkoutPlanRequestOrBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/GetWorkoutPlanRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/GetWorkoutPlanRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/GetWorkoutPlanRequestOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/GetWorkoutPlanRequestOrBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/GetWorkoutPlanResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/GetWorkoutPlanResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/GetWorkoutPlanResponseOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/GetWorkoutPlanResponseOrBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginRequestOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginRequestOrBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginResponseOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginResponseOrBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginServiceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/LoginServiceGrpc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/RegisterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/RegisterRequestOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/RegisterRequestOrBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/RegisterResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/RegisterResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/RegisterResponseOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/RegisterResponseOrBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/RegisterServiceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/RegisterServiceGrpc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/WPData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/WPData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/WPDataOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/WPDataOrBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/WorkoutPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/WorkoutPlan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/WorkoutPlanRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/WorkoutPlanRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/WorkoutPlanRequestOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/WorkoutPlanRequestOrBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/WorkoutPlanResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/WorkoutPlanResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/WorkoutPlanResponseOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/WorkoutPlanResponseOrBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/WorkoutPlanServiceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/WorkoutPlanServiceGrpc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/empty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/empty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/emptyOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resep3/javat3/resep3/javat3/protobuf/emptyOrBuilder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,18 +91,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="sqlite" />
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/resep3/javat3" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../grpc-java-master" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Roalson Purple/Desktop/ReSEP3/ReSEP3-T3/WorkoutDB.db",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "spring.configuration.checksum": "3a184a9d962145ac3cbcd81a2d42a859",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="resep3.javat3.service" />
@@ -58,7 +119,7 @@
       <recent name="resep3.javat3.model" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.JavaT3Application">
+  <component name="RunManager" selected="Spring Boot.JavaT3Application (1)">
     <configuration name="DBInitCreateWorkout" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="resep3.javat3.persistance.DBInitCreateWorkout" />
       <module name="Java-T3" />
@@ -85,6 +146,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JavaT3Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="grpc-springboot-x" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="resep3.javat3.JavaT3Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="resep3.javat3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JavaT3Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="Java-T3" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="resep3.javat3.JavaT3Application" />
@@ -94,6 +168,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.JavaT3Application (1)" />
         <item itemvalue="Application.DBInitCreateWorkout" />
         <item itemvalue="Application.DBInitializer" />
       </list>
@@ -122,6 +197,8 @@
       <workItem from="1689718219826" duration="1140000" />
       <workItem from="1689758301592" duration="5600000" />
       <workItem from="1689772240507" duration="6910000" />
+      <workItem from="1689853272325" duration="5206000" />
+      <workItem from="1689922986207" duration="2785000" />
     </task>
     <task id="LOCAL-00001" summary="initial T3 commit">
       <created>1688814411115</created>
@@ -221,7 +298,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial T3 commit" />
