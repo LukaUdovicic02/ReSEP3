@@ -309,19 +309,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Roalson Purple\\.nuget\\packages\\": {}
+    "C:\\Users\\canar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Roalson Purple\\Desktop\\ReSEP3\\ReSEP3-T1-T2\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\Users\\canar\\RiderProjects\\Tier1\\ReSEP3-T1-T2\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\Users\\Roalson Purple\\Desktop\\ReSEP3\\ReSEP3-T1-T2\\Domain\\Domain.csproj",
-      "packagesPath": "C:\\Users\\Roalson Purple\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Roalson Purple\\Desktop\\ReSEP3\\ReSEP3-T1-T2\\Domain\\obj\\",
+      "projectPath": "C:\\Users\\canar\\RiderProjects\\Tier1\\ReSEP3-T1-T2\\Domain\\Domain.csproj",
+      "packagesPath": "C:\\Users\\canar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\canar\\RiderProjects\\Tier1\\ReSEP3-T1-T2\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Roalson Purple\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\canar\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -333,8 +333,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Roalson Purple\\Desktop\\ReSEP3\\ReSEP3-T1-T2\\Model\\Model.csproj": {
-              "projectPath": "C:\\Users\\Roalson Purple\\Desktop\\ReSEP3\\ReSEP3-T1-T2\\Model\\Model.csproj"
+            "C:\\Users\\canar\\RiderProjects\\Tier1\\ReSEP3-T1-T2\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\canar\\RiderProjects\\Tier1\\ReSEP3-T1-T2\\Model\\Model.csproj"
             }
           }
         }
@@ -378,15 +378,15 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.13, 6.0.13]"
+            "version": "[6.0.18, 6.0.18]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.13, 6.0.13]"
+            "version": "[6.0.18, 6.0.18]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.13, 6.0.13]"
+            "version": "[6.0.18, 6.0.18]"
           }
         ],
         "frameworkReferences": {
@@ -394,7 +394,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\canar\\.dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }
