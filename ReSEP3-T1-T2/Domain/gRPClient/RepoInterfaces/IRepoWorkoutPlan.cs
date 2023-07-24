@@ -11,7 +11,7 @@ namespace Domain.gRPClient.RepoInterfaces
         Task<IEnumerable<WorkoutPlan>> GetAllWorkoutPlans();
         Task DeleteWorkoutPlan(int id);
         
-        Task UpdateWorkout(int id);
+        Task UpdateWorkout(WorkoutPlan workoutPlan);
         
 
     }

@@ -70,13 +70,13 @@ namespace WebApi.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateWorkout([FromBody] int id)
+        public async Task<IActionResult> UpdateWorkout([FromBody] WorkoutPlan workoutPlan)
         {
             try
             {
 
-                await _workoutPlanLogic.UpdateWorkout(id);
-                return Ok(id);
+               await _workoutPlanLogic.UpdateWorkout(workoutPlan);
+                return Ok(workoutPlan);
             }
             catch (Exception e)
             {
