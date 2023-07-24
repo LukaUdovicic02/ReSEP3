@@ -18,10 +18,7 @@ namespace WebApi.Controllers
             _workoutPlanLogic = workoutPlanLogic;
         }
 
-        
-        
-        
-        
+
         [HttpPost]
         public async Task<ActionResult<WorkoutPlan>> CreateWorkout([FromBody] WorkoutPlan wp)
         {
@@ -35,7 +32,6 @@ namespace WebApi.Controllers
             {
                 Console.WriteLine(e);
                 return StatusCode(500, e.Message);
-
             }
         }
 
@@ -74,8 +70,7 @@ namespace WebApi.Controllers
         {
             try
             {
-
-               await _workoutPlanLogic.UpdateWorkout(workoutPlan);
+                await _workoutPlanLogic.UpdateWorkout(workoutPlan);
                 return Ok(workoutPlan);
             }
             catch (Exception e)
@@ -84,6 +79,5 @@ namespace WebApi.Controllers
                 return StatusCode(500, e.Message);
             }
         }
-
     }
 }
