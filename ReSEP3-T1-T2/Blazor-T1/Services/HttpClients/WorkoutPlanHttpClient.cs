@@ -39,13 +39,13 @@ public class WorkoutPlanHttpClient : IWorkoutPlanService
         return await httpClient.GetFromJsonAsync<WorkoutPlan>(apiUrl);
     }
 
-    public async Task<bool> CreateWorkoutPlan(WorkoutPlan plan)
+    public async Task<WorkoutPlan> CreateWorkoutPlan(WorkoutPlan plan)
     {
         string apiUrl = "/api/workoutplans"; // Replace with your actual API endpoint
 
         var response = await httpClient.PostAsJsonAsync(apiUrl, plan);
 
-        return response.IsSuccessStatusCode;
+        return plan;
     }
 
     public async Task UpdateWorkoutPlan(WorkoutPlan plan)

@@ -1,0 +1,30 @@
+﻿@page "/CreateExercise"
+@using Model
+@inject IExerciseService exerciseService
+@inject NavigationManager _navigationManager
+<h3>Create Exercise</h3>
+
+<div>
+    <label for="exName">Exercise Name:</label>
+    <input type="text" id="exName" @bind="newExercise.EName" />
+</div>
+<div>
+    <label for="nrOfSets">Number of Sets:</label>
+    <input type="number" id="nrOfSets" @bind="newExercise.NrOfSets" />
+</div>
+<div>
+    <label for="nrOfReps">Number of Reps:</label>
+    <input type="number" id="nrOfReps" @bind="newExercise.NrOfReps" />
+</div>
+<button @onclick="CreateNewExercise">Create</button>
+
+@code {
+    Exercise newExercise = new Exercise();
+
+    private async Task CreateNewExercise()
+    {
+        await exerciseService.CreateExercise(newExercise);
+       
+        _navigationManager.NavigateTo("/WorkoutPlan"); 
+    }
+}
