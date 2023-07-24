@@ -11,6 +11,17 @@ public class ExerciseHttpClient : IExerciseService
     {
         this.httpClient = httpClient;
     }
+
+    public Task<List<Exercise>> GetExercises()
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<Exercise> GetExerciseById(int id)
+    {
+        throw new NotImplementedException();
+    }
+    
     public async Task<Exercise> CreateExercise(Exercise exercise)
     {
         
