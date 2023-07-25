@@ -10,28 +10,25 @@ public class DataSession
 
     public static DataSession Instance => instance.Value;
 
-    public static LoginHttpClient HttpClient;
-
     public User User { get; set; }
-    public WorkoutPlan WorkoutPlan { get; private set; }
+    public bool IsAuthenticated { get; private set; }
 
     private DataSession()
     {
         User = new User();
-        HttpClient = new LoginHttpClient();
-  
-        
     }
 
     public static async Task CreateInstance(User user)
     {
         Instance.User = user;
-        //Instance.WorkoutPlan = HttpClient.GetWpByUserID(user.Uid);
+        Instance.IsAuthenticated = true;
+    
     }
 
     public static async Task DeleteInstance()
     {
         Instance.User = null;
+        Instance.IsAuthenticated = false;
     }
     
     

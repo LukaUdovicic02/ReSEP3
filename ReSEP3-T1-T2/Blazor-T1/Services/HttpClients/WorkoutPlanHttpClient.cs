@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Net.Http.Json;
 using System.Text.Json;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Components;
 using Model;
 
 public class WorkoutPlanHttpClient : IWorkoutPlanService
@@ -70,7 +71,7 @@ public class WorkoutPlanHttpClient : IWorkoutPlanService
 
     public async Task UpdateWorkoutPlan(WorkoutPlan plan)
     {
-        plan.UserID = DataSession.Instance.User.Uid;
+      
         string apiUrl = $"http://localhost:5052/WorkoutPlan/{plan.Wpid}";
         var response = await httpClient.PutAsJsonAsync(apiUrl, plan);
 
@@ -79,6 +80,7 @@ public class WorkoutPlanHttpClient : IWorkoutPlanService
             string errorMessage = await response.Content.ReadAsStringAsync();
             throw new Exception(errorMessage);
         }
+      
     }
 
     

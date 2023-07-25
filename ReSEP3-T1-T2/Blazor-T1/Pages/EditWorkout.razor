@@ -28,17 +28,19 @@ else
     </div>
 
     <button @onclick="UpdateWorkout">Update</button>
-    <button @onclick="CancelEdit">Cancel</button>
+    <button @onclick="CancelEdit">Go Back</button>
 }
 
 @code {
     private WorkoutPlan workout;
 
+    
     [Parameter] public int workoutId { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        if (DataSession.Instance.User.IsAuthenticated)
+     
+        if (DataSession.Instance.IsAuthenticated)
         {
             try
             {
@@ -55,14 +57,16 @@ else
 
     private async Task UpdateWorkout()
     {
+        
         await workoutPlanService.UpdateWorkoutPlan(workout);
-        navigationManager.NavigateTo("/WorkoutPlan", forceLoad: true);
+        navigationManager.NavigateTo("/WorkoutPlan");
+        
         
     }
 
     private void CancelEdit()
     {
-        navigationManager.NavigateTo("/WorkoutPlan", forceLoad: true);
+        navigationManager.NavigateTo("/WorkoutPlan");
     }
 
 }
