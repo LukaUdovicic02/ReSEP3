@@ -1,82 +1,104 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Domain.gRPClient;
 using Domain.Logic.LogicInterfaces;
 using Microsoft.AspNetCore.Mvc;
 using Model;
 
-namespace WebApi.Controllers;
-
-[ApiController]
-[Route("WorkoutPlan")]
-public class WorkoutPlanController : ControllerBase
+namespace WebApi.Controllers
 {
-    private readonly IWorkoutPlanLogic _workoutPlanLogic;
-
-    public WorkoutPlanController([FromServices] IWorkoutPlanLogic workoutPlanLogic)
+    [ApiController]
+    [Route("WorkoutPlan")]
+    public class WorkoutPlanController : ControllerBase
     {
-        _workoutPlanLogic = workoutPlanLogic;
-    }
+        private readonly IWorkoutPlanLogic _workoutPlanLogic;
+
+        public WorkoutPlanController([FromServices] IWorkoutPlanLogic workoutPlanLogic)
+        {
+            _workoutPlanLogic = workoutPlanLogic;
+        }
 
 
-    [HttpPost]
-    public async Task<ActionResult<WorkoutPlan>> CreateWorkout([FromBody] WorkoutPlan wp)
-    {
-        try
+        [HttpPost]
+        public async Task<ActionResult<WorkoutPlan>> CreateWorkout([FromBody] WorkoutPlan wp)
         {
-            await _workoutPlanLogic.CreateWorkout(wp);
-            return Ok(wp);
+            try
+            {
+                await _workoutPlanLogic.CreateWorkout(wp);
+                return Ok(wp);
+            }
+
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode(500, e.Message);
+            }
         }
 
-        catch (Exception e)
+        [HttpGet]
+        public async Task<ActionResult<WorkoutPlan>> GetWorkoutPlans()
         {
-            Console.WriteLine(e);
-            return StatusCode(500, e.Message);
+            try
+            {
+                IEnumerable<WorkoutPlan> workoutPlans = _workoutPlanLogic.GetAllWorkoutPlans().Result;
+                return Ok(workoutPlans);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode(500, e.Message);
+            }
         }
-    }
 
-    [HttpGet]
-    public async Task<ActionResult<WorkoutPlan>> GetWorkoutPlans()
-    {
-        try
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<WorkoutPlan>> DeleteWorkoutPlan(int id)
         {
-            IEnumerable<WorkoutPlan> workoutPlans = _workoutPlanLogic.GetAllWorkoutPlans().Result;
-            return Ok(workoutPlans);
+            try
+            {
+                await _workoutPlanLogic.DeleteWorkoutPlan(id);
+                return Ok(id);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode(500, e.Message);
+            }
         }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            return StatusCode(500, e.Message);
-        }
-    }
 
-    [HttpDelete("{id}")]
-    public async Task<ActionResult<WorkoutPlan>> DeleteWorkoutPlan(int id)
-    {
-        try
+        [HttpPut]
+        public async Task<IActionResult> UpdateWorkout([FromBody] WorkoutPlan workoutPlan)
         {
-            await _workoutPlanLogic.DeleteWorkoutPlan(id);
-            return Ok(id);
+            try
+            {
+                await _workoutPlanLogic.UpdateWorkout(workoutPlan);
+                return Ok(workoutPlan);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode(500, e.Message);
+            }
         }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            return StatusCode(500, e.Message);
-        }
-    }
 
-    [HttpPut]
-    public async Task<IActionResult> UpdateWorkout([FromBody] WorkoutPlan workoutPlan)
-    {
-        try
+        [HttpGet("EditWorkout/{wpid}")]
+        public async Task<ActionResult<WorkoutPlan>> GetWorkoutPlanById(int wpid)
         {
-            await _workoutPlanLogic.UpdateWorkout(workoutPlan);
-            return Ok(workoutPlan);
+            try
+            {
+                var workoutPlan = await _workoutPlanLogic.GetWorkoutPlanById(wpid);
+                if (workoutPlan == null)
+                {
+                    return NotFound(); // Return 404 Not Found when the workout plan is not found
+                }
+                return Ok(workoutPlan);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode(500, e.Message);
+            }
         }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            return StatusCode(500, e.Message);
-        }
+
     }
 }

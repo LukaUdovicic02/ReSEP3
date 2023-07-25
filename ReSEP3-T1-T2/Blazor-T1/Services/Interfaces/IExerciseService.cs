@@ -1,4 +1,6 @@
-﻿using Model;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using Model;
 
 public interface IExerciseService
 {

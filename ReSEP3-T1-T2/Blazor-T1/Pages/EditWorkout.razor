@@ -16,31 +16,40 @@ else
 {
     <div>
         <label for="wpName">Workout Name:</label>
-        <input type="text" id="wpName" @bind="workout.WPname" />
+        <input type="text" id="wpName" @bind="workout.WPname"/>
     </div>
     <div>
         <label for="timeGoal">Time Goal:</label>
-        <input type="number" id="timeGoal" @bind="workout.Timegoal" />
+        <input type="number" id="timeGoal" @bind="workout.Timegoal"/>
     </div>
     <div>
         <label for="type">Type:</label>
-        <input type="text" id="type" @bind="workout.Type" />
+        <input type="text" id="type" @bind="workout.Type"/>
     </div>
 
     <button @onclick="UpdateWorkout">Update</button>
     <button @onclick="CancelEdit">Cancel</button>
-
 }
 
 @code {
     private WorkoutPlan workout;
 
-    [Parameter]
+    
     public int workoutId { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        workout = await workoutPlanService.GetWorkoutPlanById(workoutId);
+        try
+        {
+            workout = new WorkoutPlan();
+
+
+            workout = await workoutPlanService.GetWorkoutPlanById(workoutId);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+        }
     }
 
     private async Task UpdateWorkout()
@@ -53,4 +62,5 @@ else
     {
         navigationManager.NavigateTo("/WorkoutPlan", forceLoad: true);
     }
+
 }

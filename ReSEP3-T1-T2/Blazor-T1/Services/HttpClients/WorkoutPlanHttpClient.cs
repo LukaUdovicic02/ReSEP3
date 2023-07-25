@@ -18,7 +18,6 @@ public class WorkoutPlanHttpClient : IWorkoutPlanService
 
     public async Task<List<WorkoutPlan>> GetWorkoutPlans()
     {
-
         HttpResponseMessage response = await httpClient.GetAsync($"http://localhost:5052/WorkoutPlan");
         if (!response.IsSuccessStatusCode)
         {
@@ -27,34 +26,58 @@ public class WorkoutPlanHttpClient : IWorkoutPlanService
 
         string message = await response.Content.ReadAsStringAsync();
         List<WorkoutPlan> result = JsonSerializer.Deserialize<List<WorkoutPlan>>(message);
-        
+
         return result;
-        
     }
 
-    public async Task<WorkoutPlan> GetWorkoutPlanById(int id)
+    public async Task<WorkoutPlan> GetWorkoutPlanById(int wpid)
     {
-        string apiUrl = $"/api/workoutplans/{id}"; 
+        HttpResponseMessage response = await httpClient.GetAsync($"http://localhost:5052/WorkoutPlan/{wpid}");
+        if (!response.IsSuccessStatusCode)
+        {
+            throw new Exception("could not fetch the workout plan");
+        }
 
-        return await httpClient.GetFromJsonAsync<WorkoutPlan>(apiUrl);
+        string message = await response.Content.ReadAsStringAsync();
+        WorkoutPlan result = JsonSerializer.Deserialize<WorkoutPlan>(message, new JsonSerializerOptions()
+        {
+            PropertyNameCaseInsensitive = true
+        });
+
+        return result;
     }
+
 
     public async Task<WorkoutPlan> CreateWorkoutPlan(WorkoutPlan plan)
     {
-        string apiUrl = "/api/workoutplans"; // Replace with your actual API endpoint
+        plan.UserID = DataSession.Instance.User.Uid;
 
-        var response = await httpClient.PostAsJsonAsync(apiUrl, plan);
+        HttpResponseMessage response = await httpClient.PostAsJsonAsync("http://localhost:5052/WorkoutPlan", plan);
+        string result = await response.Content.ReadAsStringAsync();
+        if (!response.IsSuccessStatusCode)
+        {
+            throw new Exception(result);
+        }
 
-        return plan;
+        WorkoutPlan w = JsonSerializer.Deserialize<WorkoutPlan>(result, new JsonSerializerOptions()
+        {
+            PropertyNameCaseInsensitive = true
+        })!;
+
+        return w;
     }
 
     public async Task UpdateWorkoutPlan(WorkoutPlan plan)
     {
         DataSession.Instance.User.Uid = plan.UserID;
         string apiUrl = $"http://localhost:5052/EditWorkout/{plan.Wpid}";
-        var response = await httpClient.PutAsJsonAsync(apiUrl, plan.Wpid);
-       
-    
+        var response = await httpClient.PutAsJsonAsync(apiUrl, plan);
+
+        if (!response.IsSuccessStatusCode)
+        {
+            string errorMessage = await response.Content.ReadAsStringAsync();
+            throw new Exception(errorMessage);
+        }
     }
 
     public async Task DeleteWorkoutPlan(int id)
@@ -65,5 +88,4 @@ public class WorkoutPlanHttpClient : IWorkoutPlanService
             throw new Exception("could not delete the workout plan");
         }
     }
-
 }

@@ -5,6 +5,7 @@ option csharp_namespace = "domain.grpClient";
 service WorkoutPlanService {
   rpc createWorkoutPlan(WorkoutPlanRequest) returns (WorkoutPlanResponse);
   rpc getWorkoutPlan(GetWorkoutPlanRequest) returns (GetWorkoutPlanResponse);
+  rpc getWorkoutPlanById(GetWorkoutPlanRequest) returns (GetWorkoutPlanResponse);
   rpc deleteWorkoutPlan(DeleteWorkoutPlanRequest) returns (empty);
   rpc updateWorkoutPlan(UpdateWorkoutPlanRequest) returns (UpdateWorkoutPlanResponse);
 }
@@ -36,7 +37,7 @@ message GetWorkoutPlanRequest {
   optional int32 userid = 2;
   optional string WPName = 3;
 }
-  
+
 message GetWorkoutPlanResponse {
   repeated WPData data = 1;
 }
@@ -54,5 +55,5 @@ message DeleteWorkoutPlanRequest {
   int32 wpid = 1;
 }
 message empty {
-  
+
 }

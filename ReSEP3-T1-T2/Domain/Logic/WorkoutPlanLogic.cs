@@ -35,5 +35,10 @@ namespace Domain.Logic
         {
             await _workoutPlan.UpdateWorkout(workoutPlan);
         }
+
+        public async Task<WorkoutPlan> GetWorkoutPlanById(int wpid)
+        {
+            return await _workoutPlan.GetWorkoutPlanById(wpid);
+        }
     }
 }

@@ -36,6 +36,7 @@ else
             <th>Workout name</th>
             <th>TimeGoal</th>
             <th>Type</th>
+            <th>Edit</th>
             <th>Remove</th>
         </tr>
         </thead>
@@ -48,8 +49,10 @@ else
                 <td>@workout.Timegoal</td>
                 <td>@workout.Type</td>
                 <td>
-                      <button @onclick="@(() => EditWorkoutPlan(workout.Wpid))">
-                      </button>
+                    <button @onclick="@(() => EditWorkoutPlan(workout.Wpid))">
+                    </button>
+                </td>
+                <td>
                     <button @onclick="@(() => RemoveWorkoutPlan(workout.Wpid))">
                         <i class="oi oi-trash" style="color:red"/>
                     </button>
@@ -58,7 +61,7 @@ else
         }
         </tbody>
     </table>
-}
+
 
 
 @code {
@@ -89,16 +92,17 @@ else
         workoutplanToShow.Remove(workoutplanToShow.First(w => w.Wpid == workoutWpid));
         Console.WriteLine("workout plan deleted");
     }
-    
+
     private void CreateWorkout()
     {
         _navigationManager.NavigateTo("/CreateWorkout");
     }
 
-    private void EditWorkoutPlan(int workoutWpid)
+    private void EditWorkoutPlan(int workoutId)
     {
-        _navigationManager.NavigateTo($"/EditWorkout/{workoutWpid}");
+        _navigationManager.NavigateTo($"/EditWorkout/{workoutId}");
     }
+
 }
 
 }

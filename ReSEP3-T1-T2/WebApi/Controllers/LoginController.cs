@@ -1,68 +1,68 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Domain.Logic.LogicInterfaces;
 using Microsoft.AspNetCore.Mvc;
 using Model;
 
-namespace WebApi.Controllers;
-
-[ApiController]
-[Route("LogIn")]
-public class LoginController : ControllerBase
+namespace WebApi.Controllers
 {
+    [ApiController]
+    [Route("LogIn")]
+    public class LoginController : ControllerBase
+    {
         
-    private readonly IUserLogic userLogic;
+        private readonly IUserLogic userLogic;
 
-    public LoginController([FromServices] IUserLogic userLogic)
-    {
-        this.userLogic = userLogic;
-    }
-
-    [HttpGet]
-    [Route("{username}/{password}")]
-    public async Task<ActionResult<User>> ValidateUser([FromRoute] string username,[FromRoute] string password )
-    {
-        try
+        public LoginController([FromServices] IUserLogic userLogic)
         {
-            User user = userLogic.ValidateUser(username, password).Result;
-            return Ok(user);
+            this.userLogic = userLogic;
         }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            return StatusCode(500, e.Message);
-        }
-    }
 
-    [HttpGet("{id}")]
-    public async Task<ActionResult<IEnumerable<WorkoutPlan>>> GetWpByUserID(int id)
-    {
-        try
+        [HttpGet]
+        [Route("{username}/{password}")]
+        public async Task<ActionResult<User>> ValidateUser([FromRoute] string username,[FromRoute] string password )
         {
-            IEnumerable<WorkoutPlan> workoutPlans = await userLogic.GetWpByUserID(id);
-            return Ok(workoutPlans);
+            try
+            {
+                User user = await userLogic.ValidateUser(username, password);
+                return Ok(user);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode(500, e.Message);
+            }
         }
-        catch (Exception e)
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<IEnumerable<WorkoutPlan>>> GetWpByUserID(int id)
         {
-            Console.WriteLine(e);
-            return StatusCode(500, e.Message);
+            try
+            {
+                IEnumerable<WorkoutPlan> workoutPlans = await userLogic.GetWpByUserID(id);
+                return Ok(workoutPlans);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode(500, e.Message);
+            }
         }
-    }
 
 
-    [HttpPost]
-    public async Task<ActionResult<User>> RegisterUser([FromBody] User user)
-    {
-        try
+        [HttpPost]
+        public async Task<ActionResult<User>> RegisterUser([FromBody] User user)
         {
-            await userLogic.RegisterUser(user);
+            try
+            {
+                await userLogic.RegisterUser(user);
                 
-            return Ok(user);
-        }catch (Exception e) {
-            Console.WriteLine(e);
-            return StatusCode(500, e.Message);
+                return Ok(user);
+            }catch (Exception e) {
+                Console.WriteLine(e);
+                return StatusCode(500, e.Message);
+            }
         }
     }
 }

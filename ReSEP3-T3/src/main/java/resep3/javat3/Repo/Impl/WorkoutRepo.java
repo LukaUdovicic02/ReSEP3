@@ -2,7 +2,6 @@ package resep3.javat3.Repo.Impl;
 
 import org.lognet.springboot.grpc.GRpcService;
 import resep3.javat3.Repo.Interfaces.IWorkoutRepo;
-import resep3.javat3.model.User;
 import resep3.javat3.model.WorkoutPlan;
 import resep3.javat3.persistance.DBConnection;
 
@@ -126,6 +125,42 @@ public class WorkoutRepo implements IWorkoutRepo {
         } finally {
             initializer.disconnect();
         }
+    }
+
+    public WorkoutPlan getWorkoutPlanById(int wpid) {
+
+        WorkoutPlan wp = new WorkoutPlan();
+
+        try {
+
+            initializer.connect();
+
+            Connection connection = initializer.getConnection();
+
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM WorkoutPlan WHERE WPID = " + wpid);
+            ResultSet resultSet = statement.executeQuery();
+
+            while (resultSet.next()) {
+
+                wp.setWpID(resultSet.getInt("WPID"));
+                wp.setWpName(resultSet.getString("WPname"));
+                wp.setTimeGoal(resultSet.getInt("timegoal"));
+                wp.setType(resultSet.getString("type"));
+                wp.setUserID(resultSet.getInt("UserID"));
+            }
+
+            System.out.println("Workout plan fetched successfully");
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println("Failed to fetch workout plan.");
+        } finally {
+            initializer.disconnect();
+        }
+
+
+        return wp;
     }
 
 

@@ -10,5 +10,6 @@ namespace Domain.Logic.LogicInterfaces
         Task<IEnumerable<WorkoutPlan>> GetAllWorkoutPlans();
         Task DeleteWorkoutPlan(int id);
         Task UpdateWorkout(WorkoutPlan workoutPlan);
+        Task<WorkoutPlan> GetWorkoutPlanById(int wpid);
     }
 }
