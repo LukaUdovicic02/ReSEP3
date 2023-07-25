@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_package = "resep3.javat3.protobuf";
+option java_multiple_files = true;
+
+
+service ExerciseService {
+  rpc createExercise(CreateExerciseRequest) returns (CreateExerciseResponse);
+}
+
+message CreateExerciseRequest {
+  string EName = 1;
+  int32 NrOfSets = 2;
+  int32 NrOfReps = 3;
+  int32 WorkoutId = 4;
+}
+
+message CreateExerciseResponse {
+  int32 eid = 1;
+}

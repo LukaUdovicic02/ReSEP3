@@ -3,7 +3,6 @@ using System.Threading.Tasks;
 using Model;
 
 
-
 public class DataSession
 {
     private static readonly Lazy<DataSession> instance = new(() => new DataSession());

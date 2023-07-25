@@ -6,6 +6,8 @@ namespace Domain.Logic
 {
     public class ExerciseLogic : IExerciseLogic
     {
+        
+        // Takes from repo interface
         private readonly IExerciseLogic _exercise;
 
         public ExerciseLogic(IExerciseLogic exercise)

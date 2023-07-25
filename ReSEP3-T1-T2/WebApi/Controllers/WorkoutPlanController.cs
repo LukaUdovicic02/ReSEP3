@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Domain.gRPClient;
 using Domain.Logic.LogicInterfaces;
 using Microsoft.AspNetCore.Mvc;
 using Model;
