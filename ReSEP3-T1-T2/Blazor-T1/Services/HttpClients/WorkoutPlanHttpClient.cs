@@ -32,6 +32,7 @@ public class WorkoutPlanHttpClient : IWorkoutPlanService
 
     public async Task<WorkoutPlan> GetWorkoutPlanById(int wpid)
     {
+        Console.WriteLine(wpid);
         HttpResponseMessage response = await httpClient.GetAsync($"http://localhost:5052/WorkoutPlan/{wpid}");
         if (!response.IsSuccessStatusCode)
         {
@@ -43,7 +44,7 @@ public class WorkoutPlanHttpClient : IWorkoutPlanService
         {
             PropertyNameCaseInsensitive = true
         });
-
+        
         return result;
     }
 
@@ -69,8 +70,8 @@ public class WorkoutPlanHttpClient : IWorkoutPlanService
 
     public async Task UpdateWorkoutPlan(WorkoutPlan plan)
     {
-        DataSession.Instance.User.Uid = plan.UserID;
-        string apiUrl = $"http://localhost:5052/EditWorkout/{plan.Wpid}";
+        plan.UserID = DataSession.Instance.User.Uid;
+        string apiUrl = $"http://localhost:5052/WorkoutPlan/{plan.Wpid}";
         var response = await httpClient.PutAsJsonAsync(apiUrl, plan);
 
         if (!response.IsSuccessStatusCode)
@@ -80,6 +81,7 @@ public class WorkoutPlanHttpClient : IWorkoutPlanService
         }
     }
 
+    
     public async Task DeleteWorkoutPlan(int id)
     {
         HttpResponseMessage response = await httpClient.DeleteAsync($"http://localhost:5052/WorkoutPlan/{id}");

@@ -66,8 +66,8 @@ namespace WebApi.Controllers
             }
         }
 
-        [HttpPut]
-        public async Task<IActionResult> UpdateWorkout([FromBody] WorkoutPlan workoutPlan)
+        [HttpPut("{wpid}")]
+        public async Task<IActionResult> UpdateWorkout(int wpid, [FromBody] WorkoutPlan workoutPlan)
         {
             try
             {
@@ -81,7 +81,7 @@ namespace WebApi.Controllers
             }
         }
 
-        [HttpGet("EditWorkout/{wpid}")]
+        [HttpGet("{wpid}")]
         public async Task<ActionResult<WorkoutPlan>> GetWorkoutPlanById(int wpid)
         {
             try
@@ -89,7 +89,7 @@ namespace WebApi.Controllers
                 var workoutPlan = await _workoutPlanLogic.GetWorkoutPlanById(wpid);
                 if (workoutPlan == null)
                 {
-                    return NotFound(); // Return 404 Not Found when the workout plan is not found
+                    return NotFound(); 
                 }
                 return Ok(workoutPlan);
             }

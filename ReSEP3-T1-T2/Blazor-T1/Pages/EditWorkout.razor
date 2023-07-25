@@ -1,4 +1,4 @@
-﻿@page "/EditWorkout/{workoutId}"
+﻿@page "/EditWorkout/{workoutId:int}"
 
 @using Model
 @inject IWorkoutPlanService workoutPlanService
@@ -34,21 +34,22 @@ else
 @code {
     private WorkoutPlan workout;
 
-    
-    public int workoutId { get; set; }
+    [Parameter] public int workoutId { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        try
+        if (DataSession.Instance.User.IsAuthenticated)
         {
-            workout = new WorkoutPlan();
-
-
-            workout = await workoutPlanService.GetWorkoutPlanById(workoutId);
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
+            try
+            {
+                workout = new WorkoutPlan();
+                workout = await workoutPlanService.GetWorkoutPlanById(workoutId);
+                Console.WriteLine(workoutId);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
         }
     }
 
@@ -56,6 +57,7 @@ else
     {
         await workoutPlanService.UpdateWorkoutPlan(workout);
         navigationManager.NavigateTo("/WorkoutPlan", forceLoad: true);
+        
     }
 
     private void CancelEdit()

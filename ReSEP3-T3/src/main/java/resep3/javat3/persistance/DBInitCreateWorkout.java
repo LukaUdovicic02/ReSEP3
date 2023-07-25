@@ -78,12 +78,8 @@ public class DBInitCreateWorkout {
             System.out.println(workoutPlans.toString());
         }
 
-
-
         return workoutPlans;
     }
-
-
 
 
 
