@@ -1,19 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "9+E3201e5VLpAbayoQnF9y84zOANyb6KZzYKKbaxXSTGpL+PEnikO12KwuQINevL/EgNwf/SyXFuqwRljqNgCw==",
+  "dgSpecHash": "2lYDxV/lq0hO9qM5IDLnsFtEq91jNHfkhCOhQAZiPDOxY38zGKbTpZ0JDj36sMwXbqIbs1xmdmCF/+whX3oMLQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dragos\\Documents\\GitHub\\ReSEP3\\ReSEP3-T1-T2\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\canar\\RiderProjects\\Tier1\\ReSEP3-T1-T2\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Dragos\\.nuget\\packages\\google.protobuf\\3.23.1\\google.protobuf.3.23.1.nupkg.sha512",
-    "C:\\Users\\Dragos\\.nuget\\packages\\grpc.core.api\\2.55.0\\grpc.core.api.2.55.0.nupkg.sha512",
-    "C:\\Users\\Dragos\\.nuget\\packages\\grpc.net.client\\2.55.0\\grpc.net.client.2.55.0.nupkg.sha512",
-    "C:\\Users\\Dragos\\.nuget\\packages\\grpc.net.common\\2.55.0\\grpc.net.common.2.55.0.nupkg.sha512",
-    "C:\\Users\\Dragos\\.nuget\\packages\\grpc.tools\\2.56.0\\grpc.tools.2.56.0.nupkg.sha512",
-    "C:\\Users\\Dragos\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.0.3\\microsoft.extensions.logging.abstractions.3.0.3.nupkg.sha512",
-    "C:\\Users\\Dragos\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
-    "C:\\Users\\Dragos\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.16\\microsoft.netcore.app.ref.6.0.16.nupkg.sha512",
-    "C:\\Users\\Dragos\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.16\\microsoft.windowsdesktop.app.ref.6.0.16.nupkg.sha512",
-    "C:\\Users\\Dragos\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.16\\microsoft.aspnetcore.app.ref.6.0.16.nupkg.sha512"
+    "C:\\Users\\canar\\.nuget\\packages\\google.protobuf\\3.23.1\\google.protobuf.3.23.1.nupkg.sha512",
+    "C:\\Users\\canar\\.nuget\\packages\\grpc.core.api\\2.55.0\\grpc.core.api.2.55.0.nupkg.sha512",
+    "C:\\Users\\canar\\.nuget\\packages\\grpc.net.client\\2.55.0\\grpc.net.client.2.55.0.nupkg.sha512",
+    "C:\\Users\\canar\\.nuget\\packages\\grpc.net.common\\2.55.0\\grpc.net.common.2.55.0.nupkg.sha512",
+    "C:\\Users\\canar\\.nuget\\packages\\grpc.tools\\2.56.0\\grpc.tools.2.56.0.nupkg.sha512",
+    "C:\\Users\\canar\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.0.3\\microsoft.extensions.logging.abstractions.3.0.3.nupkg.sha512",
+    "C:\\Users\\canar\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\canar\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.18\\microsoft.netcore.app.ref.6.0.18.nupkg.sha512",
+    "C:\\Users\\canar\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.18\\microsoft.windowsdesktop.app.ref.6.0.18.nupkg.sha512",
+    "C:\\Users\\canar\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.18\\microsoft.aspnetcore.app.ref.6.0.18.nupkg.sha512"
   ],
   "logs": []
 }
