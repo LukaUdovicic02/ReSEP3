@@ -7,6 +7,8 @@ import resep3.javat3.Repo.Impl.ExerciseRepo;
 import resep3.javat3.model.Exercise;
 import resep3.javat3.protobuf.ExerciseServiceGrpc;
 
+import java.util.ArrayList;
+
 @GRpcService
 public class ExerciseServiceImpl extends ExerciseServiceGrpc.ExerciseServiceImplBase {
     private final ExerciseRepo exerciseRepo;
@@ -28,15 +30,47 @@ public class ExerciseServiceImpl extends ExerciseServiceGrpc.ExerciseServiceImpl
             responseStreamObserver.onNext(response);
             responseStreamObserver.onCompleted();
 
-
             System.out.println("Exercise created");
-
 
         } catch (Exception e) {
             e.printStackTrace();
 
             System.out.println("Could not create exercise");
         }
+    }
+
+
+    @Override
+    public void getAllExercises(resep3.javat3.protobuf.GetAllExercisesRequest request, StreamObserver<resep3.javat3.protobuf.GetAllExerciseResponse> streamObserver) {
+
+        try {
+
+            ArrayList<Exercise> exercises = exerciseRepo.GetAllExercises();
+
+            for (Exercise exercise : exercises) {
+                resep3.javat3.protobuf.GetAllExerciseResponse responseBuilder = resep3.javat3.protobuf.GetAllExerciseResponse.newBuilder()
+                        .setEid(exercise.getEid())
+                        .setEName(exercise.getEName())
+                        .setNrOfReps(exercise.getNrOfReps())
+                        .setNrOfSets(exercise.getNrOfSets())
+                        .setWorkoutId(exercise.getWorkoutId())
+                        .build();
+
+
+                streamObserver.onNext(responseBuilder);
+            }
+
+            System.out.println("All exercises has been fetch");
+            streamObserver.onCompleted();
+
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("All exercises can not be fetched");
+
+        }
+
 
     }
 
