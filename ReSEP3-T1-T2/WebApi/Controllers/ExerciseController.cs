@@ -35,6 +35,21 @@ namespace WebApi.Controllers
                 return StatusCode(500, e.Message);
             }
         }
+
+        [HttpGet]
+        public async Task<ActionResult<Exercise>> GetExercises()
+        {
+            try
+            {
+                IEnumerable<Exercise> exercises = await _exerciseLogic.GetAllExercises();
+                return Ok(exercises);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode(500, e.Message);
+            }
+        }
         /*
         [HttpGet]
         public async Task<ActionResult<WorkoutPlan>> GetWorkoutPlans()

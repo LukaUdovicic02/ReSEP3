@@ -22,5 +22,10 @@ namespace Domain.Logic
         {
             await _exercise.DeleteExercise(id);
         }
+
+        public async Task<IEnumerable<Exercise>> GetAllExercises()
+        {
+            return await _exercise.GetAllExercises();
+        }
     }
 }

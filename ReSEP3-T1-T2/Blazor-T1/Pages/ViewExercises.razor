@@ -1,0 +1,71 @@
+﻿@page "/ViewExercises"
+@using Model
+
+@inject IExerciseService ExerciseService
+@inject IWorkoutPlanService WorkoutPlanService
+@inject ILoginService LoginService
+@inject NavigationManager _navigationManager
+
+<h3>ViewExercises</h3>
+
+ @if (exercises == null)
+{
+    <p>
+        <em> Loading... </em>
+    </p>
+}
+
+else if (!exercises.Any())
+{
+    <p> No Exercises exist, please create one. </p>
+}
+else
+{
+    <button type="button" class="btn btn-secondary" @onclick="Cancel">Cancel</button>
+    <button class="custom-btn btn-14" @onclick="CreateExercise">Create new Exercise</button>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Exercise name</th>
+        <th>Number of Sets</th>
+        <th>Number of Repetitions</th>
+        <th>Remove</th>
+    </tr>
+    </thead>
+
+   <tbody>
+    @foreach (var exercise in exercises)
+    {
+        <tr>
+            <td>@exercise.EName</td>
+            <td>@exercise.NrOfSets</td>
+            <td>@exercise.NrOfReps</td>
+            <td>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+}
+@code {
+    private List<Exercise> exercises;
+    private List<Exercise> allExercises;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (DataSession.Instance.User.IsAuthenticated)
+        {
+            @*allExercises = (List<Model.Exercise>) await WorkoutPlanService.GetWorkoutPlanById(DataSession.Instance.WorkoutPlan.Wpid);*@
+
+            exercises = allExercises;
+        }
+    }
+
+    private void Cancel(){
+        _navigationManager.NavigateTo("/WorkoutPlan");
+    }
+    
+    private void CreateExercise(){
+        _navigationManager.NavigateTo("/CreateExercise");
+    }
+}
