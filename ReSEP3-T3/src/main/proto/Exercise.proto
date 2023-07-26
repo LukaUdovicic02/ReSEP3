@@ -6,6 +6,7 @@ option java_multiple_files = true;
 
 service ExerciseService {
   rpc createExercise(CreateExerciseRequest) returns (CreateExerciseResponse);
+  rpc getAllExercises(GetAllExercisesRequest) returns (GetAllExerciseResponse);
 }
 
 message CreateExerciseRequest {
@@ -17,4 +18,18 @@ message CreateExerciseRequest {
 
 message CreateExerciseResponse {
   int32 eid = 1;
+}
+
+message GetAllExercisesRequest {
+  optional int32 WorkoutPlanId = 1;
+  optional int32 eid = 2;
+}
+
+message GetAllExerciseResponse {
+  int32 eid = 1;
+  string EName = 2;
+  int32 NrOfSets = 3;
+  int32 NrOfReps = 4;
+  int32 WorkoutId = 5;
+
 }
