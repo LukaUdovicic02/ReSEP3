@@ -1,9 +1,12 @@
 package resep3.javat3.service;
+
+import com.google.protobuf.Empty;
 import io.grpc.stub.StreamObserver;
 import org.lognet.springboot.grpc.GRpcService;
 import resep3.javat3.Repo.Impl.WorkoutRepo;
 import resep3.javat3.model.WorkoutPlan;
 import resep3.javat3.protobuf.WorkoutPlanServiceGrpc;
+
 import java.util.ArrayList;
 
 
@@ -76,6 +79,7 @@ public class WorkoutPlanServiceImpl extends WorkoutPlanServiceGrpc.WorkoutPlanSe
             workoutRepo.deleteWorkoutPlan(request.getWpid());
             streamObserver.onNext(null);
             streamObserver.onCompleted();
+
         } catch
         (Exception e) {
             e.printStackTrace();
@@ -85,9 +89,8 @@ public class WorkoutPlanServiceImpl extends WorkoutPlanServiceGrpc.WorkoutPlanSe
 
 
     @Override
-    public void updateWorkoutPlan(resep3.javat3.protobuf.UpdateWorkoutPlanRequest request, StreamObserver<resep3.javat3.protobuf.UpdateWorkoutPlanResponse> responseStreamObserver)
-    {
-        WorkoutPlan workoutPlan = new WorkoutPlan(request.getWpid(),request.getWpname() , request.getTimegoal() , request.getType() , request.getUserid());
+    public void updateWorkoutPlan(resep3.javat3.protobuf.UpdateWorkoutPlanRequest request, StreamObserver<resep3.javat3.protobuf.UpdateWorkoutPlanResponse> responseStreamObserver) {
+        WorkoutPlan workoutPlan = new WorkoutPlan(request.getWpid(), request.getWpname(), request.getTimegoal(), request.getType(), request.getUserid());
 
         try {
 
@@ -99,10 +102,34 @@ public class WorkoutPlanServiceImpl extends WorkoutPlanServiceGrpc.WorkoutPlanSe
 
             System.out.println("Workout plan has been updated");
 
-        } catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
             System.out.println("could not update the workout plan");
+        }
+    }
+
+
+    @Override
+    public void getWorkoutPlanById(resep3.javat3.protobuf.GetWorkoutPlanRequest request, StreamObserver<resep3.javat3.protobuf.GetWorkoutPlanResponse> streamObserver) {
+
+        try {
+            WorkoutPlan workoutPlan = workoutRepo.getWorkoutPlanById(request.getWpid());
+
+
+            resep3.javat3.protobuf.WPData wpData = resep3.javat3.protobuf.WPData.newBuilder().setWpid(workoutPlan.getWpID()).setWpname(workoutPlan.getWpName())
+                    .setTimegoal(workoutPlan.getTimeGoal()).setType(workoutPlan.getType()).setUserid(workoutPlan.getUserID()).build();
+
+
+            resep3.javat3.protobuf.GetWorkoutPlanResponse response = resep3.javat3.protobuf.GetWorkoutPlanResponse.newBuilder().addData(wpData).build();
+
+            streamObserver.onNext(response);
+            streamObserver.onCompleted();
+
+            System.out.println("Workout plan has been fetched");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Could not fetch the workout plan");
         }
     }
 
