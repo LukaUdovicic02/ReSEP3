@@ -19,10 +19,6 @@ namespace Domain.Logic
         {
             return await _exercise.GetAllExercises();
         }
-
-        public async Task<IEnumerable<Exercise>> GetAllExercises()
-        {
-            return await _exercise.GetAllExercises();
-        }
+        
     }
 }

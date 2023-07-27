@@ -42,7 +42,7 @@ else
         @foreach (var workout in workoutplanToShow)
         {
             <tr>
-                <td>@workout.WPname</td>
+                <td style=" cursor: pointer;" @onclick="ViewExercises">@workout.WPname</td>
                 <td>@workout.Timegoal</td>
                 <td>@workout.Type</td>
                 <td>
@@ -99,7 +99,10 @@ else
     {
         _navigationManager.NavigateTo($"/EditWorkout/{workoutId}");
     }
-
+    
+    private void ViewExercises(){
+        _navigationManager.NavigateTo("/ViewExercises");
+    }
 }
 
 }

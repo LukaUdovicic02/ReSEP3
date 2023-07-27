@@ -5,8 +5,8 @@ namespace Domain.Logic.LogicInterfaces
 {
     public interface IExerciseLogic
     {
-        Task CreateExercise(Exercise exerciseLogicToBeCreated);
-        Task DeleteExercise(int id);
-        Task<IEnumerable<Exercise>> GetAllExercises();
+        //Task CreateExercise(Exercise exerciseLogicToBeCreated);
+        //Task DeleteExercise(int id);
+        Task<IList<Exercise>> GetAllExercises();
     }
 }

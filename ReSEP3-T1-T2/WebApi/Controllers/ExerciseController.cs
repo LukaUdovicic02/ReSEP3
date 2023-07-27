@@ -20,21 +20,21 @@ namespace WebApi.Controllers
         }
 
 
-        [HttpPost]
-        public async Task<ActionResult<Exercise>> CreateExercise([FromBody] Exercise eid)
-        {
-            try
-            {
-                await _exerciseLogic.CreateExercise(eid);
-                return Ok(eid);
-            }
+        //[HttpPost]
+       // public async Task<ActionResult<Exercise>> CreateExercise([FromBody] Exercise eid)
+        //{
+          //  try
+          //  {
+          //      await _exerciseLogic.CreateExercise(eid);
+          //      return Ok(eid);
+          //  }
 
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                return StatusCode(500, e.Message);
-            }
-        }
+          //  catch (Exception e)
+          //  {
+          //      Console.WriteLine(e);
+           //     return StatusCode(500, e.Message);
+          //  }
+      //  }
 
         [HttpGet]
         public async Task<ActionResult<Exercise>> GetExercises()
@@ -66,20 +66,20 @@ namespace WebApi.Controllers
             }
         }
     */
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<Exercise>> DeleteExercise(int id)
-        {
-            try
-            {
-                await _exerciseLogic.DeleteExercise(id);
-                return Ok(id);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                return StatusCode(500, e.Message);
-            }
-        }
+       // [HttpDelete("{id}")]
+       // public async Task<ActionResult<Exercise>> DeleteExercise(int id)
+        //{
+          //  try
+          //  {
+           //     await _exerciseLogic.DeleteExercise(id);
+           //     return Ok(id);
+            //}
+            //catch (Exception e)
+            //{
+           //     Console.WriteLine(e);
+            //   return StatusCode(500, e.Message);
+           // }
+       // }
 
     }
 }

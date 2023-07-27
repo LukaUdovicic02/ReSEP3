@@ -41,7 +41,9 @@ else
             <td>@exercise.NrOfSets</td>
             <td>@exercise.NrOfReps</td>
             <td>
+                <i class="oi oi-trash" style="color:red"/>
             </td>
+            
         </tr>
     }
     </tbody>
@@ -55,8 +57,7 @@ else
     {
         if (DataSession.Instance.User.IsAuthenticated)
         {
-            @*allExercises = (List<Model.Exercise>) await WorkoutPlanService.GetWorkoutPlanById(DataSession.Instance.WorkoutPlan.Wpid);*@
-
+            allExercises = (List<Exercise>)await ExerciseService.GetAllExercises();
             exercises = allExercises;
         }
     }
