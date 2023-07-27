@@ -26,7 +26,7 @@ public class ExerciseRepo implements IExerciseRepo {
                 statement.setString(1, exercise.getEName());
                 statement.setInt(2, exercise.getNrOfSets());
                 statement.setInt(3, exercise.getNrOfReps());
-                statement.setInt(3, exercise.getWorkoutId());
+                statement.setInt(4, exercise.getWorkoutId());
 
                 statement.executeUpdate();
                 System.out.println("Exercise created");
