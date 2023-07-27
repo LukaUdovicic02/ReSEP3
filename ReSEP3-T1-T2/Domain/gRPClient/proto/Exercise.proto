@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "domain.grpClient";
+
+service ExerciseService {
+  rpc createExercise(ExerciseRequest) returns (ExerciseResponse);
+  rpc deleteExercise(ExerciseRequest) returns (Empty);
+}
+
+message ExerciseRequest {
+ optional int32 exId =4;
+ optional string exName = 1;
+ optional int32 nrOfSets = 2;
+ optional int32 nrOfReps = 3;
+}
+
+message ExerciseResponse {
+  int32 exId = 1;
+}
+
+message Empty {}
