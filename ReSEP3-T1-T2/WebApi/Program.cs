@@ -34,6 +34,9 @@ builder.Services.AddScoped<IRepoRegister, RegisterGrpc>();
 builder.Services.AddScoped<IRepoWorkoutPlan, WorkoutPlanGrpc>();
 builder.Services.AddScoped<IWorkoutPlanLogic, WorkoutPlanLogic>();
 
+builder.Services.AddScoped<IRepoExercise, ExerciseGrpc>();
+builder.Services.AddScoped<IExerciseLogic, ExerciseLogic>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

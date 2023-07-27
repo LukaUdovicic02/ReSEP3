@@ -91,5 +91,39 @@ namespace Domain.gRPClient
             });
             Console.WriteLine("Successfully updated workout plan with an User Id of :" + " " + reply.ResponseAsync.Result.Wpid);
         }
+
+
+        public async Task<WorkoutPlan> GetWorkoutPlanById(int wpid)
+        {
+            using var channel = GrpcChannel.ForAddress("http://localhost:6565");
+            var client = new WorkoutPlanService.WorkoutPlanServiceClient(channel);
+            Console.WriteLine("connection established");
+
+            var reply = await client.getWorkoutPlanByIdAsync(new GetWorkoutPlanRequest
+            {
+                Wpid = wpid
+            });
+
+            if (reply.Data != null && reply.Data.Count > 0)
+            {
+                var workoutPlanData = reply.Data[0]; 
+                var workoutPlan = new WorkoutPlan
+                {
+                    Wpid = workoutPlanData.Wpid,
+                    WPname = workoutPlanData.Wpname,
+                    Timegoal = workoutPlanData.Timegoal,
+                    Type = workoutPlanData.Type,
+                    UserID = workoutPlanData.Userid,
+                };
+
+                Console.WriteLine("Successfully fetched the workout plan: " + workoutPlan.WPname);
+
+                return workoutPlan;
+            }
+
+           
+            return null;
+        }
+
     }
 }

@@ -1,47 +1,43 @@
-﻿using domain.grpClient;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using domain.grpClient;
 using Domain.gRPClient.RepoInterfaces;
 using Grpc.Net.Client;
 using Model;
 
-namespace Domain.gRPClient;
-
-public class ExerciseGrpc:IRepoExercise
+namespace Domain.gRPClient
 {
-    public async Task<Exercise> CreateExercise(Exercise exerciseGrpc)
+    public class ExerciseGrpc : IRepoExercise
     {
-        using var channel = GrpcChannel.ForAddress("http://localhost:6565");
-        var client = new ExerciseService.ExerciseServiceClient(channel);
-        Console.WriteLine("Connection ees");
-
-        var reply = await client.createExerciseAsync(new ExerciseRequest
+        
+        public async Task<IList<Exercise>> GetAllExercises()
         {
-            ExName = exerciseGrpc.EName,
-            NrOfSets = exerciseGrpc.NrOfSets,
-            NrOfReps = exerciseGrpc.NrOfReps
-        });
+            using var channel = GrpcChannel.ForAddress("http://localhost:6565");
+            var client = new ExerciseService.ExerciseServiceClient(channel);
+            Console.WriteLine("connection established");
 
-        Console.WriteLine("This is ID of the created exercise: " + reply.ExId);
+            var reply = await client.getAllExercisesAsync(new GetAllExercisesRequest
+            {
+                
+            });
 
-        return new Exercise
-        {
-            EId = reply.ExId,
-            EName = exerciseGrpc.EName,
-            NrOfSets = exerciseGrpc.NrOfSets,
-            NrOfReps = exerciseGrpc.NrOfReps
-        };
-    }
+            IList<Exercise> exercises = new List<Exercise>();
+            Exercise exercise = new Exercise
+            {
+                EId = reply.Eid,
+                EName = reply.EName,
+                NrOfReps = reply.NrOfReps,
+                NrOfSets = reply.NrOfSets,
+                WorkoutPlanId = reply.WorkoutId,
+            };
+            
+            exercises.Add(exercise);
 
-    public async Task DeleteExercise(int id)
-    {
-        using var channel = GrpcChannel.ForAddress("http://localhost:6565");
-        var client = new ExerciseService.ExerciseServiceClient(channel);
-        Console.WriteLine("Connect yes");
-         
-        var replay=await client.deleteExerciseAsync(new ExerciseRequest 
-        {
-            ExId = id
-        });
+            
+            Console.WriteLine(exercises);
 
-        Console.WriteLine("Successfully deleted exercise with ID: "+id);
+            return exercises;
+        }
     }
 }

@@ -7,7 +7,7 @@ import resep3.javat3.model.WorkoutPlan;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-@Component
+
 public interface IUserRepo
 {
     User getUserByUsernameAndPassword(String username, String password) throws SQLException;
