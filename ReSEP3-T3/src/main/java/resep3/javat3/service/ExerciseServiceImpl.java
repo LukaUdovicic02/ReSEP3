@@ -44,11 +44,12 @@ public class ExerciseServiceImpl extends ExerciseServiceGrpc.ExerciseServiceImpl
     public void getAllExercises(resep3.javat3.protobuf.GetAllExercisesRequest request, StreamObserver<resep3.javat3.protobuf.GetAllExerciseResponse> streamObserver) {
 
         try {
-
             ArrayList<Exercise> exercises = exerciseRepo.GetAllExercises();
 
+            resep3.javat3.protobuf.GetAllExerciseResponse.Builder responseBuilder = resep3.javat3.protobuf.GetAllExerciseResponse.newBuilder();
+
             for (Exercise exercise : exercises) {
-                resep3.javat3.protobuf.GetAllExerciseResponse responseBuilder = resep3.javat3.protobuf.GetAllExerciseResponse.newBuilder()
+                resep3.javat3.protobuf.EData data = resep3.javat3.protobuf.EData.newBuilder()
                         .setEid(exercise.getEid())
                         .setEName(exercise.getEName())
                         .setNrOfReps(exercise.getNrOfReps())
@@ -56,22 +57,21 @@ public class ExerciseServiceImpl extends ExerciseServiceGrpc.ExerciseServiceImpl
                         .setWorkoutId(exercise.getWorkoutId())
                         .build();
 
-
-                streamObserver.onNext(responseBuilder);
+                responseBuilder.addData(data);
             }
 
-            System.out.println("All exercises has been fetch");
+            resep3.javat3.protobuf.GetAllExerciseResponse response = responseBuilder.build();
+            streamObserver.onNext(response);
+
+
+            System.out.println("All exercises have been fetched");
             streamObserver.onCompleted();
-
-
 
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("All exercises can not be fetched");
-
+            System.out.println("All exercises cannot be fetched");
+            streamObserver.onError(e);
         }
-
-
     }
 
 
