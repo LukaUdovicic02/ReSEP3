@@ -40,6 +40,8 @@ public class ExerciseServiceImpl extends ExerciseServiceGrpc.ExerciseServiceImpl
     }
 
 
+
+
     @Override
     public void getAllExercises(resep3.javat3.protobuf.GetAllExercisesRequest request, StreamObserver<resep3.javat3.protobuf.GetAllExerciseResponse> streamObserver) {
 
