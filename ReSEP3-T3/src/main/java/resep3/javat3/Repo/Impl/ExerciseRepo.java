@@ -77,4 +77,23 @@ public class ExerciseRepo implements IExerciseRepo {
         return exercises;
     }
 
+    public void DeleteExercise(int eid)
+    {
+        initializer.connect();
+        try {
+            Connection connection = initializer.getConnection();
+            PreparedStatement statement = connection.prepareStatement("SELECT EID FROM Exercise WHERE EID =" +eid);
+            statement.executeUpdate();
+
+            System.out.println("Exercise successfully deleted");
+        }
+
+        catch (SQLException throwables) {
+            throwables.printStackTrace();
+            System.out.println("Exercise not being able to be deleted");
+
+        }
+
+        initializer.disconnect();
+    }
 }
