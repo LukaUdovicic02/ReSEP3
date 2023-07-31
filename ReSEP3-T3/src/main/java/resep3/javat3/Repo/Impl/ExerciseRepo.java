@@ -82,7 +82,7 @@ public class ExerciseRepo implements IExerciseRepo {
         initializer.connect();
         try {
             Connection connection = initializer.getConnection();
-            PreparedStatement statement = connection.prepareStatement("SELECT EID FROM Exercise WHERE EID =" +eid);
+            PreparedStatement statement = connection.prepareStatement("DELETE FROM Exercise WHERE EID =" +eid);
             statement.executeUpdate();
 
             System.out.println("Exercise successfully deleted");
