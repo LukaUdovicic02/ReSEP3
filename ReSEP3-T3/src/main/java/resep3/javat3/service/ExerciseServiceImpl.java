@@ -40,6 +40,8 @@ public class ExerciseServiceImpl extends ExerciseServiceGrpc.ExerciseServiceImpl
     }
 
 
+
+
     @Override
     public void getAllExercises(resep3.javat3.protobuf.GetAllExercisesRequest request, StreamObserver<resep3.javat3.protobuf.GetAllExerciseResponse> streamObserver) {
 
@@ -71,6 +73,22 @@ public class ExerciseServiceImpl extends ExerciseServiceGrpc.ExerciseServiceImpl
             e.printStackTrace();
             System.out.println("All exercises cannot be fetched");
             streamObserver.onError(e);
+        }
+    }
+
+    @Override
+    public void deleteExercise(resep3.javat3.protobuf.DeleteExerciseRequest request, StreamObserver<resep3.javat3.protobuf.empty> streamObserver) {
+        try {
+
+            exerciseRepo.DeleteExercise(request.getEid());
+
+            streamObserver.onNext(null);
+            streamObserver.onCompleted();
+            System.out.println("exercise deleted");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("exercise cannot be deleted");
         }
     }
 
