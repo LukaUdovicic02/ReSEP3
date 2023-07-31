@@ -4,20 +4,24 @@ option csharp_namespace = "domain.grpClient";
 
 
 service ExerciseService {
-  rpc createExercise(CreateExerciseRequest) returns (CreateExerciseResponse);
+ 
   rpc getAllExercises(GetAllExercisesRequest) returns (GetAllExerciseResponse);
+  rpc createExercise(ExerciseRequest) returns (ExerciseResponse);
+  rpc deleteExercise(ExerciseRequest) returns (Empty);
 }
 
-message CreateExerciseRequest {
-  string EName = 1;
-  int32 NrOfSets = 2;
-  int32 NrOfReps = 3;
-  int32 WorkoutId = 4;
+message ExerciseRequest {
+  optional int32 exId =4;
+  optional string exName = 1;
+  optional int32 nrOfSets = 2;
+  optional int32 nrOfReps = 3;
 }
 
-message CreateExerciseResponse {
-  int32 eid = 1;
+message ExerciseResponse {
+  int32 exId = 1;
 }
+
+message Empty {}
 
 message GetAllExercisesRequest {
   optional int32 WorkoutPlanId = 1;
@@ -30,5 +34,4 @@ message GetAllExerciseResponse {
   int32 NrOfSets = 3;
   int32 NrOfReps = 4;
   int32 WorkoutId = 5;
-
 }

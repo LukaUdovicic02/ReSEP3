@@ -15,6 +15,20 @@ namespace Domain.Logic
             _exercise = exercise;
         }
 
+        public async Task CreateExercise(Exercise exercise)
+        {
+            try
+            {
+                await _exercise.CreateExercise(exercise);
+                Console.WriteLine("Exercise created successfully.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error creating exercise: " + ex.Message);
+                throw; 
+            }
+        }
+
         public async Task<IList<Exercise>> GetAllExercises()
         {
             return await _exercise.GetAllExercises();

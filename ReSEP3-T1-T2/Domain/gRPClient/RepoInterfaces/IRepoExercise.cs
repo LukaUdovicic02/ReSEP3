@@ -6,4 +6,5 @@ public interface IRepoExercise
 {
     Task<Exercise> CreateExercise(Exercise exercise);
     Task DeleteExercise(int id);
+    Task<List<Exercise>> GetAllExercises();
 }
