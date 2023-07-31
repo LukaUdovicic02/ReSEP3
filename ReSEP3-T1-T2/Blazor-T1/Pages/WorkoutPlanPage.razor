@@ -6,7 +6,7 @@
 @inject ILoginService LoginService
 @inject NavigationManager _navigationManager
 
-
+<h3>ViewWorkoutPlan</h3>
 
 @if (!DataSession.Instance.User.IsAuthenticated)
 {
@@ -42,7 +42,7 @@ else
         @foreach (var workout in workoutplanToShow)
         {
             <tr>
-                <td style=" cursor: pointer;" @onclick="ViewExercises">@workout.WPname</td>
+                <td class="click" style="cursor: pointer;" @onclick="ViewExercises">@workout.WPname</td>
                 <td>@workout.Timegoal</td>
                 <td>@workout.Type</td>
                 <td>
@@ -102,6 +102,7 @@ else
     
     private void ViewExercises(){
         _navigationManager.NavigateTo("/ViewExercises");
+        
     }
 }
 
