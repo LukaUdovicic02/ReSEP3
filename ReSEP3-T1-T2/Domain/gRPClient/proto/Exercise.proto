@@ -6,8 +6,7 @@ option csharp_namespace = "domain.grpClient";
 service ExerciseService {
   rpc createExercise(CreateExerciseRequest) returns (CreateExerciseResponse);
   rpc getAllExercises(GetAllExercisesRequest) returns (GetAllExerciseResponse);
-  rpc createExercise(ExerciseRequest) returns (ExerciseResponse);
-  rpc deleteExercise(ExerciseRequest) returns (Empty);
+  rpc deleteExercise(DeleteExerciseRequest) returns (Empty);
 }
 
 message CreateExerciseRequest {
@@ -31,7 +30,12 @@ message GetAllExercisesRequest {
 message GetAllExerciseResponse {
   repeated EData data = 1;
 
+  
+  }
+message DeleteExerciseRequest{   
+  int32 EId = 1;
 }
+       
 
 message EData {
   int32 eid = 1;

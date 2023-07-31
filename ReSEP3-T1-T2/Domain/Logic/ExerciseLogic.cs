@@ -29,6 +29,19 @@ namespace Domain.Logic
             }
         }
 
+        public async Task DeleteExercise(int id)
+        {
+            try
+            {
+                await _exercise.DeleteExercise(id);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+
         public async Task<IList<Exercise>> GetAllExercises()
         {
             return await _exercise.GetAllExercises();

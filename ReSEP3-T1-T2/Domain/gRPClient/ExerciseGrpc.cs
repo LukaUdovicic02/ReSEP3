@@ -10,7 +10,7 @@ namespace Domain.gRPClient
 {
     public class ExerciseGrpc : IRepoExercise
     {
-        public async Task<IList<Exercise>> GetAllExercises()
+        public async Task<List<Exercise>> GetAllExercises()
         {
             using var channel = GrpcChannel.ForAddress("http://localhost:6565");
             var client = new ExerciseService.ExerciseServiceClient(channel);
@@ -18,7 +18,7 @@ namespace Domain.gRPClient
 
             var reply = await client.getAllExercisesAsync(new GetAllExercisesRequest());
 
-            IList<Exercise> exercises = new List<Exercise>();
+            List<Exercise> exercises = new List<Exercise>();
 
             foreach (var data in reply.Data)
             {
@@ -44,18 +44,18 @@ namespace Domain.gRPClient
             var client = new ExerciseService.ExerciseServiceClient(channel);
             Console.WriteLine("Connection ees");
 
-            var reply = await client.createExerciseAsync(new ExerciseRequest
+            var reply = await client.createExerciseAsync(new CreateExerciseRequest
             {
-                ExName = exerciseGrpc.EName,
+                EName = exerciseGrpc.EName,
                 NrOfSets = exerciseGrpc.NrOfSets,
                 NrOfReps = exerciseGrpc.NrOfReps
             });
 
-            Console.WriteLine("This is ID of the created exercise: " + reply.ExId);
+            Console.WriteLine("This is ID of the created exercise: " + reply.Eid);
 
             return new Exercise
             {
-                EId = reply.ExId,
+                EId = reply.Eid,
                 EName = exerciseGrpc.EName,
                 NrOfSets = exerciseGrpc.NrOfSets,
                 NrOfReps = exerciseGrpc.NrOfReps
@@ -68,9 +68,9 @@ namespace Domain.gRPClient
             var client = new ExerciseService.ExerciseServiceClient(channel);
             Console.WriteLine("Connect yes");
          
-            var replay=await client.deleteExerciseAsync(new ExerciseRequest 
+            var replay=await client.deleteExerciseAsync(new DeleteExerciseRequest
             {
-                ExId = id
+                EId = id
             });
 
             Console.WriteLine("Successfully deleted exercise with ID: "+id);

@@ -20,22 +20,22 @@ namespace WebApi.Controllers
             _exerciseLogic = exerciseLogic;
         }
 
-        //
-        // [HttpPost]
-        // public async Task<ActionResult<Exercise>> CreateExercise([FromBody] Exercise eid)
-        // {
-        //     try
-        //     {
-        //         await _exerciseLogic.CreateExercise(eid);
-        //         return Ok(eid);
-        //     }
-        //
-        //     catch (Exception e)
-        //     {
-        //         Console.WriteLine(e);
-        //         return StatusCode(500, e.Message);
-        //     }
-        // }
+       
+         [HttpPost]
+         public async Task<ActionResult<Exercise>> CreateExercise([FromBody] Exercise eid)
+         {
+             try
+             {
+                await _exerciseLogic.CreateExercise(eid);
+                return Ok(eid);
+            }
+        
+             catch (Exception e)
+             {
+                 Console.WriteLine(e);
+                 return StatusCode(500, e.Message);
+             }
+         }
         
          
          
@@ -54,20 +54,20 @@ namespace WebApi.Controllers
             }
         }
     
-        // [HttpDelete("{id}")]
-        // public async Task<ActionResult<Exercise>> DeleteExercise(int id)
-        // {
-        //     try
-        //     {
-        //         await _exerciseLogic.DeleteExercise(id);
-        //         return Ok(id);
-        //     }
-        //     catch (Exception e)
-        //     {
-        //         Console.WriteLine(e);
-        //         return StatusCode(500, e.Message);
-        //     }
-        // }
+        [HttpDelete("{id}")]
+         public async Task<ActionResult<Exercise>> DeleteExercise(int id)
+         {
+             try
+            {
+                await _exerciseLogic.DeleteExercise(id);
+                return Ok(id);
+            }
+             catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode(500, e.Message);
+            }
+         }
 
     }
 }
