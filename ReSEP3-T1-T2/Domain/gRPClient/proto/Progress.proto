@@ -1,0 +1,17 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "domain.grpClient";
+
+service ProgressService {
+    rpc AddProgress(ProgressRequest) returns (ProgressResponse);
+}
+
+message ProgressRequest {
+    string date = 1;
+    double bodyWeight = 2;
+    double fatPercentage = 3;
+}
+
+message ProgressResponse {
+    int32 progressId = 1;
+}
