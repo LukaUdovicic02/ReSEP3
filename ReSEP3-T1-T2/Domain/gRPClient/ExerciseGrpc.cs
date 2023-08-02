@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using domain.grpClient;
 using Domain.gRPClient.RepoInterfaces;
+using Domain.Logic;
 using Grpc.Net.Client;
 using Model;
 
@@ -38,6 +39,36 @@ namespace Domain.gRPClient
 
             return exercises;
         }
+
+        public async Task<IEnumerable<Exercise>> GetExByWid(int wid)
+        {
+            using var channel = GrpcChannel.ForAddress("http://localhost:6565");
+            var client = new ExerciseService.ExerciseServiceClient(channel);
+            Console.WriteLine("connection established");
+
+            var reply = await client.getExByWidAsync(new getExByWidRequest
+            {
+                Wpid = wid,
+            });
+
+            IList<Exercise> exercises = new List<Exercise>();
+
+            foreach (var edata in reply.Data)
+            {
+                Exercise ex = new Exercise
+                {
+                    EId = edata.Eid,
+                    EName = edata.EName,
+                    NrOfReps = edata.NrOfReps,
+                    NrOfSets = edata.NrOfSets,
+                    WorkoutPlanId = edata.WorkoutId,
+                };
+                exercises.Add(ex);
+            }
+
+            return exercises;
+        }
+
         public async Task<Exercise> CreateExercise(Exercise exerciseGrpc)
         {
             using var channel = GrpcChannel.ForAddress("http://localhost:6565");

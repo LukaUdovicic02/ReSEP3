@@ -11,6 +11,9 @@ namespace Domain.Logic.LogicInterfaces
 
       Task<IList<Exercise>> GetAllExercises();
       
+      Task<IEnumerable<Exercise>> GetExByWid(int wid);
+
+      
 
     }
 }

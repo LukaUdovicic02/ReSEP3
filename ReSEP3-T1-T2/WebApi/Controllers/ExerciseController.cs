@@ -38,6 +38,21 @@ namespace WebApi.Controllers
          }
         
          
+         [HttpGet("{wpid}")]
+         public async Task<ActionResult<IEnumerable<Exercise>>> GetExByWid(int wpid)
+         {
+             try
+             {
+                 IEnumerable<Exercise> exercises = await _exerciseLogic.GetExByWid(wpid);
+                 return Ok(exercises);
+             }
+             catch (Exception e)
+             {
+                 Console.WriteLine(e);
+                 return StatusCode(500, e.Message);
+             }
+         }
+         
          
         [HttpGet]
         public async Task<ActionResult<Exercise>> GetAllExercises()

@@ -4,19 +4,19 @@
 @inject NavigationManager NavigationManager
 
 
-<EditForm  EditContext="editContext">
+<EditForm EditContext="editContext">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-4">
                 <h3 class="mb-4">Register</h3>
                 <div class="form-group">
                     <label for="username">Username:</label>
-                    <InputText id="username" @bind-Value="user.Username" class="form-control" />
+                    <InputText id="username" @bind-Value="user.Username" class="form-control"/>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="password">Password:</label>
-                    <InputText id="password" @bind-Value="user.Password" class="form-control" type="password" />
+                    <InputText id="password" @bind-Value="user.Password" class="form-control" type="password"/>
                 </div>
 
                 <div class="text-center">
@@ -32,14 +32,13 @@
     private EditContext editContext;
 
     private User user = new();
-    
+
     protected override void OnInitialized()
     {
-        var user = new User(); 
+        var user = new User();
         editContext = new EditContext(user);
-        
     }
-    
+
     private async Task HandleRegister()
     {
         await _register.Register(user);
@@ -47,95 +46,5 @@
         NavigationManager.NavigateTo("/login");
     }
 
- 
+
 }
-
-@* *@
-@* @if (todosToShow == null) { *@
-@*     <p> *@
-@*         <em>Loading...</em> *@
-@*     </p> *@
-@* } else if (!todosToShow.Any()) { *@
-@*     <p> *@
-@*         <em>No ToDo items exist. Please add some.</em> *@
-@*     </p> *@
-@* } else { *@
-@*     <table class="table"> *@
-@*         <thead> *@
-@*         <tr> *@
-@*             <th>User ID</th> *@
-@*             <th>Todo ID</th> *@
-@*             <th>Title</th> *@
-@*             <th>Completed?</th> *@
-@*             <th>Remove</th> *@
-@*         </tr> *@
-@*         </thead> *@
-@*         <tbody> *@
-@*         @foreach (var item in todosToShow) { *@
-@*             <tr> *@
-@*                 <td>@item.UserId</td> *@
-@*                 <td>@item.TodoId</td> *@
-@*                 <td>@item.Title</td> *@
-@*                 <td> *@
-@*                     <input type="checkbox" checked=@item.IsCompleted @onchange="@((arg) => CompletedChange(arg, item))"/> *@
-@*                 </td> *@
-@*                 <td> *@
-@*                     <button @onclick="@(() => RemoveTodo(item.TodoId))"> *@
-@*                         <i class="oi oi-trash" style="color:red"/> *@
-@*                     </button> *@
-@*                 </td> *@
-@*             </tr> *@
-@*         } *@
-@*         </tbody> *@
-@*     </table> *@
-@* } *@
-
-
-@* *@
-@* @code { *@
-@*     private IList<Todo> todosToShow; *@
-@*     private IList<Todo> allTodos; *@
-@* *@
-@*     private int? filterById; *@
-@*     private bool? filterByIsCompleted; *@
-@* *@
-@*     private void FilterByUserId(ChangeEventArgs changeEventArgs) { *@
-@*         filterById = null; *@
-@*         try { *@
-@*             filterById = int.Parse(changeEventArgs.Value.ToString()); *@
-@*         } catch (Exception e) { } *@
-@*         ExecuteFilter(); *@
-@*     } *@
-@* *@
-@*     private void FilterByCompletedStatus(ChangeEventArgs args) { *@
-@*         filterByIsCompleted = null; *@
-@*         try { *@
-@*             filterByIsCompleted = bool.Parse(args.Value.ToString()); *@
-@*         } catch (Exception e) { } *@
-@*         ExecuteFilter(); *@
-@*     } *@
-@* *@
-@*     private void ExecuteFilter() { *@
-@*         todosToShow = allTodos.Where(t =>  *@
-@*             (filterById != null && t.UserId == filterById || filterById == null) && *@
-@*             (filterByIsCompleted != null && t.IsCompleted == filterByIsCompleted || filterByIsCompleted == null) *@
-@*             ).ToList(); *@
-@*     } *@
-@* *@
-@*     protected override async Task OnInitializedAsync() { *@
-@*         allTodos = TodosService.GetTodos(); *@
-@*         todosToShow = allTodos; *@
-@*     } *@
-@* *@
-@*     private async Task RemoveTodo(int todoId) { *@
-@*         Todo todoToRemove = todosToShow.First(t => t.TodoId == todoId); *@
-@*         TodosService.RemoveTodo(todoId); *@
-@*         todosToShow.Remove(todoToRemove); *@
-@*     } *@
-@* *@
-@*     private async Task CompletedChange(ChangeEventArgs evt, Todo todo) { *@
-@*         todo.IsCompleted = (bool) evt.Value; *@
-@*         TodosService.Update(todo); *@
-@*     } *@
-@* *@
-@* } *@

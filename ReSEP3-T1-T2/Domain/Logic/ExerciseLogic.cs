@@ -47,6 +47,10 @@ namespace Domain.Logic
         {
             return await _exercise.GetAllExercises();
         }
-        
+
+        public async Task<IEnumerable<Exercise>> GetExByWid(int wid)
+        {
+            return await _exercise.GetExByWid(wid);
+        }
     }
 }

@@ -17,7 +17,7 @@ public class RegisterHttpClient : IRegisterService
 
     public async Task<User> Register(User user)
     {
-        // plan.UserID = DataSession.Instance.User.Uid;
+        await DataSession.CreateInstance(user);
         User sendUser = new(user.Username, user.Password);
         HttpResponseMessage response = await httpClient.PostAsJsonAsync("http://localhost:5052/LogIn", sendUser);
         string result = await response.Content.ReadAsStringAsync();

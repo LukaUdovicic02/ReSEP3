@@ -22,6 +22,8 @@ else if (workoutplanToShow == null)
 else if (!workoutplanToShow.Any())
 {
     <p> No Workout Plans exist, please create one. </p>
+    <button type="button" class="btn btn-secondary" @onclick="Logout">Logout</button>
+    <button class="custom-btn btn-14" @onclick="CreateWorkout">Create new Workout</button>
 }
 else
 {

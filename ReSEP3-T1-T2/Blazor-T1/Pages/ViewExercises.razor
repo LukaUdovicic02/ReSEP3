@@ -61,7 +61,7 @@ else
     {
         if (DataSession.Instance.User.IsAuthenticated)
         {
-            allExercises = (List<Exercise>)await ExerciseService.GetAllExercises();
+            allExercises = (List<Exercise>)await ExerciseService.GetExByWid(DataSession.Instance.WorkoutPlan.Wpid);
             exercises = allExercises;
         }
     }

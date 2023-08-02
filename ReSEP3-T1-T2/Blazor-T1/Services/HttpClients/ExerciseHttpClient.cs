@@ -25,6 +25,7 @@ public class ExerciseHttpClient : IExerciseService
     {
         
         exercise.EId = DataSession.Instance.User.Uid; 
+        exercise.WorkoutPlanId = DataSession.Instance.WorkoutPlan.Wpid;
 
         HttpResponseMessage response = await httpClient.PostAsJsonAsync("http://localhost:5052/Exercise", exercise); //replace with actual endpoint
         string result = await response.Content.ReadAsStringAsync();
@@ -64,4 +65,18 @@ public class ExerciseHttpClient : IExerciseService
 
         return result;
     }
+    
+    
+    
+    public async Task<IEnumerable<Exercise>> GetExByWid(int wid)
+    {
+        HttpResponseMessage response = await httpClient.GetAsync($"http://localhost:5052/Exercise/{wid}");
+        response.EnsureSuccessStatusCode();
+
+        string message = await response.Content.ReadAsStringAsync();
+        IEnumerable<Exercise> result = JsonSerializer.Deserialize<List<Exercise>>(message);
+
+        return result;
+    }
+
 }
