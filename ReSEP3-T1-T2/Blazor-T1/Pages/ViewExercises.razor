@@ -43,7 +43,9 @@ else
             <td>@exercise.NrOfReps</td>
       
             <td>
-                <i class="oi oi-trash"  style="color:red"/>
+                <button @onclick="@(() => DeleteExercise(exercise.EId))">
+                <i class="oi oi-trash" style="color:red"/>
+                </button>
             </td>
             
         </tr>
@@ -70,5 +72,12 @@ else
     
     private void CreateExercise(){
         _navigationManager.NavigateTo("/CreateExercise");
+    }
+
+    private async Task DeleteExercise(int ExerciseID)
+    {
+        await ExerciseService.DeleteExercise(ExerciseID);
+        exercises.Remove(exercises.FirstOrDefault(e => e.EId == ExerciseID));
+        Console.WriteLine("exercise deleted");
     }
 }
