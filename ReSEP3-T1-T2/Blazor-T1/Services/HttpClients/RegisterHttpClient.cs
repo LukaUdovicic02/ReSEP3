@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.Http;
+using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -9,23 +10,27 @@ public class RegisterHttpClient : IRegisterService
 {
     private readonly HttpClient httpClient;
 
-    public RegisterHttpClient(HttpClient httpClient)
+    public RegisterHttpClient()
     {
-        this.httpClient = httpClient;
+        this.httpClient = new HttpClient();
     }
-    public async Task Register(User user)
+
+    public async Task<User> Register(User user)
     {
-        
-        string userAsJson = JsonSerializer.Serialize(user);
-        StringContent content = new StringContent(
-            userAsJson,
-            Encoding.UTF8,
-            "application/json"
-        );
-        HttpResponseMessage response = await httpClient.PostAsync("http://localhost:5052/LogIn/", content).ConfigureAwait(false);
-        if(!response.IsSuccessStatusCode)
-            throw new Exception(@"Error: {responseMessage.StatusCode}, {responseMessage.ReasonPhrase}");
+        // plan.UserID = DataSession.Instance.User.Uid;
+        User sendUser = new(user.Username, user.Password);
+        HttpResponseMessage response = await httpClient.PostAsJsonAsync("http://localhost:5052/LogIn", sendUser);
+        string result = await response.Content.ReadAsStringAsync();
+        if (!response.IsSuccessStatusCode)
+        {
+            throw new Exception(result);
+        }
 
+        User u = JsonSerializer.Deserialize<User>(result, new JsonSerializerOptions()
+        {
+            PropertyNameCaseInsensitive = true
+        })!;
 
+        return u;
     }
 }

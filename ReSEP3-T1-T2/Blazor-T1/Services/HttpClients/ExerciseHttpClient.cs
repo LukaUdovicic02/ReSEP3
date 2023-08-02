@@ -26,7 +26,7 @@ public class ExerciseHttpClient : IExerciseService
         
         exercise.EId = DataSession.Instance.User.Uid; 
 
-        HttpResponseMessage response = await httpClient.PostAsJsonAsync("http://localhost:5052/WorkoutPlan", exercise); //replace with actual endpoint
+        HttpResponseMessage response = await httpClient.PostAsJsonAsync("http://localhost:5052/Exercise", exercise); //replace with actual endpoint
         string result = await response.Content.ReadAsStringAsync();
         if (!response.IsSuccessStatusCode)
         {
@@ -44,7 +44,7 @@ public class ExerciseHttpClient : IExerciseService
 
     public async Task DeleteExercise(int id)
     {
-        HttpResponseMessage response = await httpClient.DeleteAsync($"http://localhost:5052/WorkoutPlan/{id}");
+        HttpResponseMessage response = await httpClient.DeleteAsync($"http://localhost:5052/Exercise/{id}");
         if (!response.IsSuccessStatusCode)
         {
             throw new Exception("could not delete the exercise");

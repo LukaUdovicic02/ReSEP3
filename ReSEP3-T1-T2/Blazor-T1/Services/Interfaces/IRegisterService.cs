@@ -4,5 +4,5 @@ using Model;
 
 public interface IRegisterService
 {
-    Task Register(User user);
+    Task<User> Register(User user);
 }

@@ -11,7 +11,6 @@ namespace WebApi.Controllers
     [Route("LogIn")]
     public class LoginController : ControllerBase
     {
-        
         private readonly IUserLogic userLogic;
 
         public LoginController([FromServices] IUserLogic userLogic)
@@ -21,7 +20,7 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [Route("{username}/{password}")]
-        public async Task<ActionResult<User>> ValidateUser([FromRoute] string username,[FromRoute] string password )
+        public async Task<ActionResult<User>> ValidateUser([FromRoute] string username, [FromRoute] string password)
         {
             try
             {
@@ -50,16 +49,16 @@ namespace WebApi.Controllers
             }
         }
 
-
         [HttpPost]
         public async Task<ActionResult<User>> RegisterUser([FromBody] User user)
         {
             try
             {
                 await userLogic.RegisterUser(user);
-                
                 return Ok(user);
-            }catch (Exception e) {
+            }
+            catch (Exception e)
+            {
                 Console.WriteLine(e);
                 return StatusCode(500, e.Message);
             }

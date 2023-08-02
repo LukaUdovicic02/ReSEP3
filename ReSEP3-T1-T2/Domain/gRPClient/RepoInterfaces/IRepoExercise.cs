@@ -1,10 +1,13 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Model;
 
-namespace Domain.gRPClient.RepoInterfaces;
-
-public interface IRepoExercise
+namespace Domain.gRPClient.RepoInterfaces
 {
-    Task<Exercise> CreateExercise(Exercise exercise);
-    Task DeleteExercise(int id);
-    Task<List<Exercise>> GetAllExercises();
+    public interface IRepoExercise
+    {
+        Task<Exercise> CreateExercise(Exercise exercise);
+        Task DeleteExercise(int id);
+        Task<List<Exercise>> GetAllExercises();
+    }
 }
