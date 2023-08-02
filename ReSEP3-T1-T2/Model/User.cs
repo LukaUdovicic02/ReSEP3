@@ -64,6 +64,12 @@ namespace Model
             FatPercentage = fat;
         }
 
+        public User(int uid, float fatPercentage, float bodyWeight)
+        {
+            Uid = uid;
+            FatPercentage = fatPercentage;
+            BodyWeight = bodyWeight;
+        }
 
     }
 }
