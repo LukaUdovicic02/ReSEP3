@@ -16,11 +16,6 @@ public class ExerciseHttpClient : IExerciseService
         this.httpClient = httpClient;
     }
 
-    public Task<List<Exercise>> GetExercises()
-    {
-        throw new NotImplementedException();
-    }
-
     public Task<Exercise> GetExerciseById(int id)
     {
         throw new NotImplementedException();
@@ -54,5 +49,19 @@ public class ExerciseHttpClient : IExerciseService
         {
             throw new Exception("could not delete the exercise");
         }
+    }
+
+    public async Task<List<Exercise>> GetAllExercises()
+    {
+        HttpResponseMessage response = await httpClient.GetAsync($"http://localhost:5052/Exercise");
+        if (!response.IsSuccessStatusCode)
+        {
+            throw new Exception("could not get the exercises");
+        }
+
+        string message = await response.Content.ReadAsStringAsync();
+        List<Exercise> result = JsonSerializer.Deserialize<List<Exercise>>(message);
+
+        return result;
     }
 }

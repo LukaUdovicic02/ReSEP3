@@ -46,5 +46,6 @@ namespace Domain.Logic
         {
             return await _exercise.GetAllExercises();
         }
+        
     }
 }
