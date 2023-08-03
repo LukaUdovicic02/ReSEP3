@@ -7,6 +7,7 @@ import resep3.javat3.Repo.Impl.ExerciseRepo;
 import resep3.javat3.model.Exercise;
 import resep3.javat3.protobuf.ExerciseServiceGrpc;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 @GRpcService
@@ -90,6 +91,35 @@ public class ExerciseServiceImpl extends ExerciseServiceGrpc.ExerciseServiceImpl
             e.printStackTrace();
             System.out.println("exercise cannot be deleted");
         }
+    }
+
+
+    @Override
+    public void getExByWid(resep3.javat3.protobuf.getExByWidRequest request, StreamObserver<resep3.javat3.protobuf.getExByWidResponse> streamObserver) {
+        try {
+            ArrayList<Exercise> exercises = exerciseRepo.getExByWpid(request.getWpid());
+
+            resep3.javat3.protobuf.getExByWidResponse.Builder responseBuilder = resep3.javat3.protobuf.getExByWidResponse.newBuilder();
+            for (Exercise e : exercises) {
+                resep3.javat3.protobuf.EData data = resep3.javat3.protobuf.EData.newBuilder().
+                        setEid(e.getEid()).
+                        setEName(e.getEName()).
+                        setNrOfReps(e.getNrOfReps()).
+                        setNrOfSets(e.getNrOfSets()).
+                        setWorkoutId(e.getWorkoutId()).
+                        build();
+                responseBuilder.addData(data);
+            }
+
+            resep3.javat3.protobuf.getExByWidResponse response = responseBuilder.build();
+            streamObserver.onNext(response);
+            streamObserver.onCompleted();
+
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
     }
 
 

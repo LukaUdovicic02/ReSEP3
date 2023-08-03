@@ -8,6 +8,15 @@ service ExerciseService {
   rpc createExercise(CreateExerciseRequest) returns (CreateExerciseResponse);
   rpc getAllExercises(GetAllExercisesRequest) returns (GetAllExerciseResponse);
   rpc deleteExercise(DeleteExerciseRequest) returns (empty);
+  rpc getExByWid(getExByWidRequest) returns (getExByWidResponse);
+}
+
+message getExByWidRequest {
+  int32 wpid = 1;
+}
+
+message getExByWidResponse {
+  repeated EData data = 1;
 }
 
 message CreateExerciseRequest {
