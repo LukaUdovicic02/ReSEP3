@@ -80,7 +80,7 @@ else
     private async Task Logout()
     {
         DataSession.Instance.User.IsAuthenticated = false;
-        await DataSession.DeleteInstance();
+        
         _navigationManager.NavigateTo("/login");
     }
 

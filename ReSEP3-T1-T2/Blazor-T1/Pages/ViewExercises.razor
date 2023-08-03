@@ -67,8 +67,6 @@ else
         Console.WriteLine($"WorkoutPlanId: {WorkoutPlanId}");
         if (DataSession.Instance.User.IsAuthenticated)
         {
-           
-            
             allExercises = (List<Exercise>)await ExerciseService.GetExByWid(WorkoutPlanId);
             exercises = allExercises;
         }

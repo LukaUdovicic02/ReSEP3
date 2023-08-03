@@ -24,10 +24,9 @@ public class ExerciseHttpClient : IExerciseService
     public async Task<Exercise> CreateExercise(Exercise exercise)
     {
         
-     //   exercise.EId = DataSession.Instance.User.Uid; 
         exercise.WorkoutPlanId = DataSession.Instance.WorkoutPlan.Wpid;
 
-        HttpResponseMessage response = await httpClient.PostAsJsonAsync("http://localhost:5052/Exercise", exercise); //replace with actual endpoint
+        HttpResponseMessage response = await httpClient.PostAsJsonAsync("http://localhost:5052/Exercise", exercise); 
         string result = await response.Content.ReadAsStringAsync();
         if (!response.IsSuccessStatusCode)
         {
@@ -38,7 +37,8 @@ public class ExerciseHttpClient : IExerciseService
         {
             PropertyNameCaseInsensitive = true
         })!;
-    
+        
+        
         return w;
     }
 

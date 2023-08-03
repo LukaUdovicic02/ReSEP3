@@ -23,8 +23,8 @@
 
     private async Task CreateNewExercise()
     {
-        await exerciseService.CreateExercise(newExercise);
-       
-        _navigationManager.NavigateTo("/ViewExercises"); 
+       Exercise createdExercise =  await exerciseService.CreateExercise(newExercise);
+        
+        _navigationManager.NavigateTo($"/ViewExercises/{newExercise.WorkoutPlanId}"); 
     }
 }
