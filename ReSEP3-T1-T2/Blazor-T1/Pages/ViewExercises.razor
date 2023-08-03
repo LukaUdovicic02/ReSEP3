@@ -1,4 +1,4 @@
-﻿@page "/ViewExercises"
+﻿@page "/ViewExercises/{WorkoutPlanId:int}"
 @using Model
 
 @inject IExerciseService ExerciseService
@@ -18,6 +18,8 @@
 else if (!exercises.Any())
 {
     <p> No Exercises exist, please create one. </p>
+    <button type="button" class="btn btn-secondary" @onclick="Cancel">Cancel</button>
+    <button class="custom-btn btn-14" @onclick="CreateExercise">Create new Exercise</button>
 }
 else
 {
@@ -56,12 +58,18 @@ else
 @code {
     private List<Exercise> exercises;
     private List<Exercise> allExercises;
+    
+    [Parameter]
+    public int WorkoutPlanId { get; set; }
 
     protected override async Task OnInitializedAsync()
-    {
+    { 
+        Console.WriteLine($"WorkoutPlanId: {WorkoutPlanId}");
         if (DataSession.Instance.User.IsAuthenticated)
         {
-            allExercises = (List<Exercise>)await ExerciseService.GetExByWid(DataSession.Instance.WorkoutPlan.Wpid);
+           
+            
+            allExercises = (List<Exercise>)await ExerciseService.GetExByWid(WorkoutPlanId);
             exercises = allExercises;
         }
     }

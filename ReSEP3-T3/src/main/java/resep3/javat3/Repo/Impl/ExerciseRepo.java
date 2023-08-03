@@ -6,10 +6,7 @@ import resep3.javat3.Repo.Interfaces.IExerciseRepo;
 import resep3.javat3.model.Exercise;
 import resep3.javat3.persistance.DBConnection;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 
 @GRpcService
@@ -95,5 +92,33 @@ public class ExerciseRepo implements IExerciseRepo {
         }
 
         initializer.disconnect();
+    }
+
+
+    public ArrayList<Exercise> getExByWpid(int workoutid) throws SQLException {
+        ArrayList<Exercise> exercises = new ArrayList<>();
+        initializer.connect();
+
+        Connection connection = initializer.getConnection();
+        Statement statement = connection.createStatement();
+        String selectQuery = "SELECT * FROM Exercise WHERE WorkoutPlanID = " + workoutid;
+
+        ResultSet resultSet = statement.executeQuery(selectQuery);
+
+
+        while (resultSet.next()) {
+
+            Exercise exercise = new Exercise();
+            exercise.setEid(resultSet.getInt("EID"));
+            exercise.setEName(resultSet.getString("exerciseName"));
+            exercise.setNrOfSets(resultSet.getInt("numberOfSets"));
+            exercise.setNrOfReps(resultSet.getInt("numberOfReps"));
+            exercise.setWorkoutId(resultSet.getInt("WorkoutPlanID"));
+
+            exercises.add(exercise);
+        }
+
+        initializer.disconnect();
+        return exercises;
     }
 }

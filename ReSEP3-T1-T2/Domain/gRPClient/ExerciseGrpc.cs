@@ -34,7 +34,6 @@ namespace Domain.gRPClient
                 exercises.Add(exercise);
             }
             
-
             Console.WriteLine(reply);
 
             return exercises;
@@ -65,6 +64,7 @@ namespace Domain.gRPClient
                 };
                 exercises.Add(ex);
             }
+            
 
             return exercises;
         }
@@ -79,7 +79,8 @@ namespace Domain.gRPClient
             {
                 EName = exerciseGrpc.EName,
                 NrOfSets = exerciseGrpc.NrOfSets,
-                NrOfReps = exerciseGrpc.NrOfReps
+                NrOfReps = exerciseGrpc.NrOfReps,
+                WorkoutId = exerciseGrpc.WorkoutPlanId
             });
 
             Console.WriteLine("This is ID of the created exercise: " + reply.Eid);
@@ -89,7 +90,8 @@ namespace Domain.gRPClient
                 EId = reply.Eid,
                 EName = exerciseGrpc.EName,
                 NrOfSets = exerciseGrpc.NrOfSets,
-                NrOfReps = exerciseGrpc.NrOfReps
+                NrOfReps = exerciseGrpc.NrOfReps,
+                WorkoutPlanId = exerciseGrpc.WorkoutPlanId,
             };
         }
 
