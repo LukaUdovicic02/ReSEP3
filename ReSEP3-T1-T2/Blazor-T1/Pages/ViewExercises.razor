@@ -77,7 +77,7 @@ else
     }
     
     private void CreateExercise(){
-        _navigationManager.NavigateTo("/CreateExercise");
+        _navigationManager.NavigateTo($"/CreateExercise/{WorkoutPlanId}");
     }
 
     private async Task DeleteExercise(int ExerciseID)

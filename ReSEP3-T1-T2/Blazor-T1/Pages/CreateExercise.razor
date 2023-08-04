@@ -1,4 +1,4 @@
-﻿@page "/CreateExercise"
+﻿@page "/CreateExercise/{WorkoutPlanId:int}"
 @using Model
 @inject IExerciseService exerciseService
 @inject NavigationManager _navigationManager
@@ -20,10 +20,14 @@
 
 @code {
     Exercise newExercise = new Exercise();
+    
+    [Parameter]
+    public int WorkoutPlanId { get; set; }
 
     private async Task CreateNewExercise()
     {
-       Exercise createdExercise =  await exerciseService.CreateExercise(newExercise);
+         newExercise.WorkoutPlanId = WorkoutPlanId;
+        await exerciseService.CreateExercise(newExercise);
         
         _navigationManager.NavigateTo($"/ViewExercises/{newExercise.WorkoutPlanId}"); 
     }
