@@ -81,7 +81,7 @@ namespace Domain.gRPClient
                 NrOfSets = exerciseGrpc.NrOfSets,
                 NrOfReps = exerciseGrpc.NrOfReps,
                 WorkoutId = exerciseGrpc.WorkoutPlanId
-            });
+            }); 
 
             Console.WriteLine("This is ID of the created exercise: " + reply.Eid);
 

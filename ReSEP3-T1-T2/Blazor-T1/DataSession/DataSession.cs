@@ -8,7 +8,7 @@ public class DataSession
     private static readonly Lazy<DataSession> instance = new(() => new DataSession());
 
     public static DataSession Instance => instance.Value;
-
+ 
     public User User { get; set; }
     public bool IsAuthenticated { get; private set; }
     public WorkoutPlan WorkoutPlan { get; set; }

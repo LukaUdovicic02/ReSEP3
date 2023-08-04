@@ -9,7 +9,7 @@ namespace Domain.gRPClient.RepoInterfaces
         Task<Exercise> CreateExercise(Exercise exercise);
         Task DeleteExercise(int id);
         Task<List<Exercise>> GetAllExercises();
-        Task<IEnumerable<Exercise>> GetExByWid(int wid);
+        Task<IEnumerable<Exercise>> GetExByWid(int wid); 
 
     }
 }

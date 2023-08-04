@@ -67,7 +67,7 @@ namespace WebApi.Controllers
                 Console.WriteLine(e);
                 return StatusCode(500, e.Message);
             }
-        }
+        } 
     
         [HttpDelete("{id}")]
          public async Task<ActionResult<Exercise>> DeleteExercise(int id)

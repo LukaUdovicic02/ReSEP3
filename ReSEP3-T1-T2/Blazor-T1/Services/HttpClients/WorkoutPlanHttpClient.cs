@@ -30,7 +30,7 @@ public class WorkoutPlanHttpClient : IWorkoutPlanService
 
         return result;
     }
-
+ 
     public async Task<WorkoutPlan> GetWorkoutPlanById(int wpid)
     {
         Console.WriteLine(wpid);

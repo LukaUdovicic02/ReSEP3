@@ -8,7 +8,7 @@ public class Exercise {
     private int NrOfReps;
     private int WorkoutId;
 
-    public Exercise( String EName, int nrOfSets, int nrOfReps, int workoutId) {
+    public Exercise(String EName, int nrOfSets, int nrOfReps, int workoutId) {
 
         this.EName = EName;
         NrOfSets = nrOfSets;

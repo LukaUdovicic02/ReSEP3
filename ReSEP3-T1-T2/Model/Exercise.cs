@@ -23,7 +23,7 @@ namespace Model
             NrOfReps = nrOfReps;
             WorkoutPlanId = workoutPlanId;
         }
-
+ 
         public Exercise(int eid,string eName, int nrOfSets, int nrOfReps, int workoutPlanId)
         {
             EName = eName;

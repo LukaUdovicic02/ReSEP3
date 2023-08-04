@@ -24,7 +24,7 @@ public class ExerciseHttpClient : IExerciseService
     public async Task<Exercise> CreateExercise(Exercise exercise)
     {
         
-        exercise.WorkoutPlanId = DataSession.Instance.WorkoutPlan.Wpid;
+       // exercise.WorkoutPlanId = DataSession.Instance.WorkoutPlan.Wpid;
 
         HttpResponseMessage response = await httpClient.PostAsJsonAsync("http://localhost:5052/Exercise", exercise); 
         string result = await response.Content.ReadAsStringAsync();
@@ -42,7 +42,7 @@ public class ExerciseHttpClient : IExerciseService
         return w;
     }
 
-
+ 
     public async Task DeleteExercise(int id)
     {
         HttpResponseMessage response = await httpClient.DeleteAsync($"http://localhost:5052/Exercise/{id}");
