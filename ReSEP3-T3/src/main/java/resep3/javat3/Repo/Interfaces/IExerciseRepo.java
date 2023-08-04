@@ -9,4 +9,6 @@ public interface IExerciseRepo
 {
     void CreateExercise(Exercise exercise) throws SQLException;
     ArrayList<Exercise> GetAllExercises();
+    void DeleteExercise(int eid);
+    ArrayList<Exercise> getExByWpid(int workoutid) throws SQLException;
 }
